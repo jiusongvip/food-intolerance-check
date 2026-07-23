@@ -1,0 +1,27 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import { Image } from 'astro:assets';
+import plannerImage from '../../../assets/images/planning-calendar.jpg';
+---
+<BaseLayout title="Elimination Diet Planner - Identify Trigger Foods" description="Plan a structured elimination diet with our guided planner template. Systematically identify food intolerance triggers through elimination and reintroduction." breadcrumbs={[{ label: 'Tools', href: '/tools' }, { label: 'Elimination Diet Planner', href: '/tools/elimination-diet-planner' }]}">
+<Header /><main class="max-w-3xl mx-auto px-4 sm:px-6 py-16 md:py-24">
+<h1 class="text-4xl font-semibold text-slate-900 mb-6 tracking-tight">Elimination Diet Planner</h1>
+<p class="text-lg text-slate-500 mb-8">A guided template for planning a structured elimination diet. Always undertake this under professional supervision.</p>
+<Image src={plannerImage} alt="Meal planning calendar and notebook for an elimination diet" class="w-full h-auto rounded-xl mb-8" width={800} height={450} loading="lazy" format="webp" />
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">Before You Start</h2>
+<ul class="list-disc list-inside text-slate-600 space-y-2 mb-6">
+<li>Consult your GP or a registered dietitian before beginning</li>
+<li>Keep a baseline food and symptom diary for at least one week</li>
+<li>Plan to eliminate foods for 2-4 weeks, then reintroduce one at a time</li>
+<li>Do not eliminate multiple food groups without professional guidance</li>
+</ul>
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">Common Elimination Protocols</h2>
+<div class="space-y-4">
+<div class="bg-white border border-slate-200 rounded-xl p-5"><h3 class="font-semibold text-slate-900 mb-1">Dairy Elimination</h3><p class="text-sm text-slate-500">Remove all dairy for 2 weeks. Reintroduce milk, then cheese, then yogurt separately, 3 days apart.</p></div>
+<div class="bg-white border border-slate-200 rounded-xl p-5"><h3 class="font-semibold text-slate-900 mb-1">Gluten Elimination</h3><p class="text-sm text-slate-500">Only after coeliac screening. Remove all gluten for 4-6 weeks. Reintroduce with wheat pasta, then bread, monitoring symptoms.</p></div>
+<div class="bg-white border border-slate-200 rounded-xl p-5"><h3 class="font-semibold text-slate-900 mb-1">Low FODMAP</h3><p class="text-sm text-slate-500">Remove all high FODMAP foods for 2-6 weeks. Reintroduce groups one at a time under dietitian guidance.</p></div>
+</div>
+<p class="text-sm text-slate-500 mt-8">Use our <a href="/tools/food-diary" class="text-brand-600 hover:text-brand-700 underline">Food Diary</a> to track symptoms throughout your elimination diet.</p>
+</main><Footer /></BaseLayout>

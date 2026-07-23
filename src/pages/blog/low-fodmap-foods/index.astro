@@ -1,0 +1,68 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import { Image } from 'astro:assets';
+import fodmapImage from '../../../assets/images/vegetables-fodmap.jpg';
+---
+<BaseLayout title="Low FODMAP Food List - Complete Guide for IBS Management" description="Complete low FODMAP food list for IBS management. High FODMAP foods to avoid and safe alternatives to eat. Based on Monash University research." author="Dr. Emily Carter, Registered Dietitian" datePublished="2026-02-10" dateModified="2026-07-20" breadcrumbs={[{ label: 'Blog', href: '/blog' }, { label: 'Low FODMAP Food List', href: '/blog/low-fodmap-foods' }]}" medical={true}>
+<Header /><main class="max-w-3xl mx-auto px-4 sm:px-6 py-16 md:py-24">
+<h1 class="text-4xl font-semibold text-slate-900 mb-6 tracking-tight">Low FODMAP Food List</h1>
+<p class="text-lg text-slate-500 mb-4">A quick reference guide to high and low FODMAP foods. Use this alongside professional dietary guidance.</p>
+<p class="text-sm text-slate-400 mb-8">By Dr. Emily Carter, Registered Dietitian · Published 10 Feb 2026 · Updated 20 Jul 2026</p>
+<Image src={fodmapImage} alt="Fresh vegetables and fruits used in a low FODMAP diet" class="w-full h-auto rounded-xl mb-8" width={800} height={450} loading="lazy" format="webp" />
+
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">What Are FODMAPs?</h2>
+<p class="text-slate-600 mb-4">FODMAPs are a group of short-chain carbohydrates (sugars and fibres) that are poorly absorbed in the small intestine. The acronym stands for <strong>Fermentable Oligosaccharides, Disaccharides, Monosaccharides, and Polyols</strong>. When these carbohydrates reach the large intestine, they are rapidly fermented by gut bacteria, producing gas and drawing in water — which causes bloating, pain, and altered bowel habits in sensitive individuals.</p>
+<p class="text-slate-600 mb-4">The low FODMAP diet was developed by researchers at <strong>Monash University</strong> in Australia and is now recognised by the British Dietetic Association and NICE guidelines as an evidence-based approach for managing IBS symptoms. Research shows that approximately 70-80% of IBS patients experience significant symptom improvement on a low FODMAP diet.</p>
+
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">The Five FODMAP Categories</h2>
+<div class="space-y-3 mb-8">
+<div class="bg-white border border-slate-200 rounded-xl p-4"><h3 class="font-semibold text-slate-900 mb-1 text-sm">Oligosaccharides (Fructans & GOS)</h3><p class="text-xs text-slate-600">Found in wheat, rye, onion, garlic, legumes, and certain vegetables. These are among the most common triggers.</p></div>
+<div class="bg-white border border-slate-200 rounded-xl p-4"><h3 class="font-semibold text-slate-900 mb-1 text-sm">Disaccharides (Lactose)</h3><p class="text-xs text-slate-600">Found in milk, soft cheeses, yogurt, and ice cream. Tolerance varies — many people can handle small amounts of hard cheese or butter.</p></div>
+<div class="bg-white border border-slate-200 rounded-xl p-4"><h3 class="font-semibold text-slate-900 mb-1 text-sm">Monosaccharides (Excess Fructose)</h3><p class="text-xs text-slate-600">Found in honey, apples, mangoes, and high-fructose corn syrup. Fructose is problematic when it exceeds glucose in the same food.</p></div>
+<div class="bg-white border border-slate-200 rounded-xl p-4"><h3 class="font-semibold text-slate-900 mb-1 text-sm">Polyols (Sorbitol & Mannitol)</h3><p class="text-xs text-slate-600">Found in stone fruits (cherries, peaches, plums), mushrooms, cauliflower, and artificial sweeteners (xylitol, sorbitol).</p></div>
+</div>
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">High FODMAP Foods (Avoid During Elimination)</h2>
+<p class="text-slate-600 mb-4">During the elimination phase (typically 2-6 weeks), avoid the following high FODMAP foods:</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+<div class="bg-red-50 border border-red-200 rounded-xl p-4"><h3 class="font-semibold text-red-800 mb-1 text-sm">Fruits</h3><p class="text-xs text-red-700">Apples, pears, watermelon, stone fruits, dried fruits, mango</p></div>
+<div class="bg-red-50 border border-red-200 rounded-xl p-4"><h3 class="font-semibold text-red-800 mb-1 text-sm">Vegetables</h3><p class="text-xs text-red-700">Onion, garlic, cauliflower, mushrooms, asparagus, artichoke</p></div>
+<div class="bg-red-50 border border-red-200 rounded-xl p-4"><h3 class="font-semibold text-red-800 mb-1 text-sm">Grains</h3><p class="text-xs text-red-700">Wheat, barley, rye (in large amounts)</p></div>
+<div class="bg-red-50 border border-red-200 rounded-xl p-4"><h3 class="font-semibold text-red-800 mb-1 text-sm">Dairy</h3><p class="text-xs text-red-700">Milk, soft cheese, yogurt, ice cream (lactose)</p></div>
+</div>
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">Low FODMAP Alternatives</h2>
+<p class="text-slate-600 mb-4">Replace high FODMAP foods with these safe alternatives:</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="bg-emerald-50 border border-emerald-200 rounded-xl p-4"><h3 class="font-semibold text-emerald-800 mb-1 text-sm">Fruits</h3><p class="text-xs text-emerald-700">Bananas, blueberries, strawberries, oranges, grapes, kiwi</p></div>
+<div class="bg-emerald-50 border border-emerald-200 rounded-xl p-4"><h3 class="font-semibold text-emerald-800 mb-1 text-sm">Vegetables</h3><p class="text-xs text-emerald-700">Carrots, spinach, zucchini, bell peppers, potatoes, green beans</p></div>
+<div class="bg-emerald-50 border border-emerald-200 rounded-xl p-4"><h3 class="font-semibold text-emerald-800 mb-1 text-sm">Grains</h3><p class="text-xs text-emerald-700">Rice, oats, quinoa, gluten-free bread and pasta</p></div>
+<div class="bg-emerald-50 border border-emerald-200 rounded-xl p-4"><h3 class="font-semibold text-emerald-800 mb-1 text-sm">Dairy Alternatives</h3><p class="text-xs text-emerald-700">Lactose-free milk, hard cheeses, almond milk, rice milk</p></div>
+</div>
+
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">Hidden FODMAPs to Watch For</h2>
+<p class="text-slate-600 mb-4">Many processed foods contain hidden high FODMAP ingredients. Common culprits include:</p>
+<ul class="list-disc list-inside text-slate-600 space-y-2 mb-6">
+  <li><strong>Garlic and onion powder</strong> — found in stock cubes, sauces, spice mixes, and marinades</li>
+  <li><strong>High-fructose corn syrup</strong> — found in soft drinks, cereals, and snack bars</li>
+  <li><strong>Inulin and chicory root fibre</strong> — added to "high fibre" or "prebiotic" products</li>
+  <li><strong>Honey and agave syrup</strong> — often used as "healthier" sweeteners but are high in fructose</li>
+  <li><strong>Sorbitol and xylitol</strong> — sugar-free gum, mints, and diet products</li>
+</ul>
+
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">Important Reminders</h2>
+<ul class="list-disc list-inside text-slate-600 space-y-2 mb-6">
+  <li>The low FODMAP diet is a <strong>three-phase process</strong>: elimination, reintroduction, and personalisation. It is not meant to be a permanent diet.</li>
+  <li>Undertake this diet with guidance from a <strong>registered dietitian</strong> trained in FODMAP management.</li>
+  <li>Serving size matters — some foods are low FODMAP at small portions but become high FODMAP at larger quantities (e.g., sweet potato, avocado).</li>
+  <li>Use the <strong>Monash University FODMAP Diet app</strong> for the most up-to-date food testing data.</li>
+</ul>
+
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">References</h2>
+<ul class="list-disc list-inside text-slate-500 text-sm space-y-1 mb-4">
+  <li>Monash University — The Low FODMAP Diet</li>
+  <li>NICE Guidelines — Irritable Bowel Syndrome in Adults (NG126)</li>
+  <li>British Dietetic Association — Low FODMAP Diet Fact Sheet</li>
+  <li>Gibson PR, Shepherd SJ. Evidence-based dietary management of functional gastrointestinal symptoms: The FODMAP approach. J Gastroenterol Hepatol. 2010.</li>
+</ul>
+</main><Footer /></BaseLayout>

@@ -1,0 +1,40 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import { Image } from 'astro:assets';
+import glutenImage from '../../../assets/images/wheat-gluten.jpg';
+---
+<BaseLayout title="Gluten Intolerance Checker - Free Online Self-Assessment" description="Suspect gluten sensitivity? Use our free gluten intolerance checker to explore your symptoms and decide if testing is right for you. Educational tool only." breadcrumbs={[{ label: 'Tools', href: '/tools' }, { label: 'Gluten Intolerance Checker', href: '/tools/gluten-intolerance-test' }]}">
+<Header />
+<main>
+<section class="pt-16 pb-8 md:pt-24 px-4 sm:px-6 max-w-6xl mx-auto">
+<div class="max-w-2xl mx-auto text-center">
+<h1 class="text-4xl md:text-5xl font-semibold tracking-tight text-slate-900 leading-none mb-4">Gluten Intolerance Checker</h1>
+<p class="text-lg text-slate-500 max-w-lg mx-auto">5 questions to explore possible gluten sensitivity. Educational tool only.</p>
+</div>
+<div class="mt-8 max-w-2xl mx-auto"><Image src={glutenImage} alt="Wheat bread and gluten-containing grains" class="w-full h-auto rounded-xl" width={800} height={450} loading="lazy" format="webp" /></div>
+</section>
+<section class="pb-16 md:pb-24 px-4 sm:px-6 max-w-6xl mx-auto"><div class="max-w-xl mx-auto">
+<h2 class="text-2xl font-semibold text-slate-900 mb-4 text-center">Take the Assessment</h2>
+<div class="bg-white border border-slate-200 rounded-2xl shadow-sm p-6 sm:p-8">
+<p class="text-center text-slate-400 text-sm">Select your answers below to get your result.</p>
+<div class="space-y-6 mt-6" id="gluten-quiz"></div>
+<div id="gluten-result" class="hidden"></div>
+</div>
+<div class="mt-8 bg-amber-50 border border-amber-200 rounded-xl p-4 text-xs text-amber-800">This tool does NOT diagnose disease. Always consult your GP. Do not eliminate gluten before coeliac screening.</div>
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">About This Checker</h2>
+<p class="text-slate-600 text-sm mb-4">This gluten sensitivity checker explores your reactions to wheat, bread, pasta, and baked goods. It helps determine whether your symptoms may be consistent with non-coeliac gluten sensitivity.</p>
+<p class="text-slate-600 text-sm">Important: always ask your GP for coeliac disease screening before eliminating gluten, as the screening requires you to be eating gluten for accurate results.</p>
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">Related Resources</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<a href="/guides/intolerance-vs-allergy" class="block bg-slate-50 border border-slate-200 rounded-lg p-4 hover:border-brand-300 transition-colors no-underline"><p class="text-sm font-medium text-slate-900 mb-1">Intolerance vs Allergy</p><p class="text-xs text-slate-500">Understand gluten sensitivity vs coeliac disease.</p></a>
+<a href="/tools/food-diary" class="block bg-slate-50 border border-slate-200 rounded-lg p-4 hover:border-brand-300 transition-colors no-underline"><p class="text-sm font-medium text-slate-900 mb-1">Food Diary</p><p class="text-xs text-slate-500">Track wheat and gluten intake with symptoms.</p></a>
+<a href="/guides/test-guide" class="block bg-slate-50 border border-slate-200 rounded-lg p-4 hover:border-brand-300 transition-colors no-underline"><p class="text-sm font-medium text-slate-900 mb-1">Testing Guide</p><p class="text-xs text-slate-500">Compare gluten testing methods and accuracy.</p></a>
+<a href="/blog/elimination-diet-guide" class="block bg-slate-50 border border-slate-200 rounded-lg p-4 hover:border-brand-300 transition-colors no-underline"><p class="text-sm font-medium text-slate-900 mb-1">Elimination Diet Guide</p><p class="text-xs text-slate-500">Structured protocol to confirm gluten triggers.</p></a>
+</div>
+</div></section>
+</main>
+<Footer />
+</BaseLayout>
+<script is:inline src="/js/gluten-checker.js"></script>

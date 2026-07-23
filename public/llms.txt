@@ -1,0 +1,35 @@
+# FoodCheck — Food Intolerance Self-Assessment
+
+> FoodCheck (foodintolerancecheck.com) provides free, browser-based food intolerance self-assessment tools and evidence-based educational content. No data is collected. All tools run client-side.
+
+## Key Pages
+
+- [Food Intolerance Checker](https://foodintolerancecheck.com/) — 3-step symptom assessment exploring possible food intolerances
+- [Lactose Intolerance Checker](https://foodintolerancecheck.com/tools/lactose-intolerance-test) — Dairy-specific symptom assessment
+- [Gluten Intolerance Checker](https://foodintolerancecheck.com/tools/gluten-intolerance-test) — Gluten sensitivity symptom assessment
+- [Histamine Intolerance Checker](https://foodintolerancecheck.com/tools/histamine-intolerance-test) — Histamine reaction assessment
+- [Fructose Intolerance Checker](https://foodintolerancecheck.com/tools/fructose-intolerance-test) — Fructose malabsorption assessment
+- [Food Diary](https://foodintolerancecheck.com/tools/food-diary) — Meal and symptom tracking tool (localStorage only)
+- [Elimination Diet Planner](https://foodintolerancecheck.com/tools/elimination-diet-planner) — Structured elimination diet template
+- [Symptoms Overview](https://foodintolerancecheck.com/symptoms) — 8 common food intolerance symptoms
+
+## Guides
+
+- [Intolerance vs Allergy](https://foodintolerancecheck.com/guides/intolerance-vs-allergy) — Key differences in symptoms, mechanisms, and emergency care
+- [Testing Guide](https://foodintolerancecheck.com/guides/test-guide) — Comparison of breath tests, IgG tests, and elimination diets
+- [Low FODMAP Diet Guide](https://foodintolerancecheck.com/guides/low-fodmap) — Three-phase evidence-based diet protocol
+- [Reading Test Results](https://foodintolerancecheck.com/guides/reading-test-results) — Interpreting IgG and breath test reports
+- [IBS & Food Intolerance](https://foodintolerancecheck.com/guides/ibs-food-intolerance) — Overlap and management strategies
+
+## Blog
+
+- [Elimination Diet Step-by-Step](https://foodintolerancecheck.com/blog/elimination-diet-guide) — How to conduct a structured elimination diet
+- [Low FODMAP Food List](https://foodintolerancecheck.com/blog/low-fodmap-foods) — High and low FODMAP food reference
+- [Are Food Intolerance Tests Accurate?](https://foodintolerancecheck.com/blog/are-food-intolerance-tests-accurate) — Evidence review of commercial testing methods
+
+## Content Policy
+
+- All health content is evidence-based and references NHS, BDA, NICE, AAAAI, and Monash University guidelines
+- Content is authored by Dr. Emily Carter, Registered Dietitian
+- This site provides educational content only — it does not diagnose medical conditions
+- No data is collected; all tools run entirely in the browser

@@ -1,0 +1,48 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import { Image } from 'astro:assets';
+import privacyImage from '../../assets/images/faq-questions.jpg';
+---
+<BaseLayout title="Privacy Policy - How FoodCheck Protects Your Data" description="FoodCheck privacy policy. Learn how we handle your data — spoiler: we don't collect any. All tools run entirely in your browser.">
+<Header />
+<main class="max-w-3xl mx-auto px-4 sm:px-6 py-16 md:py-24">
+  <h1 class="text-4xl font-semibold text-slate-900 mb-6 tracking-tight">Privacy Policy</h1>
+  <p class="text-sm text-slate-400 mb-8">Last updated: July 2026</p>
+
+  <p class="text-lg text-slate-500 mb-8">FoodCheck is committed to protecting your privacy. This policy explains how we handle information when you use our website and tools.</p>
+  <Image src={privacyImage} alt="Privacy and data protection document" class="w-full h-auto rounded-xl mb-8" width={800} height={450} loading="lazy" format="webp" />
+
+  <h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">Data Collection</h2>
+  <p class="text-slate-600 mb-4">We do <strong>not</strong> collect, store, or transmit any personal data. All FoodCheck tools — including the Food Intolerance Checker, individual intolerance checkers, Food Diary, and Elimination Diet Planner — run entirely in your web browser.</p>
+
+  <h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">Local Storage</h2>
+  <p class="text-slate-600 mb-4">The Food Diary tool uses your browser's <strong>localStorage</strong> to save entries on your device. This data:</p>
+  <ul class="list-disc list-inside text-slate-600 space-y-2 mb-6">
+    <li>Stays entirely on your device</li>
+    <li>Is never sent to our servers or any third party</li>
+    <li>Can be deleted at any time by clearing your browser data</li>
+    <li>Cannot be accessed by other websites</li>
+  </ul>
+
+  <h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">Cookies</h2>
+  <p class="text-slate-600 mb-4">We do not use cookies for tracking or advertising. We do not use any analytics services (such as Google Analytics).</p>
+
+  <h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">Third-Party Services</h2>
+  <p class="text-slate-600 mb-4">Our site loads web fonts from Google Fonts (Google LLC). When your browser requests these fonts, Google may log your IP address. Please refer to <a href="https://policies.google.com/privacy" class="text-brand-600 hover:text-brand-700 underline" target="_blank" rel="noopener">Google's Privacy Policy</a> for more information.</p>
+
+  <h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">Hosting</h2>
+  <p class="text-slate-600 mb-4">This site may be hosted on a CDN or static hosting provider. These providers may log basic request information (IP address, user agent, timestamp) for security and performance purposes. We do not access or use this data.</p>
+
+  <h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">Medical Disclaimer</h2>
+  <p class="text-slate-600 mb-4">FoodCheck provides educational content only. We do not provide medical diagnosis, treatment, or advice. Always consult your GP, a gastroenterologist, or a registered dietitian for medical concerns.</p>
+
+  <h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">Changes to This Policy</h2>
+  <p class="text-slate-600 mb-4">We may update this privacy policy from time to time. Changes will be posted on this page with an updated "Last updated" date.</p>
+
+  <h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">Contact</h2>
+  <p class="text-slate-600">If you have any questions about this privacy policy, you can reach us at <a href="/about" class="text-brand-600 hover:text-brand-700 underline">our About page</a>.</p>
+</main>
+<Footer />
+</BaseLayout>

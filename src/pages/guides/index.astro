@@ -1,0 +1,51 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import { Image } from 'astro:assets';
+import guidesImage from '../../assets/images/books-guides.jpg';
+---
+<BaseLayout title="Food Intolerance Guides - Testing, Diets & Symptom Management" description="In-depth guides on food intolerance testing methods, elimination diets, low FODMAP, IBS management, and how to read test results. Evidence-based resources." breadcrumbs={[{ label: 'Guides', href: '/guides' }]}">
+<Header /><main class="max-w-6xl mx-auto px-4 sm:px-6 py-16 md:py-24">
+<h1 class="text-4xl font-semibold text-slate-900 mb-4 tracking-tight">Guides</h1>
+<p class="text-lg text-slate-500 mb-12 max-w-2xl">In-depth resources to help you understand food intolerances, testing options, and evidence-based management strategies.</p>
+<Image src={guidesImage} alt="Collection of medical books and health guide resources" class="w-full h-auto rounded-xl mb-10 max-w-2xl" width={800} height={450} loading="lazy" format="webp" />
+<h2 class="text-2xl font-semibold text-slate-900 mb-5">Browse All Guides</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+<a href="/guides/intolerance-vs-allergy" class="group bg-white border border-slate-200 rounded-xl p-6 hover:border-brand-300 hover:shadow-md transition-all no-underline">
+<h3 class="font-semibold text-slate-900 group-hover:text-brand-700 transition-colors mb-1">Food Intolerance vs Food Allergy</h3>
+<p class="text-sm text-slate-500">Key differences in symptoms, mechanisms, and when to seek emergency care.</p>
+</a>
+<a href="/guides/test-guide" class="group bg-white border border-slate-200 rounded-xl p-6 hover:border-brand-300 hover:shadow-md transition-all no-underline">
+<h3 class="font-semibold text-slate-900 group-hover:text-brand-700 transition-colors mb-1">Testing Guide</h3>
+<p class="text-sm text-slate-500">Compare breath tests, IgG tests, elimination diets, and what doctors recommend.</p>
+</a>
+<a href="/guides/low-fodmap" class="group bg-white border border-slate-200 rounded-xl p-6 hover:border-brand-300 hover:shadow-md transition-all no-underline">
+<h3 class="font-semibold text-slate-900 group-hover:text-brand-700 transition-colors mb-1">Low FODMAP Diet Guide</h3>
+<p class="text-sm text-slate-500">A step-by-step guide to the low FODMAP elimination diet for IBS and food intolerance.</p>
+</a>
+<a href="/guides/reading-test-results" class="group bg-white border border-slate-200 rounded-xl p-6 hover:border-brand-300 hover:shadow-md transition-all no-underline">
+<h3 class="font-semibold text-slate-900 group-hover:text-brand-700 transition-colors mb-1">Reading Test Results</h3>
+<p class="text-sm text-slate-500">How to interpret food intolerance test reports and what the numbers actually mean.</p>
+</a>
+<a href="/guides/ibs-food-intolerance" class="group bg-white border border-slate-200 rounded-xl p-6 hover:border-brand-300 hover:shadow-md transition-all no-underline">
+<h3 class="font-semibold text-slate-900 group-hover:text-brand-700 transition-colors mb-1">IBS & Food Intolerance</h3>
+<p class="text-sm text-slate-500">Understanding the overlap between IBS and food intolerances, and how to manage both.</p>
+</a>
+</div></main>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Food Intolerance Guides",
+  "description": "In-depth resources on food intolerance testing, diets, and management",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Food Intolerance vs Food Allergy", "url": "https://foodintolerancecheck.com/guides/intolerance-vs-allergy" },
+    { "@type": "ListItem", "position": 2, "name": "Testing Guide", "url": "https://foodintolerancecheck.com/guides/test-guide" },
+    { "@type": "ListItem", "position": 3, "name": "Low FODMAP Diet Guide", "url": "https://foodintolerancecheck.com/guides/low-fodmap" },
+    { "@type": "ListItem", "position": 4, "name": "Reading Test Results", "url": "https://foodintolerancecheck.com/guides/reading-test-results" },
+    { "@type": "ListItem", "position": 5, "name": "IBS & Food Intolerance", "url": "https://foodintolerancecheck.com/guides/ibs-food-intolerance" }
+  ]
+}
+</script>
+<Footer /></BaseLayout>

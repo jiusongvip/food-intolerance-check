@@ -1,0 +1,21 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import { Image } from 'astro:assets';
+import fodmapImage from '../../../assets/images/vegetables-fodmap.jpg';
+---
+<BaseLayout title="Low FODMAP Diet Guide - Manage IBS & Food Intolerance" description="A step-by-step guide to the low FODMAP diet for managing IBS and food intolerances. Learn which foods to eat, which to avoid, and how to reintroduce triggers." author="Dr. Emily Carter, Registered Dietitian" datePublished="2026-02-05" dateModified="2026-07-20" breadcrumbs={[{ label: 'Guides', href: '/guides' }, { label: 'Low FODMAP Diet', href: '/guides/low-fodmap' }]}" medical={true}>
+<Header /><main class="max-w-3xl mx-auto px-4 sm:px-6 py-16 md:py-24">
+<h1 class="text-4xl font-semibold text-slate-900 mb-6 tracking-tight">Low FODMAP Diet Guide</h1>
+<p class="text-lg text-slate-500 mb-4">The low FODMAP diet is an evidence-based approach for managing IBS and identifying food triggers. It should be done under professional guidance.</p>
+<p class="text-sm text-slate-400 mb-8">By Dr. Emily Carter, Registered Dietitian · Updated 20 Jul 2026</p>
+<Image src={fodmapImage} alt="Low FODMAP fruits and vegetables arranged on a table" class="w-full h-auto rounded-xl mb-8" width={800} height={450} loading="lazy" format="webp" />
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">What are FODMAPs?</h2>
+<p class="text-slate-600 mb-4">FODMAPs are fermentable carbohydrates that can cause digestive symptoms in sensitive individuals. FODMAP stands for Fermentable Oligosaccharides, Disaccharides, Monosaccharides, and Polyols.</p>
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">The Three Phases</h2>
+<div class="space-y-4"><div class="bg-white border border-slate-200 rounded-xl p-5"><h3 class="font-semibold text-slate-900 mb-1">Phase 1: Elimination (2-6 weeks)</h3><p class="text-sm text-slate-500">Remove all high FODMAP foods from your diet to see if symptoms improve.</p></div>
+<div class="bg-white border border-slate-200 rounded-xl p-5"><h3 class="font-semibold text-slate-900 mb-1">Phase 2: Reintroduction (6-8 weeks)</h3><p class="text-sm text-slate-500">Systematically reintroduce FODMAP groups one at a time to identify personal triggers.</p></div>
+<div class="bg-white border border-slate-200 rounded-xl p-5"><h3 class="font-semibold text-slate-900 mb-1">Phase 3: Personalisation</h3><p class="text-sm text-slate-500">Build a long-term diet that avoids only your specific triggers while maximising variety.</p></div></div>
+<p class="text-sm text-slate-500 mt-8">The low FODMAP diet should be undertaken with guidance from a registered dietitian. It is not intended as a permanent diet.</p>
+</main><Footer /></BaseLayout>

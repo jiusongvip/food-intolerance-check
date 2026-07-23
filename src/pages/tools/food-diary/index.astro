@@ -1,0 +1,37 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import { Image } from 'astro:assets';
+import foodDiaryImage from '../../../assets/images/food-diary.jpg';
+---
+<BaseLayout title="Food Diary for Intolerance - Track Meals & Symptoms" description="Track your meals and symptoms over time with our free food diary tool. Spot patterns and identify possible food intolerance triggers. Runs entirely in your browser." breadcrumbs={[{ label: 'Tools', href: '/tools' }, { label: 'Food Diary', href: '/tools/food-diary' }]}">
+<Header /><main>
+<section class="pt-16 pb-8 md:pt-24 px-4 sm:px-6 max-w-6xl mx-auto">
+<div class="max-w-2xl mx-auto text-center">
+<h1 class="text-4xl md:text-5xl font-semibold tracking-tight text-slate-900 leading-none mb-4">Food Diary</h1>
+<p class="text-lg text-slate-500 max-w-lg mx-auto">Log your daily meals and symptoms. Spot patterns over time. Everything stays in your browser.</p>
+</div>
+<div class="mt-8 max-w-2xl mx-auto"><Image src={foodDiaryImage} alt="A food journal notebook with meal and symptom tracking notes" class="w-full h-auto rounded-xl" width={800} height={450} loading="lazy" format="webp" /></div>
+</section>
+<section class="pb-16 md:pb-24 px-4 sm:px-6 max-w-6xl mx-auto"><div class="max-w-xl mx-auto">
+<h2 class="text-2xl font-semibold text-slate-900 mb-4 text-center">Start Tracking</h2>
+<div class="bg-white border border-slate-200 rounded-2xl shadow-sm p-6 sm:p-8">
+<div id="food-diary-app"><div class="text-center text-slate-400 text-sm mb-6">No entries yet. Start by adding your first meal below.</div>
+<div class="space-y-4 mb-6"><div><label class="block text-sm font-medium text-slate-700 mb-1">Meal type</label><div class="flex gap-2" id="meal-types">
+<button class="px-4 py-2 rounded-lg border border-slate-200 text-sm hover:border-purple-300 hover:bg-purple-50 transition-colors meal-type-btn active" data-type="breakfast">Breakfast</button>
+<button class="px-4 py-2 rounded-lg border border-slate-200 text-sm hover:border-purple-300 hover:bg-purple-50 transition-colors meal-type-btn" data-type="lunch">Lunch</button>
+<button class="px-4 py-2 rounded-lg border border-slate-200 text-sm hover:border-purple-300 hover:bg-purple-50 transition-colors meal-type-btn" data-type="dinner">Dinner</button>
+<button class="px-4 py-2 rounded-lg border border-slate-200 text-sm hover:border-purple-300 hover:bg-purple-50 transition-colors meal-type-btn" data-type="snack">Snack</button>
+</div></div>
+<div><label class="block text-sm font-medium text-slate-700 mb-1">What did you eat?</label><textarea id="diary-food" rows="2" class="w-full px-4 py-2.5 border border-slate-200 rounded-xl text-sm focus:ring-2 focus:ring-purple-300 focus:border-purple-400 outline-none transition-all" placeholder="e.g. Scrambled eggs with cheese, toast"></textarea></div>
+<div><label class="block text-sm font-medium text-slate-700 mb-1">Any symptoms? (optional)</label><textarea id="diary-symptoms" rows="2" class="w-full px-4 py-2.5 border border-slate-200 rounded-xl text-sm focus:ring-2 focus:ring-purple-300 focus:border-purple-400 outline-none transition-all" placeholder="e.g. Bloated 1 hour later, mild headache"></textarea></div>
+<button id="diary-add" class="w-full px-5 py-2.5 rounded-xl bg-purple-600 text-white text-sm font-medium hover:bg-purple-700 transition-colors">Add Entry</button></div>
+<div id="diary-entries" class="space-y-3"></div></div>
+</div><div class="mt-8 bg-purple-50 border border-purple-200 rounded-xl p-4 text-xs text-purple-800">Your data stays in your browser. Nothing is sent to any server.</div>
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">How to Use the Food Diary</h2>
+<p class="text-slate-600 text-sm mb-4">Log each meal with the food you ate and any symptoms that followed. Over time, patterns may emerge — for example, bloating every time you eat dairy or headaches after wine. Use the timeline view to spot these connections.</p>
+<p class="text-slate-600 text-sm">After 2-4 weeks of consistent logging, share your diary with your GP or dietitian. This detailed record will help them recommend the most appropriate tests or dietary changes.</p>
+</div></section>
+</main><Footer /></BaseLayout>
+<script is:inline src="/js/food-diary.js"></script>

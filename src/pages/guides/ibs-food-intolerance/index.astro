@@ -1,0 +1,26 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import { Image } from 'astro:assets';
+import ibsImage from '../../../assets/images/vegetables-fodmap.jpg';
+---
+<BaseLayout title="IBS & Food Intolerance - Symptoms, Overlap & Management" description="Understand the overlap between IBS and food intolerances. Learn how symptom triggers overlap and evidence-based strategies to manage both conditions effectively." author="Dr. Emily Carter, Registered Dietitian" datePublished="2026-03-10" dateModified="2026-07-20" breadcrumbs={[{ label: 'Guides', href: '/guides' }, { label: 'IBS & Food Intolerance', href: '/guides/ibs-food-intolerance' }]}" medical={true}>
+<Header /><main class="max-w-3xl mx-auto px-4 sm:px-6 py-16 md:py-24">
+<h1 class="text-4xl font-semibold text-slate-900 mb-6 tracking-tight">IBS & Food Intolerance</h1>
+<p class="text-lg text-slate-500 mb-4">Irritable Bowel Syndrome and food intolerances often overlap. Here is what you need to know about the relationship between the two.</p>
+<p class="text-sm text-slate-400 mb-8">By Dr. Emily Carter, Registered Dietitian · Updated 20 Jul 2026</p>
+<Image src={ibsImage} alt="Healthy gut-friendly foods for managing IBS and food intolerance" class="w-full h-auto rounded-xl mb-8" width={800} height={450} loading="lazy" format="webp" />
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">The Connection</h2>
+<p class="text-slate-600 mb-4">Many people with IBS find that certain foods trigger their symptoms. Common culprits include high FODMAP foods, fatty foods, caffeine, and alcohol. Identifying and managing these triggers can significantly improve quality of life.</p>
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">Key Strategies</h2>
+<ul class="list-disc list-inside text-slate-600 space-y-2 mb-4">
+<li>Keep a detailed food and symptom diary to identify patterns</li>
+<li>Consider a low FODMAP diet under dietitian supervision</li>
+<li>Eat smaller, more frequent meals</li>
+<li>Manage stress, which can worsen both IBS and food intolerance symptoms</li>
+<li>Work with your GP to rule out other conditions (coeliac disease, IBD)</li>
+</ul>
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">When to Seek Help</h2>
+<p class="text-slate-600">If you experience unexplained weight loss, blood in stools, or severe persistent pain, see your GP promptly. These are not typical food intolerance symptoms and may indicate a more serious condition.</p>
+</main><Footer /></BaseLayout>

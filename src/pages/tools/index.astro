@@ -1,0 +1,65 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import { Image } from 'astro:assets';
+import toolsHero from '../../assets/images/hero-healthy.jpg';
+---
+<BaseLayout title="Free Food Intolerance Tools - Checkers, Diary & Planner" description="Free online tools to explore food intolerances: symptom checkers for lactose, gluten, histamine, and fructose, a food diary, and an elimination diet planner. No sign-up required." breadcrumbs={[{ label: 'Tools', href: '/tools' }]}">
+<Header /><main class="max-w-6xl mx-auto px-4 sm:px-6 py-16 md:py-24">
+<h1 class="text-4xl font-semibold text-slate-900 mb-4 tracking-tight">Tools</h1>
+<p class="text-lg text-slate-500 mb-12 max-w-2xl">Free, private tools to help you explore food intolerances. Everything runs in your browser — no sign-up, no data collected.</p>
+<Image src={toolsHero} alt="Food intolerance self-assessment tools and resources" class="w-full h-auto rounded-xl mb-10 max-w-2xl" width={800} height={450} loading="lazy" format="webp" />
+<h2 class="text-2xl font-semibold text-slate-900 mb-5">Symptom Checkers</h2>
+<p class="text-slate-600 mb-6">Answer 5 questions to explore whether your symptoms suggest a specific food intolerance. Educational only — not a medical diagnosis.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-12">
+<a href="/tools/lactose-intolerance-test" class="group bg-white border border-slate-200 rounded-xl p-6 hover:border-brand-300 hover:shadow-md transition-all no-underline">
+<h3 class="font-semibold text-slate-900 group-hover:text-brand-700 transition-colors mb-1">Lactose Intolerance Checker</h3>
+<p class="text-sm text-slate-500">Explore symptoms related to dairy consumption — bloating, gas, diarrhea after milk or cheese.</p>
+</a>
+<a href="/tools/gluten-intolerance-test" class="group bg-white border border-slate-200 rounded-xl p-6 hover:border-brand-300 hover:shadow-md transition-all no-underline">
+<h3 class="font-semibold text-slate-900 group-hover:text-brand-700 transition-colors mb-1">Gluten Intolerance Checker</h3>
+<p class="text-sm text-slate-500">Assess possible gluten sensitivity symptoms — digestive discomfort after bread, pasta, or baked goods.</p>
+</a>
+<a href="/tools/histamine-intolerance-test" class="group bg-white border border-slate-200 rounded-xl p-6 hover:border-brand-300 hover:shadow-md transition-all no-underline">
+<h3 class="font-semibold text-slate-900 group-hover:text-brand-700 transition-colors mb-1">Histamine Intolerance Checker</h3>
+<p class="text-sm text-slate-500">Check reactions to aged cheese, wine, cured meats, and fermented foods.</p>
+</a>
+<a href="/tools/fructose-intolerance-test" class="group bg-white border border-slate-200 rounded-xl p-6 hover:border-brand-300 hover:shadow-md transition-all no-underline">
+<h3 class="font-semibold text-slate-900 group-hover:text-brand-700 transition-colors mb-1">Fructose Intolerance Checker</h3>
+<p class="text-sm text-slate-500">Explore symptoms after eating fruit, honey, or high-fructose foods.</p>
+</a>
+</div>
+<h2 class="text-2xl font-semibold text-slate-900 mb-5">Planning Tools</h2>
+<p class="text-slate-600 mb-6">Track your diet and plan a structured approach to identifying trigger foods.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+<a href="/tools/food-diary" class="group bg-white border border-slate-200 rounded-xl p-6 hover:border-brand-300 hover:shadow-md transition-all no-underline">
+<h3 class="font-semibold text-slate-900 group-hover:text-brand-700 transition-colors mb-1">Food Diary</h3>
+<p class="text-sm text-slate-500">Log meals and symptoms over time. Spot patterns with our visual timeline. All data stays in your browser.</p>
+</a>
+<a href="/tools/elimination-diet-planner" class="group bg-white border border-slate-200 rounded-xl p-6 hover:border-brand-300 hover:shadow-md transition-all no-underline">
+<h3 class="font-semibold text-slate-900 group-hover:text-brand-700 transition-colors mb-1">Elimination Diet Planner</h3>
+<p class="text-sm text-slate-500">A guided template for planning a structured elimination and reintroduction protocol.</p>
+</a>
+</div>
+<div class="mt-12 bg-amber-50 border border-amber-200 rounded-xl p-5">
+<p class="text-sm text-amber-800"><strong>Important:</strong> These tools are for educational purposes only and do not provide medical diagnoses. If you suspect a food intolerance, please consult your GP or a registered dietitian for proper evaluation and testing.</p>
+</div>
+</main>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Food Intolerance Tools",
+  "description": "Free online tools to explore food intolerances",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Lactose Intolerance Checker", "url": "https://foodintolerancecheck.com/tools/lactose-intolerance-test" },
+    { "@type": "ListItem", "position": 2, "name": "Gluten Intolerance Checker", "url": "https://foodintolerancecheck.com/tools/gluten-intolerance-test" },
+    { "@type": "ListItem", "position": 3, "name": "Histamine Intolerance Checker", "url": "https://foodintolerancecheck.com/tools/histamine-intolerance-test" },
+    { "@type": "ListItem", "position": 4, "name": "Fructose Intolerance Checker", "url": "https://foodintolerancecheck.com/tools/fructose-intolerance-test" },
+    { "@type": "ListItem", "position": 5, "name": "Food Diary", "url": "https://foodintolerancecheck.com/tools/food-diary" },
+    { "@type": "ListItem", "position": 6, "name": "Elimination Diet Planner", "url": "https://foodintolerancecheck.com/tools/elimination-diet-planner" }
+  ]
+}
+</script>
+<Footer /></BaseLayout>

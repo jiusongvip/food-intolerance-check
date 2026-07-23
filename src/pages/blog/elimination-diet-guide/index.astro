@@ -1,0 +1,112 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import { Image } from 'astro:assets';
+import elimDietImage from '../../../assets/images/elimination-diet.jpg';
+---
+<BaseLayout title="Elimination Diet: A Step-by-Step Guide - FoodCheck" description="Learn how to do an elimination diet step by step. Identify food intolerance triggers through structured elimination and reintroduction. Safety guidelines included." author="Dr. Emily Carter, Registered Dietitian" datePublished="2026-01-15" dateModified="2026-07-20" breadcrumbs={[{ label: 'Blog', href: '/blog' }, { label: 'Elimination Diet Guide', href: '/blog/elimination-diet-guide' }]}" medical={true}>
+<Header /><main class="max-w-3xl mx-auto px-4 sm:px-6 py-16 md:py-24">
+<h1 class="text-4xl font-semibold text-slate-900 mb-6 tracking-tight">Elimination Diet: A Step-by-Step Guide</h1>
+<p class="text-lg text-slate-500 mb-4">An elimination diet is the gold standard for identifying food intolerances. Here is how to do it safely and effectively.</p>
+<p class="text-sm text-slate-400 mb-8">By Dr. Emily Carter, Registered Dietitian · Published 15 Jan 2026 · Updated 20 Jul 2026</p>
+<Image src={elimDietImage} alt="Colourful fresh vegetables and healthy ingredients for an elimination diet" class="w-full h-auto rounded-xl mb-8" width={800} height={450} loading="lazy" format="webp" />
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">What Is an Elimination Diet?</h2>
+<p class="text-slate-600 mb-4">An elimination diet is a structured, short-term dietary protocol in which you remove one or more suspected trigger foods from your diet, monitor your symptoms, and then systematically reintroduce each food to observe whether symptoms return. According to the British Dietetic Association (BDA), a properly conducted elimination diet followed by controlled reintroduction is considered the <strong>gold standard</strong> for identifying food intolerances.</p>
+<p class="text-slate-600 mb-4">Unlike commercial IgG blood tests — which multiple medical organisations advise against — elimination diets directly measure your body's response to specific foods in real time. This makes them both more reliable and more personalised.</p>
+
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">Who Should Consider an Elimination Diet?</h2>
+<p class="text-slate-600 mb-4">An elimination diet may be appropriate if you experience recurring digestive symptoms — such as bloating, diarrhoea, gas, or abdominal pain — that seem to correlate with certain foods. It may also help with non-digestive symptoms like headaches, fatigue, skin flare-ups, or joint pain that you suspect are food-related.</p>
+<p class="text-slate-600 mb-4">However, an elimination diet is <strong>not appropriate</strong> if you have a history of eating disorders, are pregnant or breastfeeding (without medical supervision), or if you are a child. In these cases, always consult a healthcare professional first.</p>
+
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">Step 1: Preparation (1 week)</h2>
+<p class="text-slate-600 mb-4">Keep a detailed food and symptom diary for at least one week before starting. Record everything you eat and drink, the time of consumption, and any symptoms that follow — including their severity and duration. This establishes your <strong>baseline</strong> and helps you identify patterns you may not have noticed.</p>
+<p class="text-slate-600 mb-4">During this phase, also plan which food or food group you will eliminate. Common starting points include:</p>
+<ul class="list-disc list-inside text-slate-600 space-y-2 mb-4">
+  <li><strong>Dairy</strong> (lactose) — milk, cheese, yogurt, butter, cream</li>
+  <li><strong>Gluten</strong> — wheat, barley, rye, and products containing them</li>
+  <li><strong>High FODMAP foods</strong> — a broader elimination targeting fermentable carbohydrates</li>
+  <li><strong>Eggs, soy, or nuts</strong> — less common but relevant for some individuals</li>
+</ul>
+<p class="text-slate-600 mb-4">Use our <a href="/tools/food-diary" class="text-brand-600 hover:text-brand-700 underline">Food Diary tool</a> to track your baseline week digitally.</p>
+
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">Step 2: Elimination (2-4 weeks)</h2>
+<p class="text-slate-600 mb-4">Remove the suspect food or food group <strong>completely</strong> from your diet. This means reading ingredient labels carefully — many processed foods contain hidden triggers. For example, lactose can appear in bread, sauces, and even some medications. Gluten hides in soy sauce, soups, and many pre-packaged meals.</p>
+<p class="text-slate-600 mb-4">During this phase, you should notice whether your symptoms improve. Most people see a meaningful change within 2-3 weeks if the eliminated food was indeed a trigger. If there is no improvement after 4 weeks, the eliminated food is likely not the cause, and you should discuss other possibilities with your GP.</p>
+<p class="text-slate-600 mb-4">Keep your food and symptom diary going throughout the elimination phase. Note any changes in symptom frequency, severity, and type.</p>
+
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">Step 3: Reintroduction (1-2 weeks per food)</h2>
+<p class="text-slate-600 mb-4">This is the most critical phase. Reintroduce <strong>one food at a time</strong>, with at least 3 days between each new food. Follow this protocol:</p>
+<ul class="list-disc list-inside text-slate-600 space-y-2 mb-4">
+  <li><strong>Day 1:</strong> Eat a small amount of the test food (e.g., half a glass of milk for lactose)</li>
+  <li><strong>Day 2:</strong> If no symptoms, eat a normal portion</li>
+  <li><strong>Day 3:</strong> Observe. If symptoms return, this food is likely a trigger</li>
+  <li>Wait at least 3 symptom-free days before testing the next food</li>
+</ul>
+<p class="text-slate-600 mb-4">Record the food tested, the amount, and any symptoms with their timing. A symptom that appears within 24-72 hours of reintroduction is a strong indicator of intolerance.</p>
+
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">Step 4: Personalisation</h2>
+<p class="text-slate-600 mb-4">After completing reintroduction, you will have a clear picture of which foods trigger symptoms and which do not. Work with your dietitian to build a long-term diet that avoids only your confirmed triggers while maximising nutritional variety. The goal is <strong>not</strong> to eliminate foods unnecessarily — overly restrictive diets can lead to nutritional deficiencies.</p>
+
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">Common Mistakes to Avoid</h2>
+<ul class="list-disc list-inside text-slate-600 space-y-2 mb-4">
+  <li><strong>Eliminating too many foods at once</strong> — makes it impossible to identify the specific trigger</li>
+  <li><strong>Not reading labels</strong> — hidden ingredients can sabotage the elimination phase</li>
+  <li><strong>Rushing reintroduction</strong> — testing multiple foods simultaneously invalidates results</li>
+  <li><strong>Stopping too early</strong> — some intolerances take 2-3 weeks of elimination to show improvement</li>
+  <li><strong>Not keeping a diary</strong> — without records, you cannot draw reliable conclusions</li>
+</ul>
+
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">Important Safety Notes</h2>
+<ul class="list-disc list-inside text-slate-600 space-y-2 mb-4">
+  <li>Always undertake an elimination diet under the supervision of a GP or registered dietitian</li>
+  <li>Do not eliminate multiple food groups at once without professional guidance</li>
+  <li>Never eliminate foods if you have a history of eating disorders</li>
+  <li>Children and pregnant women should only do this under medical supervision</li>
+  <li>If you experience severe symptoms (unexplained weight loss, blood in stools, persistent vomiting), see your GP promptly — these are not typical food intolerance symptoms</li>
+</ul>
+
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">References</h2>
+<ul class="list-disc list-inside text-slate-500 text-sm space-y-1 mb-4">
+  <li>British Dietetic Association (BDA) — Elimination Diet Fact Sheet</li>
+  <li>NHS UK — Food Intolerance</li>
+  <li>Guts UK — Food Intolerance and IBS</li>
+  <li>Monash University — Low FODMAP Diet</li>
+</ul>
+</main>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Do an Elimination Diet",
+  "description": "A step-by-step guide to conducting an elimination diet to identify food intolerance triggers through structured elimination and reintroduction.",
+  "totalTime": "P8W",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Preparation",
+      "text": "Keep a detailed food and symptom diary for at least one week before starting. Record everything you eat and drink, the time of consumption, and any symptoms. Plan which food or food group you will eliminate.",
+      "url": "https://foodintolerancecheck.com/blog/elimination-diet-guide#step-1"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Elimination",
+      "text": "Remove the suspect food completely from your diet for 2-4 weeks. Read ingredient labels carefully. Monitor whether symptoms improve during this phase.",
+      "url": "https://foodintolerancecheck.com/blog/elimination-diet-guide#step-2"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Reintroduction",
+      "text": "Reintroduce one food at a time, with at least 3 days between each new food. Start with a small amount on Day 1, a normal portion on Day 2, and observe on Day 3. Record all symptoms and timing.",
+      "url": "https://foodintolerancecheck.com/blog/elimination-diet-guide#step-3"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Personalisation",
+      "text": "After completing reintroduction, work with your dietitian to build a long-term diet that avoids only your confirmed triggers while maximising nutritional variety.",
+      "url": "https://foodintolerancecheck.com/blog/elimination-diet-guide#step-4"
+    }
+  ]
+}
+</script>
+<Footer /></BaseLayout>

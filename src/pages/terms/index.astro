@@ -1,0 +1,54 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import { Image } from 'astro:assets';
+import termsImage from '../../assets/images/books-guides.jpg';
+---
+<BaseLayout title="Terms of Service - Educational Food Intolerance Resources" description="FoodCheck terms of service. Important information about using our educational food intolerance tools and content.">
+<Header />
+<main class="max-w-3xl mx-auto px-4 sm:px-6 py-16 md:py-24">
+  <h1 class="text-4xl font-semibold text-slate-900 mb-6 tracking-tight">Terms of Service</h1>
+  <p class="text-sm text-slate-400 mb-8">Last updated: July 2026</p>
+
+  <p class="text-lg text-slate-500 mb-8">By accessing and using FoodCheck (foodintolerancecheck.com), you agree to the following terms.</p>
+  <Image src={termsImage} alt="Legal documents and terms of service guidelines" class="w-full h-auto rounded-xl mb-8" width={800} height={450} loading="lazy" format="webp" />
+
+  <h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">Educational Purpose Only</h2>
+  <p class="text-slate-600 mb-4">FoodCheck is an <strong>educational resource</strong>. Our tools and content are designed to help you explore possible food intolerances and start informed conversations with healthcare providers.</p>
+  <p class="text-slate-600 mb-4">FoodCheck does <strong>not</strong>:</p>
+  <ul class="list-disc list-inside text-slate-600 space-y-2 mb-6">
+    <li>Provide medical diagnosis of any kind</li>
+    <li>Replace professional medical advice, diagnosis, or treatment</li>
+    <li>Recommend specific treatments or dietary changes without professional oversight</li>
+    <li>Guarantee the accuracy of self-assessment results</li>
+  </ul>
+
+  <h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">Not a Substitute for Medical Care</h2>
+  <p class="text-slate-600 mb-4">Always consult your GP, a gastroenterologist, or a registered dietitian before making any significant dietary changes. Never disregard professional medical advice or delay seeking it because of information found on this website.</p>
+  <p class="text-slate-600 mb-4">If you experience severe symptoms — such as difficulty breathing, swelling of the face or throat, or signs of anaphylaxis — seek emergency medical attention immediately.</p>
+
+  <h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">Use of Tools</h2>
+  <p class="text-slate-600 mb-4">Our self-assessment tools (Food Intolerance Checker, individual intolerance checkers) are for personal, non-commercial use only. Results are indicative only and should always be discussed with a qualified healthcare professional.</p>
+  <p class="text-slate-600 mb-4">The Food Diary tool stores data locally in your browser. You are responsible for managing and backing up your own data.</p>
+
+  <h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">Content Accuracy</h2>
+  <p class="text-slate-600 mb-4">We strive to provide accurate, evidence-based information sourced from reputable medical organisations including the NHS, British Dietetic Association, Guts UK, and AAAAI. However, medical knowledge evolves and we cannot guarantee that all content is current or applicable to your specific situation.</p>
+
+  <h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">Limitation of Liability</h2>
+  <p class="text-slate-600 mb-4">FoodCheck and its contributors are not liable for any decisions, actions, or outcomes resulting from the use of information or tools provided on this website. Use of this site is at your own risk.</p>
+
+  <h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">Intellectual Property</h2>
+  <p class="text-slate-600 mb-4">All content on FoodCheck — including text, graphics, logos, and software — is the property of FoodCheck and is protected by applicable intellectual property laws. You may share links to our content but may not reproduce or redistribute our content without permission.</p>
+
+  <h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">External Links</h2>
+  <p class="text-slate-600 mb-4">Our site may contain links to external websites (such as NHS or BDA). We are not responsible for the content or privacy practices of these external sites.</p>
+
+  <h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">Changes to These Terms</h2>
+  <p class="text-slate-600 mb-4">We may update these terms from time to time. Continued use of the site after changes constitutes acceptance of the revised terms.</p>
+
+  <h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">Contact</h2>
+  <p class="text-slate-600">Questions about these terms? Visit our <a href="/about" class="text-brand-600 hover:text-brand-700 underline">About page</a> to get in touch.</p>
+</main>
+<Footer />
+</BaseLayout>

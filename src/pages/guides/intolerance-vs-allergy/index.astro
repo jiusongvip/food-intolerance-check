@@ -1,0 +1,37 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import { Image } from 'astro:assets';
+import allergyImage from '../../../assets/images/allergy-compare.jpg';
+---
+<BaseLayout title="Food Intolerance vs Food Allergy - Key Differences Explained" description="Learn the key differences between food intolerance and food allergy — symptoms, mechanisms, diagnosis, and when to seek emergency care. Clear comparison included." author="Dr. Emily Carter, Registered Dietitian" datePublished="2026-01-10" dateModified="2026-07-20" breadcrumbs={[{ label: 'Guides', href: '/guides' }, { label: 'Intolerance vs Allergy', href: '/guides/intolerance-vs-allergy' }]}" medical={true}>
+  <Header />
+  <main class="max-w-3xl mx-auto px-4 sm:px-6 py-16 md:py-24">
+    <h1 class="text-4xl font-semibold text-slate-900 mb-6 tracking-tight">Food Intolerance vs Food Allergy</h1>
+    <p class="text-lg text-slate-500 mb-4">Understanding the difference is critical for your health and safety.</p>
+    <p class="text-sm text-slate-400 mb-8">By Dr. Emily Carter, Registered Dietitian · Updated 20 Jul 2026</p>
+    <Image src={allergyImage} alt="Comparison of food allergy and food intolerance symptoms" class="w-full h-auto rounded-xl mb-8" width={800} height={450} loading="lazy" format="webp" />
+    <h2 class="text-2xl font-semibold text-slate-900 mb-4">Intolerance vs Allergy: Side-by-Side Comparison</h2>
+    <div class="overflow-x-auto mb-10">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="border-b-2 border-slate-200">
+            <th class="text-left py-3 pr-4 font-semibold text-slate-900">Aspect</th>
+            <th class="text-left py-3 px-4 font-semibold text-brand-700 bg-brand-50/50">Food Intolerance</th>
+            <th class="text-left py-3 pl-4 font-semibold text-red-700 bg-red-50/50">Food Allergy</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr><td class="py-3 pr-4 font-medium text-slate-700">System involved</td><td class="py-3 px-4 text-slate-600 bg-brand-50/30">Digestive system</td><td class="py-3 pl-4 text-slate-600 bg-red-50/30">Immune system</td></tr>
+          <tr><td class="py-3 pr-4 font-medium text-slate-700">Onset</td><td class="py-3 px-4 text-slate-600 bg-brand-50/30">Gradual (hours to days)</td><td class="py-3 pl-4 text-slate-600 bg-red-50/30">Rapid (minutes to 2 hours)</td></tr>
+          <tr><td class="py-3 pr-4 font-medium text-slate-700">Severity</td><td class="py-3 px-4 text-slate-600 bg-brand-50/30">Uncomfortable, not life-threatening</td><td class="py-3 pl-4 text-slate-600 bg-red-50/30">Can be life-threatening (anaphylaxis)</td></tr>
+          <tr><td class="py-3 pr-4 font-medium text-slate-700">Amount of food</td><td class="py-3 px-4 text-slate-600 bg-brand-50/30">Dose-dependent</td><td class="py-3 pl-4 text-slate-600 bg-red-50/30">Tiny amounts can trigger</td></tr>
+          <tr><td class="py-3 pr-4 font-medium text-slate-700">Common examples</td><td class="py-3 px-4 text-slate-600 bg-brand-50/30">Lactose, gluten, histamine</td><td class="py-3 pl-4 text-slate-600 bg-red-50/30">Peanuts, tree nuts, shellfish, eggs</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="text-sm text-slate-500">This is a simplified overview. Always consult a healthcare professional for assessment and diagnosis.</p>
+  </main>
+  <Footer />
+</BaseLayout>

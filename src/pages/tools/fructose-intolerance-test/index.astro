@@ -1,0 +1,35 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import { Image } from 'astro:assets';
+import fructoseImage from '../../../assets/images/fruits-fructose.jpg';
+---
+<BaseLayout title="Fructose Intolerance Checker - Free Self-Assessment Tool" description="Bloating or discomfort after fruit or honey? Our free fructose intolerance checker helps identify possible malabsorption patterns. Educational tool only." breadcrumbs={[{ label: 'Tools', href: '/tools' }, { label: 'Fructose Intolerance Checker', href: '/tools/fructose-intolerance-test' }]}">
+<Header /><main>
+<section class="pt-16 pb-8 md:pt-24 px-4 sm:px-6 max-w-6xl mx-auto">
+<div class="max-w-2xl mx-auto text-center">
+<h1 class="text-4xl md:text-5xl font-semibold tracking-tight text-slate-900 leading-none mb-4">Fructose Intolerance Checker</h1>
+<p class="text-lg text-slate-500 max-w-lg mx-auto">5 questions to explore possible fructose malabsorption. Educational tool only.</p>
+</div>
+<div class="mt-8 max-w-2xl mx-auto"><Image src={fructoseImage} alt="Fresh fruits and honey containing natural fructose" class="w-full h-auto rounded-xl" width={800} height={450} loading="lazy" format="webp" /></div>
+</section>
+<section class="pb-16 md:pb-24 px-4 sm:px-6 max-w-6xl mx-auto"><div class="max-w-xl mx-auto">
+<h2 class="text-2xl font-semibold text-slate-900 mb-4 text-center">Take the Assessment</h2>
+<div class="bg-white border border-slate-200 rounded-2xl shadow-sm p-6 sm:p-8">
+<div class="space-y-6" id="fructose-quiz"><p class="text-center text-slate-400 text-sm">Select your answers to get your result.</p></div>
+<div id="fructose-result" class="hidden"></div>
+</div><div class="mt-8 bg-amber-50 border border-amber-200 rounded-xl p-4 text-xs text-amber-800">Not a medical diagnosis. Consult your GP or a dietitian.</div>
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">About This Checker</h2>
+<p class="text-slate-600 text-sm mb-4">This fructose intolerance checker explores your symptoms after eating fruit, honey, and high-fructose foods. Fructose malabsorption occurs when the small intestine cannot efficiently absorb fructose, leading to bloating, gas, and altered bowel habits.</p>
+<p class="text-slate-600 text-sm">A hydrogen breath test for fructose, available through your GP, is the gold standard for confirming fructose malabsorption.</p>
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">Related Resources</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<a href="/blog/low-fodmap-foods" class="block bg-slate-50 border border-slate-200 rounded-lg p-4 hover:border-brand-300 transition-colors no-underline"><p class="text-sm font-medium text-slate-900 mb-1">Low FODMAP Food List</p><p class="text-xs text-slate-500">High and low fructose foods reference guide.</p></a>
+<a href="/tools/food-diary" class="block bg-slate-50 border border-slate-200 rounded-lg p-4 hover:border-brand-300 transition-colors no-underline"><p class="text-sm font-medium text-slate-900 mb-1">Food Diary</p><p class="text-xs text-slate-500">Track fruit intake and fructose symptoms.</p></a>
+<a href="/guides/test-guide" class="block bg-slate-50 border border-slate-200 rounded-lg p-4 hover:border-brand-300 transition-colors no-underline"><p class="text-sm font-medium text-slate-900 mb-1">Testing Guide</p><p class="text-xs text-slate-500">Hydrogen breath tests for fructose malabsorption.</p></a>
+<a href="/blog/elimination-diet-guide" class="block bg-slate-50 border border-slate-200 rounded-lg p-4 hover:border-brand-300 transition-colors no-underline"><p class="text-sm font-medium text-slate-900 mb-1">Elimination Diet Guide</p><p class="text-xs text-slate-500">Structured protocol to confirm fructose triggers.</p></a>
+</div>
+</div></section>
+</main><Footer /></BaseLayout>
+<script is:inline src="/js/fructose-checker.js"></script>

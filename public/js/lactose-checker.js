@@ -1,0 +1,19 @@
+(function(){
+var a=[],s=0;
+var Q=[{q:"Do you experience bloating or gas after consuming milk?",desc:"This is the most common symptom of lactose intolerance.",opts:[{v:"yes",l:"Yes, often"},{v:"sometimes",l:"Sometimes"},{v:"no",l:"Rarely or never"}]},{q:"Do you get diarrhea after eating cheese or ice cream?",desc:"Undigested lactose draws water into the bowel.",opts:[{v:"yes",l:"Yes, frequently"},{v:"sometimes",l:"Occasionally"},{v:"no",l:"Rarely or never"}]},{q:"Do symptoms improve when you avoid dairy for a few days?",desc:"A positive response to dairy elimination is a strong indicator.",opts:[{v:"yes",l:"Yes, noticeably"},{v:"sometimes",l:"Slightly"},{v:"no",l:"No change"}]},{q:"Are you of Asian, African, or Southern European descent?",desc:"Lactose intolerance is more common in these populations.",opts:[{v:"yes",l:"Yes"},{v:"no",l:"No"}]},{q:"Did your symptoms begin or worsen in adulthood?",desc:"Lactose intolerance typically develops in adolescence or adulthood.",opts:[{v:"yes",l:"Yes, as an adult"},{v:"no",l:"Since childhood"},{v:"unsure",l:"Not sure"}]}];
+function calcScore(){
+var y=0;a.forEach(function(v){if(v==='yes')y++;});
+if(y>=4)return{level:'High',cls:'bg-red-50 border-red-200',txt:'text-red-900',badge:'bg-red-100 text-red-700',label:'Strong possibility'};
+if(y>=3)return{level:'Moderate',cls:'bg-amber-50 border-amber-200',txt:'text-amber-900',badge:'bg-amber-100 text-amber-700',label:'Possible'};
+return{level:'Low',cls:'bg-emerald-50 border-emerald-200',txt:'text-emerald-900',badge:'bg-emerald-100 text-emerald-700',label:'Unlikely'};}
+function rend(){
+var h='',el=document.getElementById('lactose-quiz');
+if(s<Q.length){var q=Q[s];h='<div class="space-y-4"><h3 class="text-lg font-semibold text-slate-800">'+(s+1)+'. '+q.q+'</h3><p class="text-sm text-slate-500">'+q.desc+'</p><div class="flex gap-3">';q.opts.forEach(function(o){h+='<button class="quiz-opt flex-1 px-4 py-3 rounded-xl border-2 border-slate-200 text-sm font-medium text-slate-600 hover:border-brand-300 hover:bg-brand-50 transition-all" data-val="'+o.v+'">'+o.l+'</button>';});h+='</div></div>';}
+else{var r=calcScore();h='<div class="space-y-4"><h3 class="text-xl font-semibold text-slate-900">Your Result</h3><div class="border-2 '+r.cls+' rounded-xl p-5"><div class="flex items-center gap-3 mb-3"><div class="w-12 h-12 rounded-full '+r.badge+' flex items-center justify-center shrink-0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div><div><h3 class="font-semibold '+r.txt+' text-lg">'+r.label+'</h3><span class="text-xs font-medium '+r.badge+' px-2 py-0.5 rounded-full">'+r.level+' likelihood</span></div></div><p class="text-sm '+r.txt+' mb-4 opacity-85">Lactose intolerance occurs when the body cannot produce enough lactase enzyme to digest milk sugar. It affects up to 65% of the global population.</p>';
+if(r.level!=='Low'){h+='<div class="space-y-2 mb-4"><p class="text-sm font-semibold '+r.txt+'">Next steps:</p><ul class="text-sm '+r.txt+' opacity-85 space-y-1 list-disc list-inside"><li>Keep a food and symptom diary</li><li>Try a 2-week dairy elimination diet</li><li>Ask your GP about a hydrogen breath test</li></ul></div>';h+='<a href="/guides/test-guide" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-brand-600 text-white text-sm font-medium hover:bg-brand-700 transition-colors no-underline">Learn more about testing</a>';}
+h+='</div><button onclick="location.reload()" class="mt-3 px-4 py-2 rounded-xl border-2 border-slate-200 text-sm text-slate-600 hover:bg-slate-50 transition-all">Start Over</button></div>';}
+el.innerHTML=h;
+el.querySelectorAll('.quiz-opt').forEach(function(b){b.onclick=function(){a[s]=b.dataset.val;s++;rend();};});
+}
+rend();
+})();

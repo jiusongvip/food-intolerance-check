@@ -1,0 +1,33 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import { Image } from 'astro:assets';
+import labImage from '../../../assets/images/lab-testing.jpg';
+---
+<BaseLayout title="Food Intolerance Test Guide - Breath Tests, IgG & Elimination Diets" description="Compare food intolerance testing options: hydrogen breath tests, IgG blood tests, elimination diets, and what NHS doctors actually recommend. Evidence-based guide." author="Dr. Emily Carter, Registered Dietitian" datePublished="2026-01-20" dateModified="2026-07-20" breadcrumbs={[{ label: 'Guides', href: '/guides' }, { label: 'Test Guide', href: '/guides/test-guide' }]}" medical={true}>
+<Header />
+<main class="max-w-3xl mx-auto px-4 sm:px-6 py-16 md:py-24">
+<h1 class="text-4xl font-semibold text-slate-900 mb-6 tracking-tight">Food Intolerance Testing Guide</h1>
+<p class="text-lg text-slate-500 mb-4">Not all tests are created equal. Here's what the evidence says about each type.</p>
+<p class="text-sm text-slate-400 mb-8">By Dr. Emily Carter, Registered Dietitian · Updated 20 Jul 2026</p>
+<Image src={labImage} alt="Doctor reviewing food intolerance test results with a patient" class="w-full h-auto rounded-xl mb-8" width={800} height={450} loading="lazy" format="webp" />
+<h2 class="text-2xl font-semibold text-slate-900 mb-4">Food Intolerance Testing Methods Compared</h2>
+<div class="overflow-x-auto mb-10">
+<table class="w-full text-sm border-collapse">
+<thead><tr class="border-b-2 border-slate-200">
+<th class="text-left py-3 pr-4 font-semibold text-slate-900">Test Type</th>
+<th class="text-left py-3 px-4 font-semibold text-slate-900">How It Works</th>
+<th class="text-left py-3 pl-4 font-semibold text-slate-900">Evidence</th>
+</tr></thead>
+<tbody class="divide-y divide-slate-100">
+<tr><td class="py-3 pr-4 font-medium text-slate-700">Hydrogen Breath Test</td><td class="py-3 px-4 text-slate-600">Measures hydrogen in breath after consuming a sugar solution</td><td class="py-3 pl-4"><span class="text-xs font-medium bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full">Evidence-based</span></td></tr>
+<tr><td class="py-3 pr-4 font-medium text-slate-700">Lactose Tolerance Test</td><td class="py-3 px-4 text-slate-600">Blood glucose measured after lactose consumption</td><td class="py-3 pl-4"><span class="text-xs font-medium bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full">Evidence-based</span></td></tr>
+<tr><td class="py-3 pr-4 font-medium text-slate-700">Elimination Diet</td><td class="py-3 px-4 text-slate-600">Systematic removal and reintroduction of suspect foods</td><td class="py-3 pl-4"><span class="text-xs font-medium bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full">Gold standard</span></td></tr>
+<tr><td class="py-3 pr-4 font-medium text-slate-700">IgG Blood Test</td><td class="py-3 px-4 text-slate-600">Measures IgG antibodies to specific foods</td><td class="py-3 pl-4"><span class="text-xs font-medium bg-red-100 text-red-700 px-2 py-0.5 rounded-full">Not recommended</span></td></tr>
+<tr><td class="py-3 pr-4 font-medium text-slate-700">Skin Prick Test</td><td class="py-3 px-4 text-slate-600">Small amounts of allergen placed on skin</td><td class="py-3 pl-4"><span class="text-xs font-medium bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full">For allergy only</span></td></tr>
+</tbody></table></div>
+<p class="text-sm text-slate-500">References: NHS, BDA, Guts UK, AAAAI. Always consult your GP before pursuing any testing.</p>
+</main>
+<Footer />
+</BaseLayout>

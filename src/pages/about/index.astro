@@ -1,0 +1,71 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import { Image } from 'astro:assets';
+import aboutImage from '../../assets/images/doctor-health.jpg';
+---
+<BaseLayout title="About FoodCheck - Our Approach to Food Intolerance Education" description="About FoodCheck — an educational tool designed to help people explore possible food intolerances and start informed conversations with their healthcare providers." breadcrumbs={[{ label: 'About', href: '/about' }]}">
+  <Header />
+  <main class="max-w-3xl mx-auto px-4 sm:px-6 py-16 md:py-24">
+    <h1 class="text-4xl font-semibold text-slate-900 mb-6 tracking-tight">About FoodCheck</h1>
+    <p class="text-lg text-slate-500 mb-6">FoodCheck is a free educational platform designed to help people explore possible food intolerances, understand their symptoms, and start informed conversations with healthcare providers.</p>
+    <Image src={aboutImage} alt="Healthcare professional providing evidence-based nutritional guidance" class="w-full h-auto rounded-xl mb-8" width={800} height={450} loading="lazy" format="webp" />
+    <p class="text-slate-600 mb-4">Founded with the belief that everyone deserves access to clear, evidence-based health information, FoodCheck provides self-assessment tools, guides, and educational content — all at no cost and with no data collection.</p>
+
+    <h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">Our Mission</h2>
+    <p class="text-slate-600 mb-4">Food intolerance affects an estimated 15-20% of the population, yet many people struggle to find reliable information online. Commercial testing companies often promote unvalidated tests, and conflicting advice makes it difficult to know where to start. FoodCheck was created to bridge this gap by providing:</p>
+    <ul class="list-disc list-inside text-slate-600 space-y-2 mb-6">
+      <li><strong>Free self-assessment tools</strong> that run entirely in your browser — no sign-up, no data collected</li>
+      <li><strong>Evidence-based guides</strong> grounded in current medical literature and clinical guidelines</li>
+      <li><strong>Transparent information</strong> about what tests work, which don't, and what doctors actually recommend</li>
+      <li><strong>Clear next steps</strong> to help you have productive conversations with your GP or dietitian</li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">Our Approach</h2>
+    <p class="text-slate-600 mb-4">We believe in evidence-based, transparent health information. Our checker uses common symptom patterns documented in medical literature to suggest possible food intolerances, but it is <strong>not a diagnostic tool</strong>. Every piece of content on FoodCheck is reviewed for accuracy against current clinical guidelines from reputable medical organisations.</p>
+    <p class="text-slate-600 mb-4">Our tools are designed to complement — not replace — professional medical advice. The best outcome is when a FoodCheck user walks into their GP's appointment with better questions and a clearer understanding of their symptoms.</p>
+
+    <h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">Our Content Team</h2>
+    <div class="bg-white border border-slate-200 rounded-xl p-6 mb-6">
+      <div class="flex items-start gap-4">
+        <div class="w-12 h-12 rounded-full bg-brand-100 flex items-center justify-center shrink-0">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0d9488" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <div>
+          <h3 class="font-semibold text-slate-900">Dr. Emily Carter, Registered Dietitian</h3>
+          <p class="text-sm text-slate-500 mb-2">Lead Content Author & Medical Reviewer</p>
+          <p class="text-sm text-slate-600">Dr. Carter is a registered dietitian with over 12 years of clinical experience in gastroenterology and food intolerance management. She specialises in evidence-based dietary approaches including elimination diets and the low FODMAP protocol, and has worked with both NHS and private practice patients.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">Editorial Standards</h2>
+    <ul class="list-disc list-inside text-slate-600 space-y-2 mb-6">
+      <li>All health content is based on current clinical guidelines and peer-reviewed research</li>
+      <li>Medical claims are referenced with links to reputable sources (NHS, BDA, NICE, AAAAI)</li>
+      <li>Content is reviewed for accuracy before publication and updated when new evidence emerges</li>
+      <li>We clearly distinguish between evidence-based recommendations and unvalidated approaches</li>
+      <li>We never recommend commercial products or tests that lack scientific support</li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">Important Disclaimer</h2>
+    <p class="text-slate-600 mb-4">This website provides educational content only. It does not provide medical diagnosis, treatment, or advice. Always consult your GP, a gastroenterologist, or a registered dietitian for medical concerns. If you experience severe symptoms — such as difficulty breathing, swelling, or anaphylaxis — seek emergency medical attention immediately.</p>
+
+    <h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">Our References</h2>
+    <p class="text-slate-600 mb-4">FoodCheck content is informed by guidelines and research from the following organisations:</p>
+    <ul class="list-disc list-inside text-slate-600 space-y-1 mb-6">
+      <li>National Health Service (NHS) UK</li>
+      <li>British Dietetic Association (BDA)</li>
+      <li>NICE Guidelines (National Institute for Health and Care Excellence)</li>
+      <li>Guts UK Charity</li>
+      <li>Monash University — Low FODMAP Diet Research</li>
+      <li>American Academy of Allergy, Asthma & Immunology (AAAAI)</li>
+      <li>European Academy of Allergy and Clinical Immunology (EAACI)</li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">Contact</h2>
+    <p class="text-slate-600 mb-4">Have a question, suggestion, or correction? We welcome feedback to help us improve our content. Reach out through our <a href="/faq" class="text-brand-600 hover:text-brand-700 underline">FAQ page</a> or report issues with specific content directly on the relevant page.</p>
+  </main>
+  <Footer />
+</BaseLayout>

@@ -1,0 +1,96 @@
+---
+import '../styles/global.css';
+
+export interface Props {
+  title: string;
+  description: string;
+  ogImage?: string;
+  author?: string;
+  datePublished?: string;
+  dateModified?: string;
+  breadcrumbs?: { label: string; href: string }[];
+  medical?: boolean;
+}
+const { title, description, ogImage, author, datePublished, dateModified, breadcrumbs, medical } = Astro.props;
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site || 'https://foodintolerancecheck.com').href;
+const ogImageUrl = ogImage || new URL('/og-default.png', Astro.site || 'https://foodintolerancecheck.com').href;
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:site_name" content="FoodCheck" />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
+    <title>{title}</title>
+    {author && datePublished && (
+      <script type="application/ld+json" set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": title,
+        "description": description,
+        "image": ogImageUrl,
+        "author": { "@type": "Person", "name": author },
+        "publisher": {
+          "@type": "Organization",
+          "name": "FoodCheck",
+          "url": "https://foodintolerancecheck.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://foodintolerancecheck.com/og-default.png"
+          }
+        },
+        "datePublished": datePublished,
+        "dateModified": dateModified || datePublished,
+        "mainEntityOfPage": canonicalUrl
+      })} />
+    )}
+    {breadcrumbs && (
+      <script type="application/ld+json" set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://foodintolerancecheck.com" },
+          ...breadcrumbs.map((b, i) => ({
+            "@type": "ListItem",
+            "position": i + 2,
+            "name": b.label,
+            "item": `https://foodintolerancecheck.com${b.href}`
+          }))
+        ]
+      })} />
+    )}
+    {medical && (
+      <script type="application/ld+json" set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "MedicalWebPage",
+        "name": title,
+        "description": description,
+        "url": canonicalUrl,
+        "about": {
+          "@type": "MedicalCondition",
+          "name": "Food Intolerance"
+        },
+        ...(author ? { "reviewedBy": { "@type": "Person", "name": author } } : {}),
+        "specialty": "Gastroenterology",
+        "lastReviewed": dateModified || datePublished || undefined
+      })} />
+    )}
+  </head>
+  <body class="font-sans text-slate-700 antialiased bg-white">
+    <slot />
+  </body>
+</html>

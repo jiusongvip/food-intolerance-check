@@ -1,0 +1,62 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import { Image } from 'astro:assets';
+import labImage from '../../../assets/images/lab-testing.jpg';
+---
+<BaseLayout title="Are Food Intolerance Tests Accurate? - FoodCheck" description="What does the evidence say about food intolerance tests? A look at IgG tests, breath tests, and which methods doctors actually recommend." author="Dr. Emily Carter, Registered Dietitian" datePublished="2026-03-05" dateModified="2026-07-20" breadcrumbs={[{ label: 'Blog', href: '/blog' }, { label: 'Are Food Intolerance Tests Accurate?', href: '/blog/are-food-intolerance-tests-accurate' }]}" medical={true}>
+<Header /><main class="max-w-3xl mx-auto px-4 sm:px-6 py-16 md:py-24">
+<h1 class="text-4xl font-semibold text-slate-900 mb-6 tracking-tight">Are Food Intolerance Tests Accurate?</h1>
+<p class="text-lg text-slate-500 mb-4">Not all tests are created equal. Here is what the evidence says about the most common food intolerance testing methods.</p>
+<p class="text-sm text-slate-400 mb-8">By Dr. Emily Carter, Registered Dietitian · Published 5 Mar 2026 · Updated 20 Jul 2026</p>
+<Image src={labImage} alt="Medical laboratory testing equipment and samples" class="w-full h-auto rounded-xl mb-8" width={800} height={450} loading="lazy" format="webp" />
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">The Problem with Commercial Food Intolerance Tests</h2>
+<p class="text-slate-600 mb-4">The commercial food intolerance testing industry is worth billions, yet many of the most popular tests lack scientific validation. Before spending money on a test, it is essential to understand which methods are backed by evidence and which are not. Here is a breakdown of the most common testing approaches.</p>
+
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">IgG Blood Tests</h2>
+<p class="text-slate-600 mb-4">IgG tests measure immunoglobulin G antibodies to specific foods. However, the NHS, BDA, and AAAAI <strong>do not recommend</strong> IgG testing for food intolerance. The presence of IgG antibodies may simply indicate <em>exposure</em> to a food, not intolerance. A 2018 review in <em>Allergy, Asthma & Clinical Immunology</em> concluded there is insufficient evidence to support IgG testing for food intolerance diagnosis.</p>
+<p class="text-slate-600 mb-4">Despite this, IgG tests remain widely marketed and sold directly to consumers. A 2020 investigation by the BBC found that some companies selling these tests could not provide evidence that their results correlated with clinical outcomes. The European Academy of Allergy and Clinical Immunology (EAACI) has also issued a position paper advising against IgG and IgG4 testing for food intolerance.</p>
+<p class="text-slate-600 mb-4"><strong>The risk:</strong> IgG test results may lead people to unnecessarily restrict their diet, potentially causing nutritional deficiencies and anxiety around food — without actually addressing the underlying problem.</p>
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">Hydrogen Breath Tests</h2>
+<p class="text-slate-600 mb-4">Hydrogen breath tests for lactose and fructose malabsorption are <strong>evidence-based and recommended</strong> by clinical guidelines. They measure hydrogen gas produced when undigested sugars are fermented by gut bacteria. These tests have good sensitivity and specificity when performed correctly.</p>
+<p class="text-slate-600 mb-4">The test involves fasting overnight, consuming a measured dose of the test sugar (e.g., 25g of lactose dissolved in water), then breathing into a device at regular intervals over 2-3 hours. A rise in breath hydrogen of <strong>20 ppm or more</strong> above baseline is typically considered positive for malabsorption.</p>
+<p class="text-slate-600 mb-4">Breath tests are usually performed in hospital gastroenterology departments or specialist clinics. They are non-invasive, relatively inexpensive, and provide objective data. They are considered the first-line diagnostic tool for lactose and fructose malabsorption.</p>
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">Elimination Diets</h2>
+<p class="text-slate-600 mb-4">A properly conducted elimination diet followed by controlled reintroduction is considered the <strong>gold standard</strong> for identifying food intolerances. However, it requires discipline, time (typically 4-8 weeks), and ideally supervision by a registered dietitian. <a href="/blog/elimination-diet-guide" class="text-brand-600 hover:text-brand-700 underline">See our step-by-step elimination diet guide</a> for more detail.</p>
+<p class="text-slate-600 mb-4">Unlike blood tests or breath tests, elimination diets measure your body's actual response to food removal and reintroduction in real-world conditions. They can identify intolerances that breath tests cannot detect (e.g., reactions to food additives, histamine, or salicylates).</p>
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">Other Tests with Limited Evidence</h2>
+<ul class="list-disc list-inside text-slate-600 space-y-2 mb-6">
+  <li><strong>Hair analysis</strong> — no scientific basis for food intolerance testing. Hair does not contain reliable markers of food sensitivity.</li>
+  <li><strong>Vega testing (electrodermal)</strong> — measures electrical resistance at acupuncture points. Multiple studies have shown it is no more accurate than a placebo.</li>
+  <li><strong>Kinesiology (muscle testing)</strong> — tests muscle strength response to food placed on the tongue. No peer-reviewed evidence supports its use for food intolerance diagnosis.</li>
+  <li><strong>Cytotoxic testing</strong> — observes white blood cell reactions to food extracts in a laboratory. Results are inconsistent and not reproducible.</li>
+</ul>
+
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">Comparison Summary</h2>
+<div class="overflow-x-auto mb-8">
+<table class="w-full text-sm border-collapse">
+<thead><tr class="border-b-2 border-slate-200">
+<th class="text-left py-3 pr-4 font-semibold text-slate-900">Test Type</th>
+<th class="text-left py-3 px-4 font-semibold text-slate-900">Evidence Level</th>
+<th class="text-left py-3 pl-4 font-semibold text-slate-900">Recommended?</th>
+</tr></thead>
+<tbody class="divide-y divide-slate-100">
+<tr><td class="py-3 pr-4 font-medium text-slate-700">Hydrogen Breath Test</td><td class="py-3 px-4 text-slate-600"><span class="text-xs font-medium bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full">Strong evidence</span></td><td class="py-3 pl-4 text-slate-600">Yes</td></tr>
+<tr><td class="py-3 pr-4 font-medium text-slate-700">Elimination Diet</td><td class="py-3 px-4 text-slate-600"><span class="text-xs font-medium bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full">Gold standard</span></td><td class="py-3 pl-4 text-slate-600">Yes</td></tr>
+<tr><td class="py-3 pr-4 font-medium text-slate-700">IgG Blood Test</td><td class="py-3 px-4 text-slate-600"><span class="text-xs font-medium bg-red-100 text-red-700 px-2 py-0.5 rounded-full">Insufficient</span></td><td class="py-3 pl-4 text-slate-600">No</td></tr>
+<tr><td class="py-3 pr-4 font-medium text-slate-700">Hair / Vega / Kinesiology</td><td class="py-3 px-4 text-slate-600"><span class="text-xs font-medium bg-red-100 text-red-700 px-2 py-0.5 rounded-full">No evidence</span></td><td class="py-3 pl-4 text-slate-600">No</td></tr>
+</tbody></table>
+</div>
+
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">The Bottom Line</h2>
+<p class="text-slate-600 mb-4">Before spending money on commercial tests, speak to your GP. They can recommend evidence-based approaches and rule out other conditions such as coeliac disease, inflammatory bowel disease, or other gastrointestinal disorders. <a href="/guides/test-guide" class="text-brand-600 hover:text-brand-700 underline">See our full testing guide for more details.</a></p>
+
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">References</h2>
+<ul class="list-disc list-inside text-slate-500 text-sm space-y-1 mb-4">
+  <li>NHS UK — Food intolerance testing</li>
+  <li>British Dietetic Association — Food intolerance fact sheet</li>
+  <li>Lomer MCE. Review article: the aetiology, diagnosis, mechanisms and therapeutic evidence for food allergy and intolerance. Aliment Pharmacol Ther. 2011.</li>
+  <li>EAACI Position Paper — IgG and IgG4 testing for food intolerance (2014)</li>
+</ul>
+</main><Footer /></BaseLayout>
