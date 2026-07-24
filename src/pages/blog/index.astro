@@ -5,12 +5,12 @@ import Footer from "../../components/Footer.astro";
 import { Image } from 'astro:assets';
 import blogImage from '../../assets/images/blog-articles.jpg';
 ---
-<BaseLayout title="Food Intolerance Blog - Guides, Tips & Evidence-Based Nutrition" description="Evidence-based articles on food intolerance, elimination diets, FODMAPs, testing accuracy, and practical nutrition guides for managing digestive symptoms." breadcrumbs={[{ label: 'Blog', href: '/blog' }]}">
+<BaseLayout title="Food Intolerance Blog - Tips & Evidence - FoodCheck" description="Evidence-based articles on food intolerance, elimination diets, FODMAPs, testing accuracy, and practical nutrition guides for managing digestive symptoms." breadcrumbs={[{ label: 'Blog', href: '/blog' }]}">
 <Header /><main class="max-w-6xl mx-auto px-4 sm:px-6 py-16 md:py-24">
 <h1 class="text-4xl font-semibold text-slate-900 mb-4 tracking-tight">Blog</h1>
 <p class="text-lg text-slate-500 mb-12 max-w-2xl">Evidence-based articles on food intolerance, nutrition, and digestive health.</p>
 <Image src={blogImage} alt="Workspace with nutrition articles and healthy food references" class="w-full h-auto rounded-xl mb-10 max-w-2xl" width={800} height={450} loading="lazy" format="webp" />
-<h2 class="text-2xl font-semibold text-slate-900 mb-5">Latest Articles</h2>
+<h2 class="text-2xl font-semibold text-slate-900 mb-5">What Can You Learn From Our Articles?</h2>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
 <a href="/blog/elimination-diet-guide" class="group bg-white border border-slate-200 rounded-xl p-6 hover:border-brand-300 hover:shadow-md transition-all no-underline">
 <span class="text-xs font-medium text-brand-600 bg-brand-50 px-2 py-0.5 rounded-full mb-3 inline-block">Guide</span>
@@ -27,7 +27,24 @@ import blogImage from '../../assets/images/blog-articles.jpg';
 <h3 class="font-semibold text-slate-900 group-hover:text-brand-700 transition-colors mb-1">Are Food Intolerance Tests Accurate?</h3>
 <p class="text-sm text-slate-500">What the evidence says about IgG tests, breath tests, and other commercial testing methods.</p>
 </a>
-</div></main>
+</div>
+
+<h2 class="text-2xl font-semibold text-slate-900 mt-12 mb-5">How Should You Use These Articles?</h2>
+<p class="text-slate-600 mb-6">Our articles are written by a registered dietitian and reviewed against guidelines from the NHS, British Dietetic Association, and Monash University. Use them to:</p>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+  <div class="bg-white border border-slate-200 rounded-xl p-5"><h3 class="font-semibold text-slate-900 text-sm mb-2">Prepare for Your GP Appointment</h3><p class="text-xs text-slate-500">Understand which tests are evidence-based so you can ask informed questions.</p></div>
+  <div class="bg-white border border-slate-200 rounded-xl p-5"><h3 class="font-semibold text-slate-900 text-sm mb-2">Start an Elimination Diet Safely</h3><p class="text-xs text-slate-500">Follow our step-by-step protocol to avoid common mistakes and nutritional gaps.</p></div>
+  <div class="bg-white border border-slate-200 rounded-xl p-5"><h3 class="font-semibold text-slate-900 text-sm mb-2">Understand Your Diet Options</h3><p class="text-xs text-slate-500">Compare approaches like low FODMAP, elimination diets, and breath test protocols.</p></div>
+</div>
+
+<h2 class="text-2xl font-semibold text-slate-900 mt-12 mb-5">Where Should You Go Next?</h2>
+<p class="text-slate-600 mb-4">After reading our articles, try our free tools to put what you have learned into practice:</p>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+  <a href="/" class="bg-white border border-slate-200 rounded-xl p-5 hover:border-brand-300 transition-colors no-underline"><h3 class="font-semibold text-slate-900 text-sm mb-2">Food Intolerance Checker</h3><p class="text-xs text-slate-500">3-step assessment to explore possible triggers</p></a>
+  <a href="/tools/food-diary" class="bg-white border border-slate-200 rounded-xl p-5 hover:border-brand-300 transition-colors no-underline"><h3 class="font-semibold text-slate-900 text-sm mb-2">Food Diary</h3><p class="text-xs text-slate-500">Track meals and symptoms to spot patterns</p></a>
+  <a href="/tools/elimination-diet-planner" class="bg-white border border-slate-200 rounded-xl p-5 hover:border-brand-300 transition-colors no-underline"><h3 class="font-semibold text-slate-900 text-sm mb-2">Elimination Diet Planner</h3><p class="text-xs text-slate-500">Structured template for elimination and reintroduction</p></a>
+</div>
+</main>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",

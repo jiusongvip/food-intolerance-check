@@ -5,13 +5,14 @@ export interface Props {
   title: string;
   description: string;
   ogImage?: string;
+  ogType?: string;
   author?: string;
   datePublished?: string;
   dateModified?: string;
   breadcrumbs?: { label: string; href: string }[];
   medical?: boolean;
 }
-const { title, description, ogImage, author, datePublished, dateModified, breadcrumbs, medical } = Astro.props;
+const { title, description, ogImage, ogType = 'website', author, datePublished, dateModified, breadcrumbs, medical } = Astro.props;
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site || 'https://foodintolerancecheck.com').href;
 const ogImageUrl = ogImage || new URL('/og-default.png', Astro.site || 'https://foodintolerancecheck.com').href;
 ---
@@ -27,7 +28,7 @@ const ogImageUrl = ogImage || new URL('/og-default.png', Astro.site || 'https://
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalUrl} />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
     <meta property="og:image" content={ogImageUrl} />
     <meta property="og:site_name" content="FoodCheck" />
     <!-- Twitter Card -->
@@ -50,7 +51,7 @@ const ogImageUrl = ogImage || new URL('/og-default.png', Astro.site || 'https://
           "url": "https://foodintolerancecheck.com",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://foodintolerancecheck.com/og-default.png"
+            "url": "https://foodintolerancecheck.com/favicon.svg"
           }
         },
         "datePublished": datePublished,

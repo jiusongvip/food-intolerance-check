@@ -118,7 +118,7 @@ const faqs=[
   {q:"Are commercial tests reliable?",a:"Many IgG tests are not recommended by the NHS and BDA. <a href='/guides/test-guide/' class='text-brand-600 hover:text-brand-700 underline'>Read our testing guide.</a>"},
   {q:"What should I do with my results?",a:"Keep a food diary, try an elimination diet under professional guidance, and discuss with your GP."}
 ];
-document.getElementById('faq-list').innerHTML=faqs.map(f=>'<details class="group bg-white border border-slate-200 rounded-xl"><summary class="flex items-center justify-between px-5 py-4 cursor-pointer font-medium text-slate-900 text-sm list-none select-none">'+f.q+'<svg class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform shrink-0 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></summary><div class="px-5 pb-4 text-sm text-slate-500 leading-relaxed">'+f.a+'</div></details>').join('');
+document.getElementById('faq-list').innerHTML=faqs.map(f=>'<details class="group bg-white border border-slate-200 rounded-xl"><summary class="flex items-center justify-between px-5 py-4 cursor-pointer select-none list-none"><h3 class="font-medium text-slate-900 text-sm flex-1">'+f.q+'</h3><svg class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform shrink-0 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></summary><div class="px-5 pb-4 text-sm text-slate-500 leading-relaxed">'+f.a+'</div></details>').join('');
 
 document.getElementById('step-content').innerHTML=renderStep(0);
 bindEvents(0);updateProgress();

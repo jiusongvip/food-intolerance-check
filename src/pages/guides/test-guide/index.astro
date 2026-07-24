@@ -5,14 +5,14 @@ import Footer from "../../../components/Footer.astro";
 import { Image } from 'astro:assets';
 import labImage from '../../../assets/images/lab-testing.jpg';
 ---
-<BaseLayout title="Food Intolerance Test Guide - Breath Tests, IgG & Elimination Diets" description="Compare food intolerance testing options: hydrogen breath tests, IgG blood tests, elimination diets, and what NHS doctors actually recommend. Evidence-based guide." author="Dr. Emily Carter, Registered Dietitian" datePublished="2026-01-20" dateModified="2026-07-20" breadcrumbs={[{ label: 'Guides', href: '/guides' }, { label: 'Test Guide', href: '/guides/test-guide' }]}" medical={true}>
+<BaseLayout title="Food Intolerance Tests - Breath, IgG & Diets - FoodCheck" description="Compare food intolerance testing options: hydrogen breath tests, IgG blood tests, elimination diets, and what NHS doctors actually recommend. Evidence-based guide." ogType="article" author="Dr. Emily Carter, Registered Dietitian" datePublished="2026-01-20" dateModified="2026-07-20" breadcrumbs={[{ label: 'Guides', href: '/guides' }, { label: 'Test Guide', href: '/guides/test-guide' }]} medical={true}>
 <Header />
 <main class="max-w-3xl mx-auto px-4 sm:px-6 py-16 md:py-24">
 <h1 class="text-4xl font-semibold text-slate-900 mb-6 tracking-tight">Food Intolerance Testing Guide</h1>
 <p class="text-lg text-slate-500 mb-4">Not all tests are created equal. Here's what the evidence says about each type.</p>
 <p class="text-sm text-slate-400 mb-8">By Dr. Emily Carter, Registered Dietitian · Updated 20 Jul 2026</p>
 <Image src={labImage} alt="Doctor reviewing food intolerance test results with a patient" class="w-full h-auto rounded-xl mb-8" width={800} height={450} loading="lazy" format="webp" />
-<h2 class="text-2xl font-semibold text-slate-900 mb-4">Food Intolerance Testing Methods Compared</h2>
+<h2 class="text-2xl font-semibold text-slate-900 mb-4">Which Food Intolerance Tests Are Evidence-Based?</h2>
 <div class="overflow-x-auto mb-10">
 <table class="w-full text-sm border-collapse">
 <thead><tr class="border-b-2 border-slate-200">
@@ -27,7 +27,41 @@ import labImage from '../../../assets/images/lab-testing.jpg';
 <tr><td class="py-3 pr-4 font-medium text-slate-700">IgG Blood Test</td><td class="py-3 px-4 text-slate-600">Measures IgG antibodies to specific foods</td><td class="py-3 pl-4"><span class="text-xs font-medium bg-red-100 text-red-700 px-2 py-0.5 rounded-full">Not recommended</span></td></tr>
 <tr><td class="py-3 pr-4 font-medium text-slate-700">Skin Prick Test</td><td class="py-3 px-4 text-slate-600">Small amounts of allergen placed on skin</td><td class="py-3 pl-4"><span class="text-xs font-medium bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full">For allergy only</span></td></tr>
 </tbody></table></div>
-<p class="text-sm text-slate-500">References: NHS, BDA, Guts UK, AAAAI. Always consult your GP before pursuing any testing.</p>
+<p class="text-sm text-slate-500 mt-6 mb-4">References: NHS, BDA, Guts UK, AAAAI. Always consult your GP before pursuing any testing.</p>
+
+<h3 class="text-lg font-semibold text-slate-900 mt-6 mb-2">Understanding the Evidence Levels</h3>
+<p class="text-slate-600 mb-4">Tests marked as <strong>evidence-based</strong> (breath tests, lactose tolerance tests) have been validated in clinical trials and are recommended by the NHS and BDA. The <strong>elimination diet</strong> is considered the gold standard because it directly measures your body's response. IgG blood tests are <strong>not recommended</strong> by any major medical organisation for intolerance diagnosis.</p>
+
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">Why Do Doctors Not Recommend IgG Blood Tests?</h2>
+<p class="text-slate-600 mb-4">According to the <strong>NHS</strong>, the <strong>British Dietetic Association (BDA)</strong>, and the <strong>European Academy of Allergy and Clinical Immunology (EAACI)</strong>, IgG blood tests are not recommended for food intolerance diagnosis. The presence of IgG antibodies may simply indicate normal exposure to a food, not intolerance. A 2018 review in <em>Allergy, Asthma & Clinical Immunology</em> concluded there is insufficient evidence to support IgG testing.</p>
+<blockquote class="border-l-4 border-brand-400 bg-white rounded-r-xl p-5 shadow-sm mb-6">
+  <p class="text-sm text-slate-700 italic mb-2">"IgG and IgG4 testing for food intolerance has no clinical utility and should not be used to guide dietary decisions."</p>
+  <cite class="text-xs text-slate-500 not-italic">— EAACI Position Paper, 2014</cite>
+</blockquote>
+
+<h3 class="text-lg font-semibold text-slate-900 mt-6 mb-2">Why Do IgG Tests Seem Convincing?</h3>
+<p class="text-slate-600 mb-4">IgG antibodies are a normal immune response to foods you eat regularly. A positive IgG result for wheat or dairy may simply mean you eat those foods often — not that you are intolerant. This is why IgG tests often flag common foods as "problematic," leading to unnecessary dietary restrictions and potential nutritional deficiencies.</p>
+
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">What Is the Gold Standard for Food Intolerance Diagnosis?</h2>
+<p class="text-slate-600 mb-4">A properly conducted <strong>elimination diet</strong> followed by controlled reintroduction is considered the gold standard by the BDA and most clinical guidelines. This approach directly measures your body's response to specific foods in real-world conditions, unlike blood tests which only measure antibody levels.</p>
+
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">How Do Hydrogen Breath Tests Work?</h2>
+<p class="text-slate-600 mb-4">Hydrogen breath tests are evidence-based and recommended for diagnosing lactose and fructose malabsorption. They measure hydrogen gas produced when undigested sugars are fermented by gut bacteria. A rise of <strong>20 ppm or more</strong> above baseline is typically considered positive. These tests are usually performed in hospital gastroenterology departments.</p>
+
+<h3 class="text-lg font-semibold text-slate-900 mt-6 mb-2">What to Expect During a Breath Test</h3>
+<p class="text-slate-600 mb-4">You will be asked to fast overnight, then drink a measured sugar solution (e.g., 25g of lactose in water). Breath samples are collected every 15–30 minutes over 2–3 hours. The test is non-invasive, painless, and typically completed in a hospital setting. Your GP can refer you to a gastroenterology department for testing.</p>
+
+<h3 class="text-lg font-semibold text-slate-900 mt-6 mb-2">How to Prepare for Testing</h3>
+<p class="text-slate-600 mb-4">Before any testing, speak to your GP about your symptoms. They may recommend a symptom diary first. Avoid starting a gluten-free diet before coeliac disease has been ruled out, as this can affect test accuracy. For breath tests, you may need to avoid certain medications (antibiotics, laxatives) for 2–4 weeks beforehand.</p>
+
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">References</h2>
+<ul class="list-disc list-inside text-slate-500 text-sm space-y-1 mb-4">
+  <li>NHS UK — Food Intolerance Testing</li>
+  <li>British Dietetic Association (BDA) — Food Intolerance Fact Sheet</li>
+  <li>EAACI Position Paper — IgG and IgG4 testing for food intolerance (2014)</li>
+  <li>Lomer MCE. Review article: the aetiology, diagnosis, mechanisms and therapeutic evidence for food allergy and intolerance. Aliment Pharmacol Ther. 2011.</li>
+  <li>Guts UK — Food Intolerance and IBS</li>
+</ul>
 </main>
 <Footer />
 </BaseLayout>

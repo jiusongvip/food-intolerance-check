@@ -5,7 +5,7 @@ import Footer from "../../../components/Footer.astro";
 import { Image } from 'astro:assets';
 import foodDiaryImage from '../../../assets/images/food-diary.jpg';
 ---
-<BaseLayout title="Food Diary for Intolerance - Track Meals & Symptoms" description="Track your meals and symptoms over time with our free food diary tool. Spot patterns and identify possible food intolerance triggers. Runs entirely in your browser." breadcrumbs={[{ label: 'Tools', href: '/tools' }, { label: 'Food Diary', href: '/tools/food-diary' }]}">
+<BaseLayout title="Food Diary - Track Meals & Symptoms - FoodCheck" description="Track your meals and symptoms over time with our free food diary tool. Spot patterns and identify possible food intolerance triggers. Runs entirely in your browser." breadcrumbs={[{ label: 'Tools', href: '/tools' }, { label: 'Food Diary', href: '/tools/food-diary' }]}">
 <Header /><main>
 <section class="pt-16 pb-8 md:pt-24 px-4 sm:px-6 max-w-6xl mx-auto">
 <div class="max-w-2xl mx-auto text-center">
@@ -29,9 +29,31 @@ import foodDiaryImage from '../../../assets/images/food-diary.jpg';
 <button id="diary-add" class="w-full px-5 py-2.5 rounded-xl bg-purple-600 text-white text-sm font-medium hover:bg-purple-700 transition-colors">Add Entry</button></div>
 <div id="diary-entries" class="space-y-3"></div></div>
 </div><div class="mt-8 bg-purple-50 border border-purple-200 rounded-xl p-4 text-xs text-purple-800">Your data stays in your browser. Nothing is sent to any server.</div>
-<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">How to Use the Food Diary</h2>
-<p class="text-slate-600 text-sm mb-4">Log each meal with the food you ate and any symptoms that followed. Over time, patterns may emerge — for example, bloating every time you eat dairy or headaches after wine. Use the timeline view to spot these connections.</p>
-<p class="text-slate-600 text-sm">After 2-4 weeks of consistent logging, share your diary with your GP or dietitian. This detailed record will help them recommend the most appropriate tests or dietary changes.</p>
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">How Should You Use the Food Diary?</h2>
+<p class="text-slate-600 text-sm mb-4">Log each meal with the food you ate and any symptoms that followed. Over time, patterns may emerge — for example, bloating every time you eat dairy or headaches after wine. According to the <strong>BDA</strong>, keeping a detailed food and symptom diary for at least 2–4 weeks is one of the most effective first steps in identifying food intolerances.</p>
+<h3 class="text-lg font-semibold text-slate-900 mt-6 mb-2">What Should You Record?</h3>
+<p class="text-slate-600 text-sm mb-4">For the most useful results, log the following for each entry: the specific foods and drinks consumed (including portion sizes), the time of the meal, any symptoms experienced and when they started, and your stress level or sleep quality. The more detail you provide, the easier it becomes to identify patterns.</p>
+<h3 class="text-lg font-semibold text-slate-900 mt-6 mb-2">How Long Should You Keep a Food Diary?</h3>
+<p class="text-slate-600 text-sm mb-4">According to <strong>Monash University</strong>, a minimum of 2 weeks is recommended, but 4 weeks provides a more reliable picture. This allows you to capture variability across different days and identify foods that may cause delayed reactions (up to 24–48 hours later).</p>
+<h3 class="text-lg font-semibold text-slate-900 mt-6 mb-2">When Should You Share Your Diary with a Doctor?</h3>
+<p class="text-slate-600 text-sm mb-4">After 2–4 weeks of consistent logging, share your diary with your GP or dietitian. This detailed record will help them recommend the most appropriate tests or dietary changes. Bring your diary to your appointment — it provides far more useful information than trying to recall symptoms from memory.</p>
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">Related Resources</h2>
+<div class="grid sm:grid-cols-2 gap-4 mb-4">
+<a href="/tools/elimination-diet-planner" class="block bg-white border border-slate-200 rounded-xl p-4 hover:border-purple-300 transition-colors"><h3 class="font-semibold text-slate-900 text-sm mb-1">Elimination Diet Planner</h3><p class="text-xs text-slate-500">Structured template for elimination and reintroduction</p></a>
+<a href="/guides/low-fodmap" class="block bg-white border border-slate-200 rounded-xl p-4 hover:border-purple-300 transition-colors"><h3 class="font-semibold text-slate-900 text-sm mb-1">Low FODMAP Diet Guide</h3><p class="text-xs text-slate-500">Step-by-step three-phase FODMAP protocol</p></a>
+</div>
 </div></section>
 </main><Footer /></BaseLayout>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Food Diary for Intolerance",
+  "url": "https://foodintolerancecheck.com/tools/food-diary",
+  "description": "Free online food and symptom tracking tool. Log meals and symptoms to identify possible food intolerance patterns. All data stays in your browser.",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "All",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
 <script is:inline src="/js/food-diary.js"></script>

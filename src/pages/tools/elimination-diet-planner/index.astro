@@ -5,23 +5,88 @@ import Footer from "../../../components/Footer.astro";
 import { Image } from 'astro:assets';
 import plannerImage from '../../../assets/images/planning-calendar.jpg';
 ---
-<BaseLayout title="Elimination Diet Planner - Identify Trigger Foods" description="Plan a structured elimination diet with our guided planner template. Systematically identify food intolerance triggers through elimination and reintroduction." breadcrumbs={[{ label: 'Tools', href: '/tools' }, { label: 'Elimination Diet Planner', href: '/tools/elimination-diet-planner' }]}">
+<BaseLayout title="Elimination Diet Planner - Identify Triggers - FoodCheck" description="Plan a structured elimination diet with our guided planner template. Systematically identify food intolerance triggers through elimination and reintroduction." breadcrumbs={[{ label: 'Tools', href: '/tools' }, { label: 'Elimination Diet Planner', href: '/tools/elimination-diet-planner' }]}">
 <Header /><main class="max-w-3xl mx-auto px-4 sm:px-6 py-16 md:py-24">
 <h1 class="text-4xl font-semibold text-slate-900 mb-6 tracking-tight">Elimination Diet Planner</h1>
 <p class="text-lg text-slate-500 mb-8">A guided template for planning a structured elimination diet. Always undertake this under professional supervision.</p>
 <Image src={plannerImage} alt="Meal planning calendar and notebook for an elimination diet" class="w-full h-auto rounded-xl mb-8" width={800} height={450} loading="lazy" format="webp" />
-<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">Before You Start</h2>
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">What Is an Elimination Diet and How Does It Work?</h2>
+<p class="text-slate-600 mb-4">An elimination diet is a structured, short-term dietary protocol used to identify specific foods that trigger adverse symptoms. According to the <strong>British Dietetic Association (BDA)</strong>, elimination diets are considered the gold standard for diagnosing food intolerances when used alongside a detailed symptom diary. The process involves removing suspected trigger foods for a defined period, then systematically reintroducing them one at a time while monitoring symptoms.</p>
+<blockquote class="border-l-4 border-brand-400 bg-white rounded-r-xl p-5 shadow-sm mb-6">
+  <p class="text-sm text-slate-700 italic mb-2">"Elimination diets followed by food challenges remain the most reliable method for identifying food intolerances. They should always be conducted under the supervision of a registered dietitian to ensure nutritional adequacy."</p>
+  <cite class="text-xs text-slate-500 not-italic">— British Dietetic Association, Elimination Diet Fact Sheet</cite>
+</blockquote>
+
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">What Should You Know Before Starting?</h2>
 <ul class="list-disc list-inside text-slate-600 space-y-2 mb-6">
 <li>Consult your GP or a registered dietitian before beginning</li>
-<li>Keep a baseline food and symptom diary for at least one week</li>
-<li>Plan to eliminate foods for 2-4 weeks, then reintroduce one at a time</li>
+<li>Keep a baseline food and symptom diary for at least one week before starting (use our <a href="/tools/food-diary" class="text-brand-600 hover:text-brand-700 underline">Food Diary</a> tool)</li>
+<li>Plan to eliminate foods for 2–4 weeks, then reintroduce one at a time</li>
 <li>Do not eliminate multiple food groups without professional guidance</li>
+<li>Ensure you are replacing eliminated nutrients — for example, calcium when removing dairy</li>
+<li>Avoid starting during periods of high stress, illness, or travel</li>
 </ul>
-<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">Common Elimination Protocols</h2>
+
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">What Are the Common Elimination Protocols?</h2>
 <div class="space-y-4">
-<div class="bg-white border border-slate-200 rounded-xl p-5"><h3 class="font-semibold text-slate-900 mb-1">Dairy Elimination</h3><p class="text-sm text-slate-500">Remove all dairy for 2 weeks. Reintroduce milk, then cheese, then yogurt separately, 3 days apart.</p></div>
-<div class="bg-white border border-slate-200 rounded-xl p-5"><h3 class="font-semibold text-slate-900 mb-1">Gluten Elimination</h3><p class="text-sm text-slate-500">Only after coeliac screening. Remove all gluten for 4-6 weeks. Reintroduce with wheat pasta, then bread, monitoring symptoms.</p></div>
-<div class="bg-white border border-slate-200 rounded-xl p-5"><h3 class="font-semibold text-slate-900 mb-1">Low FODMAP</h3><p class="text-sm text-slate-500">Remove all high FODMAP foods for 2-6 weeks. Reintroduce groups one at a time under dietitian guidance.</p></div>
+<div class="bg-white border border-slate-200 rounded-xl p-5"><h3 class="font-semibold text-slate-900 mb-1">Dairy Elimination (2 weeks)</h3><p class="text-sm text-slate-500 mb-2">Remove all dairy products including milk, cheese, yogurt, butter, and cream. After 2 weeks, reintroduce in order: a glass of milk on Day 1–2, hard cheese on Day 3–4, yogurt on Day 5–6. Wait 3 symptom-free days between each challenge.</p><p class="text-sm text-slate-500"><strong>Nutrient replacement:</strong> Use calcium-fortified plant milks, leafy greens, and tofu to maintain calcium intake.</p></div>
+<div class="bg-white border border-slate-200 rounded-xl p-5"><h3 class="font-semibold text-slate-900 mb-1">Gluten Elimination (4–6 weeks)</h3><p class="text-sm text-slate-500 mb-2"><strong>Important:</strong> Only undertake after coeliac disease has been ruled out by your GP. Remove all wheat, barley, and rye. After the elimination phase, reintroduce with wheat pasta on Day 1–2, then wheat bread on Day 3–4, monitoring symptoms carefully.</p><p class="text-sm text-slate-500"><strong>Nutrient replacement:</strong> Choose rice, quinoa, potatoes, and certified gluten-free oats for fibre and energy.</p></div>
+<div class="bg-white border border-slate-200 rounded-xl p-5"><h3 class="font-semibold text-slate-900 mb-1">Low FODMAP Elimination (2–6 weeks)</h3><p class="text-sm text-slate-500 mb-2">Remove all high FODMAP foods across all five categories (oligosaccharides, disaccharides, monosaccharides, and polyols). After symptom improvement, reintroduce one FODMAP group at a time. See our <a href="/guides/low-fodmap" class="text-brand-600 hover:text-brand-700 underline">Low FODMAP Diet Guide</a> for the full protocol.</p><p class="text-sm text-slate-500"><strong>Nutrient replacement:</strong> Varies by category — work with a dietitian to ensure adequate fibre, prebiotics, and calcium.</p></div>
+<div class="bg-white border border-slate-200 rounded-xl p-5"><h3 class="font-semibold text-slate-900 mb-1">Histamine Elimination (2–4 weeks)</h3><p class="text-sm text-slate-500 mb-2">Remove high-histamine foods (aged cheeses, fermented foods, wine, tinned fish, cured meats) and histamine liberators (citrus, strawberries, tomatoes). After the elimination phase, reintroduce one food at a time. Use our <a href="/tools/histamine-intolerance-test" class="text-brand-600 hover:text-brand-700 underline">Histamine Intolerance Checker</a> to assess your symptoms first.</p><p class="text-sm text-slate-500"><strong>Nutrient replacement:</strong> Fresh meat, fish, and vegetables are naturally low in histamine and nutritionally equivalent.</p></div>
 </div>
-<p class="text-sm text-slate-500 mt-8">Use our <a href="/tools/food-diary" class="text-brand-600 hover:text-brand-700 underline">Food Diary</a> to track symptoms throughout your elimination diet.</p>
+
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">How Should You Structure the Reintroduction Phase?</h2>
+<p class="text-slate-600 mb-4">The reintroduction phase is the most critical part of the elimination diet. According to <strong>Monash University</strong>, each food challenge should follow a standardised 3-day protocol:</p>
+<div class="overflow-x-auto mb-6">
+<table class="w-full text-sm text-left border border-slate-200 rounded-xl overflow-hidden">
+  <thead class="bg-slate-50">
+    <tr><th class="px-4 py-3 font-semibold text-slate-900">Day</th><th class="px-4 py-3 font-semibold text-slate-900">Action</th><th class="px-4 py-3 font-semibold text-slate-900">Example</th></tr>
+  </thead>
+  <tbody class="divide-y divide-slate-100">
+    <tr class="bg-white"><td class="px-4 py-3 text-slate-700">Day 1</td><td class="px-4 py-3 text-slate-600">Small portion of the test food</td><td class="px-4 py-3 text-slate-600">½ cup of milk (125 ml)</td></tr>
+    <tr class="bg-white"><td class="px-4 py-3 text-slate-700">Day 2</td><td class="px-4 py-3 text-slate-600">Normal portion of the test food</td><td class="px-4 py-3 text-slate-600">1 full cup of milk (250 ml)</td></tr>
+    <tr class="bg-white"><td class="px-4 py-3 text-slate-700">Day 3</td><td class="px-4 py-3 text-slate-600">Observe — no new test foods</td><td class="px-4 py-3 text-slate-600">Record symptoms in diary</td></tr>
+    <tr class="bg-white"><td class="px-4 py-3 text-slate-700">Days 4–6</td><td class="px-4 py-3 text-slate-600">Washout — return to elimination diet</td><td class="px-4 py-3 text-slate-600">Wait for symptoms to settle</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="text-sm text-slate-500 mb-4">If symptoms appear on Day 2 or 3, stop the challenge and note the trigger. If no symptoms occur, the food is likely tolerated. Always test one FODMAP group or food category at a time.</p>
+
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">What Are Common Mistakes to Avoid?</h2>
+<div class="space-y-3 mb-6">
+<div class="bg-white border border-slate-200 rounded-xl p-4"><p class="text-sm text-slate-600"><strong>Eliminating too many foods at once</strong> — This makes it impossible to identify which specific food is the trigger. Always eliminate and reintroduce one category at a time.</p></div>
+<div class="bg-white border border-slate-200 rounded-xl p-4"><p class="text-sm text-slate-600"><strong>Skipping the baseline diary</strong> — Without a pre-elimination record, you cannot tell if symptoms have genuinely improved during the elimination phase.</p></div>
+<div class="bg-white border border-slate-200 rounded-xl p-4"><p class="text-sm text-slate-600"><strong>Rushing reintroduction</strong> — Testing multiple foods in the same week creates overlapping results. Allow at least 3 washout days between challenges.</p></div>
+<div class="bg-white border border-slate-200 rounded-xl p-4"><p class="text-sm text-slate-600"><strong>Ignoring hidden sources</strong> — Many processed foods contain hidden dairy (casein, whey), gluten (modified starch), or FODMAPs (inulin, high-fructose corn syrup). Always read labels carefully.</p></div>
+<div class="bg-white border border-slate-200 rounded-xl p-4"><p class="text-sm text-slate-600"><strong>Staying on the elimination diet too long</strong> — Prolonged restriction can lead to nutritional deficiencies and a less diverse gut microbiome. The elimination phase should not exceed 6 weeks.</p></div>
+</div>
+
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">Related Resources</h2>
+<div class="grid sm:grid-cols-2 gap-4 mb-6">
+<a href="/tools/food-diary" class="block bg-white border border-slate-200 rounded-xl p-4 hover:border-brand-300 transition-colors"><h3 class="font-semibold text-slate-900 text-sm mb-1">Food Diary</h3><p class="text-xs text-slate-500">Track meals and symptoms throughout your elimination diet</p></a>
+<a href="/guides/low-fodmap" class="block bg-white border border-slate-200 rounded-xl p-4 hover:border-brand-300 transition-colors"><h3 class="font-semibold text-slate-900 text-sm mb-1">Low FODMAP Diet Guide</h3><p class="text-xs text-slate-500">Step-by-step three-phase FODMAP protocol</p></a>
+<a href="/blog/elimination-diet-guide" class="block bg-white border border-slate-200 rounded-xl p-4 hover:border-brand-300 transition-colors"><h3 class="font-semibold text-slate-900 text-sm mb-1">Elimination Diet Step-by-Step</h3><p class="text-xs text-slate-500">Detailed walkthrough of the full elimination process</p></a>
+<a href="/tools/gluten-intolerance-test" class="block bg-white border border-slate-200 rounded-xl p-4 hover:border-brand-300 transition-colors"><h3 class="font-semibold text-slate-900 text-sm mb-1">Gluten Intolerance Checker</h3><p class="text-xs text-slate-500">Assess whether gluten may be a trigger for you</p></a>
+</div>
+
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">References</h2>
+<ul class="list-disc list-inside text-slate-500 text-sm space-y-1 mb-4">
+  <li>British Dietetic Association (BDA) — Elimination Diet Fact Sheet</li>
+  <li>NHS UK — Food Intolerance</li>
+  <li>Monash University — Low FODMAP Diet</li>
+  <li>AAAAI — Food Intolerance</li>
+  <li>NICE Guidelines NG126 — Irritable Bowel Syndrome in Adults</li>
+</ul>
 </main><Footer /></BaseLayout>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Elimination Diet Planner",
+  "url": "https://foodintolerancecheck.com/tools/elimination-diet-planner",
+  "description": "Free online elimination diet planning tool. Plan a structured elimination and reintroduction protocol to identify food intolerance triggers.",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "All",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>

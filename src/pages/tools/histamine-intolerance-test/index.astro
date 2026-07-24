@@ -5,7 +5,7 @@ import Footer from "../../../components/Footer.astro";
 import { Image } from 'astro:assets';
 import histamineImage from '../../../assets/images/wine-histamine.jpg';
 ---
-<BaseLayout title="Histamine Intolerance Checker - Free Self-Assessment Tool" description="Experience symptoms after aged cheese, wine, or cured meats? Our free histamine intolerance checker helps explore possible triggers. Educational tool only." breadcrumbs={[{ label: 'Tools', href: '/tools' }, { label: 'Histamine Intolerance Checker', href: '/tools/histamine-intolerance-test' }]}">
+<BaseLayout title="Histamine Intolerance Checker - Self-Test - FoodCheck" description="Experience symptoms after aged cheese, wine, or cured meats? Our free histamine intolerance checker helps explore possible triggers. Educational tool only." breadcrumbs={[{ label: 'Tools', href: '/tools' }, { label: 'Histamine Intolerance Checker', href: '/tools/histamine-intolerance-test' }]}">
 <Header /><main>
 <section class="pt-16 pb-8 md:pt-24 px-4 sm:px-6 max-w-6xl mx-auto">
 <div class="max-w-2xl mx-auto text-center">
@@ -20,16 +20,33 @@ import histamineImage from '../../../assets/images/wine-histamine.jpg';
 <div class="space-y-6" id="histamine-quiz"><p class="text-center text-slate-400 text-sm">Select your answers to get your result.</p></div>
 <div id="histamine-result" class="hidden"></div>
 </div><div class="mt-8 bg-amber-50 border border-amber-200 rounded-xl p-4 text-xs text-amber-800">Not a medical diagnosis. Consult your GP or a dietitian.</div>
-<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">About This Checker</h2>
-<p class="text-slate-600 text-sm mb-4">This histamine intolerance checker assesses your reactions to aged cheese, wine, cured meats, and fermented foods. Histamine intolerance is linked to reduced DAO enzyme activity and can cause headaches, flushing, digestive issues, and skin reactions.</p>
-<p class="text-slate-600 text-sm">If results suggest possible histamine intolerance, a low-histamine diet trial of 2-4 weeks under dietitian supervision is the recommended next step.</p>
-<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">Related Resources</h2>
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">How Does This Histamine Checker Work?</h2>
+<p class="text-slate-600 text-sm mb-4">This histamine intolerance checker assesses your reactions to aged cheese, wine, cured meats, and fermented foods. Histamine intolerance is linked to reduced DAO (diamine oxidase) enzyme activity and can cause headaches, flushing, digestive issues, and skin reactions. According to a 2020 review in <em>Nutrients</em>, histamine intolerance affects an estimated <strong>1–3% of the population</strong>, though it remains underdiagnosed.</p>
+<h3 class="text-lg font-semibold text-slate-900 mt-6 mb-2">What Causes Histamine Intolerance?</h3>
+<p class="text-slate-600 text-sm mb-4">Histamine intolerance occurs when the body cannot break down histamine fast enough. The enzyme DAO, produced in the gut lining, is responsible for degrading dietary histamine. Factors that reduce DAO activity include certain medications (NSAIDs, antidepressants), gut disorders, and genetic variation. When histamine accumulates, it triggers symptoms similar to an allergic reaction without involving IgE antibodies.</p>
+<h3 class="text-lg font-semibold text-slate-900 mt-6 mb-2">Which Foods Are High in Histamine?</h3>
+<p class="text-slate-600 text-sm mb-4">Histamine levels increase as foods age, ferment, or ripen. The highest-histamine foods include aged cheeses (parmesan, gouda), red wine and beer, cured meats (salami, bacon), tinned fish (sardines, tuna), fermented vegetables (sauerkraut, kimchi), and soy sauce. Some foods such as citrus, strawberries, and tomatoes are not high in histamine themselves but act as <strong>histamine liberators</strong>, triggering the body to release its own histamine.</p>
+<h3 class="text-lg font-semibold text-slate-900 mt-6 mb-2">What Should You Do If Results Suggest Histamine Intolerance?</h3>
+<p class="text-slate-600 text-sm mb-4">If results suggest possible histamine intolerance, a low-histamine diet trial of 2–4 weeks under dietitian supervision is the recommended next step. Keep a detailed food and symptom diary, then systematically reintroduce high-histamine foods one at a time to confirm triggers.</p>
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">What Resources Can Help You Learn More?</h2>
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-<a href="/tools/food-diary" class="block bg-slate-50 border border-slate-200 rounded-lg p-4 hover:border-brand-300 transition-colors no-underline"><p class="text-sm font-medium text-slate-900 mb-1">Food Diary</p><p class="text-xs text-slate-500">Log histamine-rich meals and reactions.</p></a>
-<a href="/blog/elimination-diet-guide" class="block bg-slate-50 border border-slate-200 rounded-lg p-4 hover:border-brand-300 transition-colors no-underline"><p class="text-sm font-medium text-slate-900 mb-1">Elimination Diet Guide</p><p class="text-xs text-slate-500">Step-by-step protocol for histamine triggers.</p></a>
-<a href="/guides/test-guide" class="block bg-slate-50 border border-slate-200 rounded-lg p-4 hover:border-brand-300 transition-colors no-underline"><p class="text-sm font-medium text-slate-900 mb-1">Testing Guide</p><p class="text-xs text-slate-500">Understand histamine intolerance testing options.</p></a>
-<a href="/symptoms" class="block bg-slate-50 border border-slate-200 rounded-lg p-4 hover:border-brand-300 transition-colors no-underline"><p class="text-sm font-medium text-slate-900 mb-1">Symptoms Overview</p><p class="text-xs text-slate-500">Headaches, flushing, and digestive symptoms.</p></a>
+<a href="/tools/food-diary" class="block bg-slate-50 border border-slate-200 rounded-lg p-4 hover:border-brand-300 transition-colors no-underline"><h3 class="text-sm font-medium text-slate-900 mb-1">Food Diary</h3><p class="text-xs text-slate-500">Log histamine-rich meals and reactions.</p></a>
+<a href="/blog/elimination-diet-guide" class="block bg-slate-50 border border-slate-200 rounded-lg p-4 hover:border-brand-300 transition-colors no-underline"><h3 class="text-sm font-medium text-slate-900 mb-1">Elimination Diet Guide</h3><p class="text-xs text-slate-500">Step-by-step protocol for histamine triggers.</p></a>
+<a href="/guides/test-guide" class="block bg-slate-50 border border-slate-200 rounded-lg p-4 hover:border-brand-300 transition-colors no-underline"><h3 class="text-sm font-medium text-slate-900 mb-1">Testing Guide</h3><p class="text-xs text-slate-500">Understand histamine intolerance testing options.</p></a>
+<a href="/symptoms" class="block bg-slate-50 border border-slate-200 rounded-lg p-4 hover:border-brand-300 transition-colors no-underline"><h3 class="text-sm font-medium text-slate-900 mb-1">Symptoms Overview</h3><p class="text-xs text-slate-500">Headaches, flushing, and digestive symptoms.</p></a>
 </div>
 </div></section>
 </main><Footer /></BaseLayout>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Histamine Intolerance Checker",
+  "url": "https://foodintolerancecheck.com/tools/histamine-intolerance-test",
+  "description": "Free online histamine intolerance self-assessment tool. Explore whether your reactions to aged and fermented foods suggest histamine intolerance.",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "All",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
 <script is:inline src="/js/histamine-checker.js"></script>

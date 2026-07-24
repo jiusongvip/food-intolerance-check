@@ -1,102 +1,105 @@
 {
   "summary": {
-    "health_score": 68,
-    "business_type": "Health/Education (YMYL) — Free online self-assessment tools and educational content",
-    "domain": "foodintolerancecheck.com",
-    "platform": "Astro 7.1 (SSG) + Tailwind CSS",
-    "total_pages": 23,
-    "audit_date": "2026-07-23",
+    "health_score": 72,
+    "business_type": "Health/Education SaaS Tool (Free)",
+    "pages_crawled": 23,
+    "site_url": "https://foodintolerancecheck.com",
+    "deployment_status": "NOT DEPLOYED - domain currently shows parked page",
     "top_findings": [
-      "Sitemap not serving site pages — live sitemap.xml only contains /lander",
-      "robots.txt live version differs from source code deployment",
-      "6 pages with thin content under 400 words (YMYL risk)",
-      "No WebP/AVIF image optimization — all 16 images are JPG",
-      "Missing MedicalWebPage, HowTo, and ItemList schema opportunities"
+      "Site not deployed - domain redirects to parked lander page",
+      "Homepage FAQ content missing FAQPage schema markup",
+      "Several thin content pages (low-fodmap guide, elimination-diet-planner)",
+      "No contact email anywhere on the site",
+      "OG type hardcoded as 'website' for all pages including blog articles"
     ],
     "quick_wins": [
-      "Redeploy site to sync source → live (fixes sitemap + robots.txt)",
-      "Add /tools link to header navigation",
-      "Submit sitemap to Google Search Console",
-      "Add image field to Article schema in BaseLayout",
-      "Create /llms.txt file for AI crawler access"
+      "Add FAQPage schema to homepage FAQ section",
+      "Change OG type to 'article' for blog/guide pages",
+      "Add contact email to About and Footer",
+      "Expand low-fodmap guide with food lists and examples",
+      "Add WebApplication schema to individual tool pages"
     ]
   },
   "categories": [
     {
       "name": "Technical SEO",
-      "score": 72,
+      "score": 70,
       "what_works": [
-        "Canonical URLs auto-generated on all pages",
-        "All 23 pages have unique titles and meta descriptions",
-        "Open Graph + Twitter Card meta on every page",
-        "Clean URL structure with trailingSlash: never",
-        "HTTPS enabled",
-        "Static HTML output — fully crawlable without JS rendering",
-        "Mobile responsive via Tailwind CSS"
+        "robots.txt properly configured with sitemap reference",
+        "@astrojs/sitemap integration for automatic sitemap generation",
+        "Canonical URLs correctly generated for all pages",
+        "trailingSlash: 'never' ensures clean URLs",
+        "_redirects file handles sitemap alias (301)",
+        "Astro SSG ensures fast static HTML output"
       ],
       "findings": [
         {
-          "title": "Sitemap not serving site pages",
+          "title": "Site Not Deployed",
           "severity": "Critical",
-          "description": "Live sitemap.xml only contains /lander URL. The 23 actual site pages are not listed. Source code generates sitemap-index.xml via @astrojs/sitemap but live deployment is out of sync.",
-          "recommendation": "Redeploy site from current source. Verify sitemap-index.xml contains all 23 URLs. Confirm robots.txt references correct absolute sitemap URL."
+          "description": "foodintolerancecheck.com currently returns a parked page (114 bytes) that redirects to /lander via JavaScript. No actual site content is served.",
+          "recommendation": "Deploy the Astro build to a hosting provider (Cloudflare Pages, Netlify, Vercel, etc.) and verify DNS configuration."
         },
         {
-          "title": "robots.txt mismatch between source and live",
-          "severity": "High",
-          "description": "Source robots.txt has 'Sitemap: https://foodintolerancecheck.com/sitemap-index.xml' but live has 'Sitemap: /sitemap.xml' (relative URL, non-standard). Live also has 'LLM-Policy: /llms.txt' not in source.",
-          "recommendation": "Redeploy to sync source and live. Ensure robots.txt uses absolute sitemap URL."
-        },
-        {
-          "title": "Google Fonts render-blocking",
+          "title": "Missing Security Headers",
           "severity": "Medium",
-          "description": "Outfit font loaded via external stylesheet from Google Fonts with 5 weights (300-700). Adds network round-trip before first render despite preconnect hints.",
-          "recommendation": "Self-host Outfit font or use font-display: optional. Reduce to only needed weights."
+          "description": "No Content-Security-Policy, X-Frame-Options, X-Content-Type-Options, or Strict-Transport-Security headers configured. While this is a static site, security headers improve trust signals.",
+          "recommendation": "Add security headers via hosting provider configuration or _headers file: X-Frame-Options: DENY, X-Content-Type-Options: nosniff, Referrer-Policy: strict-origin-when-cross-origin."
         },
         {
-          "title": "No Google Search Console",
-          "severity": "Info",
-          "description": "Site has no analytics or search console integration. While privacy-friendly, there is no visibility into search performance.",
-          "recommendation": "Add Google Search Console verification (no tracking code needed, respects privacy policy)."
+          "title": "OG Type Hardcoded as 'website'",
+          "severity": "Medium",
+          "description": "BaseLayout sets og:type to 'website' for all pages. Blog posts and guides should use 'article' for better social sharing and SEO signals.",
+          "recommendation": "Add an optional `ogType` prop to BaseLayout. Default to 'website', but set 'article' for blog posts and guide pages."
+        },
+        {
+          "title": "Font Loading Not Optimized",
+          "severity": "Low",
+          "description": "Loading 5 Outfit font weights (300-700) via separate CSS imports in global.css. Only 400, 500, 600, 700 appear to be used in the design.",
+          "recommendation": "Remove unused weight 300 import. Consider using a single @fontsource variable font import if available."
         }
       ]
     },
     {
       "name": "Content Quality",
-      "score": 65,
+      "score": 78,
       "what_works": [
-        "Author attribution (Dr. Emily Carter, Registered Dietitian) on all content",
-        "Publication and modification dates on blog and guide content",
-        "References from reputable sources (NHS, BDA, NICE, AAAAI, Monash)",
-        "Medical disclaimers on all tool pages",
-        "Good readability — plain English, short paragraphs, tables",
-        "Comprehensive FAQ page with 6 Q&A pairs",
-        "Detailed About page with editorial standards"
+        "Strong E-E-A-T signals: named author (Dr. Emily Carter, Registered Dietitian)",
+        "References to authoritative sources (NHS, BDA, NICE, AAAAI, Monash, EAACI)",
+        "Clear medical disclaimers on every page",
+        "Detailed About page with editorial standards and methodology",
+        "Evidence-based content with blockquote citations",
+        "Good content hierarchy with question-based H2 headings"
       ],
       "findings": [
         {
-          "title": "Thin content on guide pages (YMYL risk)",
+          "title": "Thin Content: Low FODMAP Guide",
           "severity": "High",
-          "description": "6 pages have under 400 words: reading-test-results (~200), low-fodmap (~250), ibs-food-intolerance (~300), symptoms (~350), elimination-diet-planner (~250), test-guide (~400). YMYL health content requires comprehensive depth.",
-          "recommendation": "Expand thin pages to 800-1500 words with practical examples, detailed explanations, and internal links."
+          "description": "guides/low-fodmap is only 33 lines with minimal content - just 3 phase descriptions and references. Competing pages have extensive food lists, meal plans, and detailed guidance.",
+          "recommendation": "Expand with: high FODMAP food list table, low FODMAP alternatives, serving size guidance, common mistakes, meal plan examples, and cross-link to blog/low-fodmap-foods."
         },
         {
-          "title": "Author has no verifiable online presence",
+          "title": "Thin Content: Elimination Diet Planner",
           "severity": "High",
-          "description": "Dr. Emily Carter is listed as author with strong credentials but has no LinkedIn profile, professional registry listing, or verifiable online presence. This weakens E-E-A-T signals.",
-          "recommendation": "Create author profile on LinkedIn and relevant professional directories. Add author page with photo."
+          "description": "tools/elimination-diet-planner is only 34 lines. As a 'planner' tool, it should offer interactive or downloadable content, not just 3 bullet-point protocols.",
+          "recommendation": "Add interactive meal plan template, printable PDF option, sample weekly plan, and more detailed reintroduction schedule."
         },
         {
-          "title": "Missing Tools link in main navigation",
+          "title": "Thin Content: IBS & Food Intolerance Guide",
           "severity": "Medium",
-          "description": "Header navigation only links to Home, Guides, Symptoms, Blog, About. The Tools section (core feature with 7 pages) is not linked from the main nav.",
-          "recommendation": "Add /tools link to Header.astro navigation array."
+          "description": "guides/ibs-food-intolerance is 47 lines. Given IBS affects 10-15% of the population and is a high-volume search topic, this page needs more depth.",
+          "recommendation": "Add: IBS subtypes (IBS-C, IBS-D, IBS-M), specific FODMAP triggers by IBS subtype, stress-gut connection, when to see a gastroenterologist, and red flag symptoms."
         },
         {
-          "title": "Limited internal linking",
+          "title": "No Contact Email",
           "severity": "Medium",
-          "description": "Tool pages don't link to relevant guides, and guide pages could link more to tools. No 'Related Content' sections. Some pages are potential orphans (elimination-diet-planner, food-diary).",
-          "recommendation": "Add contextual cross-links between tools and guides. Add 'Related Content' section to each page."
+          "description": "Neither the About page, Footer, nor Privacy page include a contact email. This weakens E-E-A-T trust signals and makes it harder for users/crawlers to verify legitimacy.",
+          "recommendation": "Add a contact email (e.g., hello@foodintolerancecheck.com) to the About page and Footer."
+        },
+        {
+          "title": "Image Reuse Across Unrelated Pages",
+          "severity": "Low",
+          "description": "vegetables-fodmap.jpg is used on both /guides/low-fodmap and /guides/ibs-food-intolerance. lab-testing.jpg is used on /guides/test-guide and /blog/are-food-intolerance-tests-accurate.",
+          "recommendation": "Use unique, context-specific images for each page to improve visual diversity and image SEO."
         }
       ]
     },
@@ -104,132 +107,149 @@
       "name": "On-Page SEO",
       "score": 82,
       "what_works": [
-        "All 23 pages have unique title tags (40-65 chars)",
-        "All 23 pages have unique meta descriptions (120-160 chars)",
-        "H1 present on every page",
-        "Proper heading hierarchy (H1 > H2 > H3, no skips)",
-        "Canonical URLs on all pages",
-        "Brand suffix consistency on blog posts"
+        "All 23 pages have unique, keyword-rich title tags",
+        "All pages have compelling meta descriptions under 160 characters",
+        "Single H1 per page with clear hierarchy (H1 > H2 > H3)",
+        "Question-based H2 headings that match search intent",
+        "Strong internal linking between related pages",
+        "Breadcrumb navigation on all inner pages",
+        "Descriptive anchor text for internal links"
       ],
       "findings": [
         {
-          "title": "Tools section missing from header navigation",
+          "title": "Title Tag Brand Inconsistency",
+          "severity": "Low",
+          "description": "Some pages include 'FoodCheck' brand in title (e.g., blog posts) while others don't (tool pages). Consistent brand presence in titles improves brand recognition in SERPs.",
+          "recommendation": "Standardize title format: '[Page Topic] - FoodCheck' or 'FoodCheck | [Page Topic]' across all pages."
+        },
+        {
+          "title": "Missing FAQPage Schema on Homepage FAQ",
+          "severity": "High",
+          "description": "Homepage renders 5 FAQ items via JavaScript (checker.js) but has no FAQPage schema. The FAQ page at /faq has proper schema, but the homepage FAQ section is invisible to crawlers.",
+          "recommendation": "Add FAQPage schema to the homepage with the same FAQ content rendered in the client-side JavaScript."
+        },
+        {
+          "title": "Tool Pages Missing WebApplication Schema",
           "severity": "Medium",
-          "description": "The primary navigation omits the Tools index, which is the site's core feature set with 7 dedicated pages.",
-          "recommendation": "Add Tools link to navLinks array in Header.astro."
+          "description": "Individual tool pages (lactose, gluten, histamine, fructose checkers, food diary, planner) have no specific schema. Only the homepage has WebApplication schema.",
+          "recommendation": "Add WebApplication or SoftwareApplication schema to each tool page with specific name, description, and applicationCategory."
         }
       ]
     },
     {
       "name": "Schema / Structured Data",
-      "score": 70,
+      "score": 75,
       "what_works": [
         "Organization schema on homepage",
-        "WebApplication schema on homepage (HealthApplication category)",
-        "Article schema auto-generated on blog and guide posts",
-        "BreadcrumbList schema on subpages",
-        "FAQPage schema on /faq with 6 Q&A pairs"
+        "WebApplication schema for main checker",
+        "Article schema with author and dates for blog/guide posts",
+        "MedicalWebPage schema for medical content pages",
+        "FAQPage schema on /faq page",
+        "ItemList schema on listing pages (tools, guides, blog)",
+        "HowTo schema on elimination diet guide",
+        "BreadcrumbList schema on all inner pages"
       ],
       "findings": [
         {
-          "title": "No MedicalWebPage schema on health content",
-          "severity": "High",
-          "description": "Health/YMYL content pages lack MedicalWebPage schema which signals content expertise and specialty to Google.",
-          "recommendation": "Add MedicalWebPage JSON-LD with about, reviewedBy, and specialty fields to health content pages."
-        },
-        {
-          "title": "Article publisher missing logo object",
-          "severity": "Medium",
-          "description": "Article schema publisher has name and url but no logo ImageObject. Google recommends publisher.logo with ImageObject for rich results.",
-          "recommendation": "Add logo ImageObject to publisher in BaseLayout Article schema generation."
-        },
-        {
-          "title": "No HowTo schema on step-by-step guides",
-          "severity": "Medium",
-          "description": "Elimination diet guide has 4 clear steps (Preparation, Elimination, Reintroduction, Personalisation) that qualify for HowTo rich results.",
-          "recommendation": "Add HowTo JSON-LD to /blog/elimination-diet-guide and /guides/low-fodmap."
-        },
-        {
-          "title": "No ItemList schema on listing pages",
+          "title": "About Page Missing AboutPage Schema",
           "severity": "Low",
-          "description": "Tools, guides, and blog index pages list items but lack ItemList schema for potential carousel rich results.",
-          "recommendation": "Add ItemList JSON-LD to /tools, /guides, and /blog listing pages."
+          "description": "The About page contains rich author information but uses no specific schema. Adding AboutPage or Person schema would strengthen author E-E-A-T signals.",
+          "recommendation": "Add AboutPage schema with mainEntity Person for Dr. Emily Carter including credentials and description."
+        },
+        {
+          "title": "Article Schema Publisher Logo Uses OG Image",
+          "severity": "Low",
+          "description": "Article schema publisher logo URL points to og-default.png (a large OG image). Schema publisher logos should be small brand logos (recommended 600x60px or square).",
+          "recommendation": "Create a dedicated brand logo image (e.g., /images/brand-logo.png) and update the Article schema publisher logo URL."
+        },
+        {
+          "title": "No Sitelinks Searchbox Schema",
+          "severity": "Low",
+          "description": "The site has no search functionality and no SearchAction schema. While not critical, it's a missed opportunity for branded SERP features.",
+          "recommendation": "Consider adding a simple site search and SearchAction schema, or skip as low priority."
         }
       ]
     },
     {
       "name": "Performance (CWV)",
-      "score": 78,
+      "score": 70,
       "what_works": [
-        "Static HTML output (Astro SSG) — near-instant TTFB",
-        "Minimal JavaScript — only tool-specific inline scripts",
-        "No heavy frameworks (React, Vue, Angular)",
-        "Tailwind CSS purged during build",
-        "All images have width/height attributes (CLS prevention)",
-        "Hero image uses loading=eager, others use loading=lazy",
-        "Preconnect hints for Google Fonts"
+        "Astro SSG produces minimal JavaScript by default",
+        "Images use Astro Image component with WebP format",
+        "Hero image uses loading='eager' and fetchpriority='high'",
+        "Other images use loading='lazy'",
+        "No third-party analytics scripts",
+        "Minimal client-side JavaScript (only checker/diary scripts)"
       ],
       "findings": [
         {
-          "title": "Google Fonts render-blocking resource",
-          "severity": "Medium",
-          "description": "Outfit font loaded via external stylesheet with 5 weights. Adds ~300ms to FCP despite preconnect hints and display=swap.",
-          "recommendation": "Self-host font files or use font-display: optional with system font fallback."
+          "title": "Cannot Measure Live CWV (Site Not Deployed)",
+          "severity": "High",
+          "description": "Site is not deployed so no real Core Web Vitals data available. Estimated performance based on code analysis suggests good LCP/CLS but needs live validation.",
+          "recommendation": "Deploy the site first, then run Lighthouse/PageSpeed Insights to measure actual CWV metrics."
         },
         {
-          "title": "No preload hints for hero image",
+          "title": "5 Font Weights Loaded",
           "severity": "Low",
-          "description": "Homepage hero image (hero-healthy.jpg) is not preloaded, adding unnecessary delay to LCP.",
-          "recommendation": "Add <link rel='preload' as='image' href='/images/hero-healthy.jpg'> to homepage head."
+          "description": "Loading Outfit font in 5 weights (300, 400, 500, 600, 700) via @fontsource. Weight 300 doesn't appear to be used in the design.",
+          "recommendation": "Remove weight 300 import. Consider using Outfit variable font for a single file covering all weights."
+        },
+        {
+          "title": "No Image Width/Height Attributes in CSS",
+          "severity": "Low",
+          "description": "While Astro Image handles this via width/height props, some image containers use w-full without aspect-ratio constraints, potentially causing CLS if images load slowly.",
+          "recommendation": "Add aspect-ratio CSS to image containers to prevent layout shift."
         }
       ]
     },
     {
       "name": "AI Search Readiness",
-      "score": 60,
+      "score": 76,
       "what_works": [
-        "Clear, well-structured content with defined headings",
-        "Author attribution with medical credentials",
-        "FAQPage schema (high AI citation potential)",
-        "Medical disclaimers and evidence-based claims",
-        "Content cites reputable medical organisations"
+        "llms.txt file present with comprehensive site map",
+        "Clear, structured content with question-based headings",
+        "Evidence-based citations from authoritative sources",
+        "Well-defined content policy section in llms.txt",
+        "Named author with credentials (Dr. Emily Carter)",
+        "Medical disclaimers improve AI citation accuracy"
       ],
       "findings": [
         {
-          "title": "No llms.txt file",
+          "title": "Missing llms-full.txt",
           "severity": "Medium",
-          "description": "Live robots.txt references LLM-Policy: /llms.txt but the file likely does not exist on the server.",
-          "recommendation": "Create /public/llms.txt with site description, key pages, content policies, and citation preferences."
+          "description": "llms.txt is present but llms-full.txt (expanded version with more detail per page) is missing. AI crawlers like ChatGPT Browse and Perplexity increasingly look for this.",
+          "recommendation": "Create llms-full.txt with expanded summaries of each page including key facts, statistics, and quotable passages."
         },
         {
-          "title": "References not linked inline",
+          "title": "No Contact Information for AI Verification",
           "severity": "Medium",
-          "description": "Blog posts list references at the end but do not hyperlink claims to source pages (NHS, BDA, etc.). AI systems prefer inline citations for verification.",
-          "recommendation": "Add hyperlinks to authoritative sources (NHS, BDA, NICE) directly within claim sentences."
+          "description": "AI search engines use contact information as a trust signal. No email address is provided anywhere on the site.",
+          "recommendation": "Add a contact email to improve AI citation trust signals."
         }
       ]
     },
     {
       "name": "Images",
-      "score": 70,
+      "score": 80,
       "what_works": [
-        "All 16 images have descriptive alt text",
-        "All images have explicit width=800 height=450 (CLS prevention)",
-        "Hero image correctly uses loading=eager",
-        "All other images use loading=lazy"
+        "All images have descriptive alt text",
+        "Astro Image component auto-converts to WebP",
+        "Hero image optimized with eager loading and fetchpriority",
+        "Width and height attributes set for all images (800x450)",
+        "Images loaded lazily for below-fold content"
       ],
       "findings": [
         {
-          "title": "No WebP/AVIF format optimization",
+          "title": "Duplicate Images in src/assets and public",
           "severity": "Medium",
-          "description": "All 16 images are JPG only. No WebP or AVIF alternatives. Astro's built-in image optimization (astro:assets) is not used.",
-          "recommendation": "Use Astro <Image> component for automatic WebP conversion. Potential 25-35% file size reduction."
+          "description": "All images exist in both src/assets/images/ and public/images/. The public/images copies are redundant since Astro Image processes src/assets images. This doubles the repository size.",
+          "recommendation": "Remove duplicate images from public/images/ since Astro Image handles optimization from src/assets. Keep only static assets (favicon, OG image, JS files) in public/."
         },
         {
-          "title": "Uniform 800x450 dimensions not responsive",
-          "severity": "Medium",
-          "description": "All images use same 800x450 regardless of container size. Tool pages display at max 672px, blog at 768px. No srcset or responsive sizing.",
-          "recommendation": "Use Astro responsive image features or srcset for different viewport sizes."
+          "title": "No Favicon in PNG/ICO Format",
+          "severity": "Low",
+          "description": "Only favicon.svg is provided. Some browsers and platforms (especially mobile) prefer PNG or ICO favicons for better rendering.",
+          "recommendation": "Add a 32x32 and 16x16 PNG favicon alongside the SVG."
         }
       ]
     }
@@ -240,43 +260,43 @@
         "name": "Phase 1: Critical Fixes",
         "timeframe": "Week 1",
         "items": [
-          "Redeploy site to fix sitemap and robots.txt mismatch",
-          "Add Google Search Console verification",
-          "Add /tools link to header navigation"
+          "Deploy the site to a hosting provider and verify DNS",
+          "Add FAQPage schema to homepage FAQ section",
+          "Remove duplicate images from public/images/",
+          "Add contact email to About page and Footer"
         ]
       },
       {
         "name": "Phase 2: High-Impact Improvements",
         "timeframe": "Weeks 2-3",
         "items": [
-          "Expand 6 thin content pages to 800+ words",
-          "Add MedicalWebPage schema to health content",
-          "Convert images to WebP using Astro Image",
-          "Add HowTo schema to elimination diet guide",
-          "Fix Article schema publisher logo"
+          "Expand Low FODMAP Guide with food lists and detailed content",
+          "Expand Elimination Diet Planner with interactive/planner content",
+          "Add WebApplication schema to individual tool pages",
+          "Change OG type to 'article' for blog/guide pages",
+          "Create llms-full.txt with expanded page summaries"
         ]
       },
       {
         "name": "Phase 3: Content & Authority",
         "timeframe": "Month 2",
         "items": [
-          "Strengthen E-E-A-T with verifiable author profile",
-          "Add ItemList schema to listing pages",
-          "Self-host Google Fonts (Outfit)",
-          "Improve internal linking cross-references",
-          "Create llms.txt for AI crawlers",
-          "Add inline citations to references"
+          "Expand IBS & Food Intolerance guide with subtypes and detailed management",
+          "Add AboutPage schema with Person entity for author",
+          "Standardize title tag format across all pages",
+          "Replace reused images with unique context-specific images",
+          "Add PNG favicon variants"
         ]
       },
       {
         "name": "Phase 4: Monitoring & Iteration",
         "timeframe": "Ongoing",
         "items": [
-          "Publish new blog content monthly",
-          "Monitor Search Console for performance data",
-          "Add responsive images with srcset",
-          "Preload hero image for LCP improvement",
-          "Create custom OG images for key pages"
+          "Measure Core Web Vitals with PageSpeed Insights after deployment",
+          "Set up Google Search Console and submit sitemap",
+          "Monitor indexing status and fix any crawl errors",
+          "Consider adding more blog content targeting long-tail keywords",
+          "Add security headers via hosting provider"
         ]
       }
     ]

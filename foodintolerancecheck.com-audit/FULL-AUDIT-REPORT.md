@@ -1,250 +1,271 @@
-# FoodIntoleranceCheck.com — Full SEO Audit Report
+# Food Intolerance Check — Full SEO Audit Report
 
-**Domain**: foodintolerancecheck.com  
-**Date**: July 23, 2026  
-**Business Type**: Health/Education (YMYL) — Free online self-assessment tools and educational content  
-**Platform**: Astro 7.1 (SSG) + Tailwind CSS  
-**Total Pages**: 23  
+**Domain:** foodintolerancecheck.com  
+**Audit Date:** July 24, 2026  
+**Pages Analyzed:** 23  
+**Framework:** Astro 7.1.3 + Tailwind CSS 3.4  
+**Business Type:** Health/Education SaaS Tool (Free)  
+**Deployment Status:** NOT DEPLOYED (domain shows parked page)
 
 ---
 
 ## Executive Summary
 
-**SEO Health Score: 68/100**
+**SEO Health Score: 72/100**
 
-FoodIntoleranceCheck.com is a well-built health education site with solid technical foundations — clean static HTML, proper meta tags, good heading hierarchy, and structured data on key pages. However, a **critical sitemap deployment issue** means search engines may not be able to discover most pages. Several guide pages are too thin for YMYL health content, and image optimization opportunities remain.
+FoodCheck is a well-structured, evidence-based health education site with strong foundational SEO. The codebase demonstrates excellent on-page SEO practices, comprehensive schema markup, and high-quality content with proper E-E-A-T signals. However, the site is not currently deployed, several pages have thin content, and there are schema gaps that need attention before launch.
 
 ### Top 5 Critical Issues
-1. **Sitemap not serving site pages** — live sitemap.xml only contains `/lander`, not the 23 actual URLs
-2. **robots.txt mismatch** — live version differs from source code (different deployment?)
-3. **Thin content on guide pages** — 3 guides under 300 words (YMYL penalty risk)
-4. **No WebP/AVIF image optimization** — all 16 images are JPG only
-5. **Missing schema opportunities** — no MedicalWebPage, HowTo, or ItemList schemas
+1. **Site not deployed** — domain returns a parked JavaScript redirect page
+2. **Homepage FAQ section missing FAQPage schema** — FAQ content rendered via JS but no structured data
+3. **Thin content pages** — Low FODMAP guide and Elimination Diet Planner need significant expansion
+4. **No contact email** — weakens E-E-A-T trust signals across the site
+5. **OG type hardcoded** — all pages use `og:type="website"` including blog articles
 
 ### Top 5 Quick Wins
-1. Redeploy site to sync source → live (fixes sitemap + robots.txt)
-2. Add "Tools" link to main navigation header
-3. Expand `/guides/reading-test-results` from ~200 to 800+ words
-4. Add MedicalWebPage schema to health content pages
-5. Convert images to WebP using Astro's `<Image>` component
+1. Add FAQPage schema to homepage (matches existing JS-rendered FAQ content)
+2. Set `og:type="article"` for blog posts and guide pages
+3. Add contact email to About page and Footer
+4. Expand Low FODMAP guide with food lists from existing blog content
+5. Add WebApplication schema to individual tool pages
 
 ---
 
-## Category Scores
+## Scoring Breakdown
 
-| Category | Score | Weight | Weighted |
-|----------|-------|--------|----------|
-| Technical SEO | 72/100 | 22% | 15.8 |
-| Content Quality | 65/100 | 23% | 15.0 |
-| On-Page SEO | 82/100 | 20% | 16.4 |
-| Schema / Structured Data | 70/100 | 10% | 7.0 |
-| Performance (CWV) | 78/100 | 10% | 7.8 |
-| AI Search Readiness | 60/100 | 10% | 6.0 |
-| Images | 70/100 | 5% | 3.5 |
-| **Total** | | **100%** | **71.5 → 68** |
-
----
-
-## Technical SEO (72/100)
-
-### Strengths
-- ✅ Canonical URLs auto-generated on all pages
-- ✅ All 23 pages have unique titles and meta descriptions
-- ✅ Open Graph + Twitter Card meta on every page
-- ✅ Clean URL structure (`/tools/lactose-intolerance-test`, `/guides/test-guide`)
-- ✅ `trailingSlash: "never"` for URL consistency
-- ✅ HTTPS enabled
-- ✅ Static HTML output — fully crawlable without JS rendering
-- ✅ Mobile responsive via Tailwind
-
-### Issues
-
-| # | Severity | Issue | Impact |
-|---|----------|-------|--------|
-| 1 | **Critical** | Live sitemap.xml only has `/lander` URL | Search engines can't discover pages |
-| 2 | **High** | robots.txt live ≠ source code | Deployment out of sync |
-| 3 | **Medium** | Google Fonts render-blocking | FCP delay ~300ms |
-| 4 | **Low** | No hreflang tags | Acceptable for English-only site |
-| 5 | **Info** | No Google Search Console | No search performance data |
-
-**Full details**: [findings/technical.md](findings/technical.md)
+| Category | Weight | Score | Weighted |
+|---|---|---|---|
+| Technical SEO | 22% | 70 | 15.4 |
+| Content Quality | 23% | 78 | 17.9 |
+| On-Page SEO | 20% | 82 | 16.4 |
+| Schema / Structured Data | 10% | 75 | 7.5 |
+| Performance (CWV) | 10% | 70 | 7.0 |
+| AI Search Readiness | 10% | 76 | 7.6 |
+| Images | 5% | 80 | 4.0 |
+| **Total** | **100%** | | **75.8** |
 
 ---
 
-## Content Quality (65/100)
+## 1. Technical SEO (70/100)
 
-### Strengths
-- ✅ Author attribution (Dr. Emily Carter, Registered Dietitian) on all content
-- ✅ Publication and modification dates on blog and guide content
-- ✅ References from reputable sources (NHS, BDA, NICE, AAAAI, Monash)
-- ✅ Medical disclaimers on all tool pages
-- ✅ Good readability — plain English, short paragraphs, tables
-- ✅ FAQ page with comprehensive Q&A pairs
-- ✅ Detailed About page with editorial standards
+### What Works
+- `robots.txt` properly configured: `Allow: /` with sitemap reference
+- `@astrojs/sitemap` integration generates sitemap automatically
+- Canonical URLs correctly generated via `Astro.url.pathname`
+- `trailingSlash: "never"` ensures clean, consistent URLs
+- `_redirects` handles `/sitemap.xml → /sitemap-index.xml` (301)
+- Astro SSG produces fast static HTML with minimal JavaScript
 
-### Issues
+### Issues Found
 
-| # | Severity | Issue | Impact |
-|---|----------|-------|--------|
-| 1 | **High** | 6 pages with thin content (<400 words) | YMYL ranking penalty |
-| 2 | **High** | "Dr. Emily Carter" has no verifiable online presence | E-E-A-T trust gap |
-| 3 | **Medium** | No "Tools" link in main navigation | Users and crawlers can't find core feature |
-| 4 | **Medium** | Limited internal linking between tools and guides | Missed link equity |
-| 5 | **Low** | No blog content since March 2026 | Freshness signal decay |
+| # | Finding | Severity |
+|---|---|---|
+| 1 | Site not deployed — domain returns parked page (114 bytes, JS redirect to /lander) | Critical |
+| 2 | No security headers (CSP, X-Frame-Options, HSTS) | Medium |
+| 3 | OG type hardcoded as "website" for all pages | Medium |
+| 4 | Loading 5 font weights (300-700) when only 4 appear used | Low |
+
+### Deployment
+The domain `foodintolerancecheck.com` is currently serving a parked page:
+```html
+<!DOCTYPE html><html><head><script>window.onload=function(){window.location.href="/lander"}</script></head></html>
+```
+This must be resolved before any SEO efforts can take effect.
+
+### Recommendations
+- Deploy to Cloudflare Pages, Netlify, or Vercel
+- Add `_headers` file with security headers for hosting provider
+- Pass `ogType` prop from pages to BaseLayout for correct OG type
+
+---
+
+## 2. Content Quality (78/100)
+
+### E-E-A-T Assessment: Strong
+- **Experience:** Author has 12+ years clinical experience (stated on About page)
+- **Expertise:** Dr. Emily Carter, Registered Dietitian — named on all guide/blog posts
+- **Authoritativeness:** References NHS, BDA, NICE, AAAAI, Monash, EAACI, peer-reviewed journals
+- **Trust:** Clear medical disclaimers on every page, editorial standards documented, no commercial bias
 
 ### Thin Content Pages
-| Page | Est. Words | Recommended |
-|------|-----------|-------------|
-| `/guides/reading-test-results` | ~200 | Expand to 800+ |
-| `/guides/low-fodmap` | ~250 | Expand to 1200+ |
-| `/guides/ibs-food-intolerance` | ~300 | Expand to 800+ |
-| `/symptoms` | ~350 | Expand to 600+ |
-| `/tools/elimination-diet-planner` | ~250 | Add interactive elements |
 
-**Full details**: [findings/content.md](findings/content.md)
+| Page | Lines | Issue |
+|---|---|---|
+| `/guides/low-fodmap` | 33 | Missing food lists, only 3 phase descriptions |
+| `/tools/elimination-diet-planner` | 34 | No interactive content, just bullet-point protocols |
+| `/guides/ibs-food-intolerance` | 47 | Missing IBS subtypes, detailed management strategies |
 
----
+### Content Duplication
+- `vegetables-fodmap.jpg` used on both `/guides/low-fodmap` and `/guides/ibs-food-intolerance`
+- `lab-testing.jpg` used on both `/guides/test-guide` and `/blog/are-food-intolerance-tests-accurate`
+- Content between `/guides/test-guide` and `/blog/are-food-intolerance-tests-accurate` overlaps significantly
 
-## On-Page SEO (82/100)
-
-### Title Tags
-All 23 pages have unique, descriptive titles (40-65 chars). ✅  
-Brand suffix "- FoodCheck" used on blog posts. ✅
-
-### Meta Descriptions
-All 23 pages have unique descriptions (120-160 chars). ✅  
-No duplicates found. ✅
-
-### Heading Structure
-- H1: Present on every page ✅
-- H2: Used for major sections ✅
-- H3: Used for sub-items (cards, steps) ✅
-- No skipped heading levels ✅
-
-### Internal Linking
-- Footer: 4-column link structure covering all major pages ✅
-- Content: Cross-links between related blog/guide articles ✅
-- Breadcrumbs: Present on subpages via schema ✅
-- **Missing**: "Tools" not in header nav, limited tool ↔ guide cross-links ⚠️
+### Strengths
+- Elimination Diet Guide (113 lines) is comprehensive with HowTo schema
+- Intolerance vs Allergy guide has excellent comparison table
+- Low FODMAP Food List blog post has detailed food reference tables
+- All checker pages include NHS/BDA statistics and blockquote citations
 
 ---
 
-## Schema / Structured Data (70/100)
+## 3. On-Page SEO (82/100)
+
+### Title Tags — All Unique and Well-Crafted
+Every page has a unique, keyword-rich title. Examples:
+- `Food Intolerance Checker - Free Online Self-Assessment`
+- `Lactose Intolerance Checker - Free Online Self-Assessment`
+- `Low FODMAP Food List - Complete Guide for IBS Management`
+
+### Meta Descriptions — All Present and Compelling
+All descriptions are under 160 characters and include relevant keywords with clear value propositions.
+
+### Heading Structure — Excellent
+- Single `<h1>` per page with clear hierarchy
+- Question-based H2 headings that match search intent patterns:
+  - "How Does This Lactose Checker Work?"
+  - "Why Do Doctors Not Recommend IgG Blood Tests?"
+  - "What Should You Remember About the Low FODMAP Diet?"
+
+### Internal Linking — Strong
+- Cross-linking between related tools, guides, and blog posts
+- Resource cards at bottom of each checker page (4 links each)
+- Footer links organized by category (Tools, Guides, Intolerances, Company)
+- Contextual inline links within content body
+
+### Issues Found
+
+| # | Finding | Severity |
+|---|---|---|
+| 1 | Homepage FAQ rendered via JS with no FAQPage schema | High |
+| 2 | Tool pages missing WebApplication schema | Medium |
+| 3 | Title tag brand name inconsistent across pages | Low |
+
+---
+
+## 4. Schema / Structured Data (75/100)
 
 ### Current Implementation
+
 | Schema Type | Pages | Status |
-|-------------|-------|--------|
-| Organization | Homepage | ✅ Valid |
-| WebApplication | Homepage | ✅ Valid |
-| Article | Blog + Guide posts (auto via BaseLayout) | ✅ Valid (minor issues) |
-| BreadcrumbList | Subpages with breadcrumbs prop | ✅ Valid |
-| FAQPage | `/faq` | ✅ Valid |
+|---|---|---|
+| Organization | Homepage | ✅ |
+| WebApplication | Homepage only | ⚠️ Should be on all tool pages |
+| Article | Blog posts, Guide pages | ✅ |
+| MedicalWebPage | Medical content pages | ✅ |
+| FAQPage | /faq page | ✅ |
+| ItemList | Listing pages (tools, guides, blog) | ✅ |
+| HowTo | Elimination Diet Guide | ✅ |
+| BreadcrumbList | All inner pages | ✅ |
 
-### Missing Opportunities
-- **MedicalWebPage** — high value for YMYL health content
-- **HowTo** — elimination diet guide has clear step-by-step structure
-- **ItemList** — listing pages (tools, guides, blog) could get carousel rich results
+### Gaps
+- **No FAQPage schema on homepage** — homepage has 5 FAQ items rendered via JS but no structured data
+- **No WebApplication schema on tool pages** — individual checkers should have their own schema
+- **No AboutPage schema** on /about page
+- **Article publisher logo** uses og-default.png (a large image) instead of a proper brand logo
 
-### Validation Issues
-- Article schema publisher missing `logo` ImageObject
-- Organization logo uses SVG (may not meet Google's 112×112px minimum)
-- Article schema missing `image` field
-
-**Full details**: [findings/schema.md](findings/schema.md)
+### Validation Notes
+- All JSON-LD is valid syntax
+- URLs are correctly absolute (https://foodintolerancecheck.com/...)
+- Date fields use ISO 8601 format
 
 ---
 
-## Performance (78/100)
+## 5. Performance / Core Web Vitals (70/100)
 
-### Estimated Core Web Vitals
-| Metric | Estimate | Rating |
-|--------|----------|--------|
-| LCP | ~2.0-2.5s | Needs Improvement |
-| INP | <100ms | Good |
-| CLS | <0.05 | Good |
-| FCP | ~1.5-2.0s | Good |
-| TTFB | <100ms | Excellent (static) |
+### Estimated Performance (Code Analysis — Site Not Deployed)
 
-### Strengths
-- Static HTML (Astro SSG) — near-instant TTFB
-- Minimal JavaScript — only tool-specific scripts
-- Tailwind CSS purged — small stylesheet
+| Metric | Estimate | Basis |
+|---|---|---|
+| LCP | Good (~1.5s) | Hero image eager+fetpriority, minimal JS, static HTML |
+| INP | Good (~50ms) | Minimal interactive elements, no heavy frameworks |
+| CLS | Good (~0.05) | Image width/height set, font may cause minor shift |
+| TBT | Good (~50ms) | Only checker scripts are client-side JS |
+
+### Concerns
+- Cannot verify without live deployment
+- 5 font weight files may increase FCP
+- No `aspect-ratio` on image containers could cause minor CLS
+- Checker.js is 126 lines loaded on homepage — minimal impact
+
+### Optimizations Already in Place
+- Astro SSG (zero JS framework overhead)
+- `@astrojs/tailwind` for purged CSS
+- `loading="lazy"` on all non-hero images
+- `fetchpriority="high"` on hero image
 - No analytics or tracking scripts
 
+---
+
+## 6. AI Search Readiness (76/100)
+
+### What Works
+- **llms.txt** present with comprehensive site overview, key pages, guides, blog, and content policy
+- Content uses question-based headings (H2) that match AI extraction patterns
+- Blockquote citations provide quotable passages
+- Named author with credentials enables attribution
+- Medical disclaimers help AI systems cite responsibly
+
+### Gaps
+- **No llms-full.txt** — expanded version with detailed per-page summaries
+- **No contact email** — AI engines use contact info as trust signal
+- **No structured data for tools** — AI crawlers benefit from WebApplication schema
+
+### Citability Score: 7/10
+Content is well-structured for AI extraction but missing the expanded llms-full.txt that increasingly powers AI Overview citations.
+
+---
+
+## 7. Images (80/100)
+
+### What Works
+- All images have descriptive `alt` text
+- Astro `<Image>` component auto-converts to WebP format
+- Width (800) and height (450) set for consistent aspect ratio
+- Proper loading strategy: eager for hero, lazy for rest
+
 ### Issues
-- Google Fonts render-blocking (Outfit, 5 weights)
-- No `<link rel="preload">` for hero image
-- No critical CSS inlining
-
-**Full details**: [findings/performance.md](findings/performance.md)
-
----
-
-## Images (70/100)
-
-### Inventory: 16 JPG images
-- ✅ All have descriptive alt text
-- ✅ All have `width` and `height` attributes (CLS prevention)
-- ✅ Hero uses `loading="eager"`, others use `loading="lazy"`
-- ⚠️ No WebP/AVIF format alternatives
-- ⚠️ All use uniform 800×450 dimensions (not responsive)
-- ⚠️ Astro `<Image>` component not used
+- **Duplicate storage:** All images exist in both `src/assets/images/` and `public/images/`
+  - `public/images/` copies are redundant (Astro Image processes from `src/assets/`)
+  - Doubles the repository size unnecessarily
+- **No PNG favicon** — only SVG, some platforms prefer PNG/ICO
+- **Image reuse** across unrelated pages reduces visual diversity
 
 ---
 
-## AI Search Readiness (60/100)
+## Site Architecture Summary
 
-### Strengths
-- Well-structured, factual content with clear headings
-- Author credentials visible
-- FAQPage schema (high AI citation potential)
-- Medical disclaimers and evidence-based claims
+```
+/ (Homepage — Main Checker)
+├── /tools (Listing)
+│   ├── /tools/lactose-intolerance-test
+│   ├── /tools/gluten-intolerance-test
+│   ├── /tools/histamine-intolerance-test
+│   ├── /tools/fructose-intolerance-test
+│   ├── /tools/food-diary
+│   └── /tools/elimination-diet-planner
+├── /guides (Listing)
+│   ├── /guides/intolerance-vs-allergy
+│   ├── /guides/test-guide
+│   ├── /guides/low-fodmap
+│   ├── /guides/reading-test-results
+│   └── /guides/ibs-food-intolerance
+├── /symptoms
+├── /blog (Listing)
+│   ├── /blog/elimination-diet-guide
+│   ├── /blog/low-fodmap-foods
+│   └── /blog/are-food-intolerance-tests-accurate
+├── /faq
+├── /about
+├── /privacy
+└── /terms
+```
 
-### Issues
-- No `llms.txt` file (referenced in live robots.txt but likely missing)
-- No inline citation links (references listed but not hyperlinked)
-- No structured summaries/abstracts for AI extraction
-- No explicit "key takeaway" passages optimized for AI citation
+**Total Pages:** 23  
+**Average Internal Links Per Page:** ~6  
+**Orphan Pages:** 0 (all pages linked from nav, footer, or related pages)
 
 ---
 
-## Page Inventory
+## Conclusion
 
-### Tools (7 pages)
-| URL | Title | H1 |
-|-----|-------|----|
-| `/` | Food Intolerance Checker - Free Online Self-Assessment | Food Intolerance Checker |
-| `/tools` | Free Food Intolerance Tools - Checkers, Diary & Planner | Tools |
-| `/tools/lactose-intolerance-test` | Lactose Intolerance Checker - Free Online Self-Assessment | Lactose Intolerance Checker |
-| `/tools/gluten-intolerance-test` | Gluten Intolerance Checker - Free Online Self-Assessment | Gluten Intolerance Checker |
-| `/tools/histamine-intolerance-test` | Histamine Intolerance Checker - Free Self-Assessment Tool | Histamine Intolerance Checker |
-| `/tools/fructose-intolerance-test` | Fructose Intolerance Checker - Free Self-Assessment Tool | Fructose Intolerance Checker |
-| `/tools/food-diary` | Food Diary for Intolerance - Track Meals & Symptoms | Food Diary |
-| `/tools/elimination-diet-planner` | Elimination Diet Planner - Identify Trigger Foods | Elimination Diet Planner |
-
-### Guides (6 pages)
-| URL | Title |
-|-----|-------|
-| `/guides` | Food Intolerance Guides - Testing, Diets & Symptom Management |
-| `/guides/intolerance-vs-allergy` | Food Intolerance vs Food Allergy - Key Differences Explained |
-| `/guides/test-guide` | Food Intolerance Test Guide - Breath Tests, IgG & Elimination Diets |
-| `/guides/low-fodmap` | Low FODMAP Diet Guide - Manage IBS & Food Intolerance |
-| `/guides/reading-test-results` | How to Read Food Intolerance Test Results - FoodCheck |
-| `/guides/ibs-food-intolerance` | IBS & Food Intolerance - Symptoms, Overlap & Management |
-
-### Blog (4 pages)
-| URL | Title |
-|-----|-------|
-| `/blog` | Food Intolerance Blog - Guides, Tips & Evidence-Based Nutrition |
-| `/blog/elimination-diet-guide` | Elimination Diet: A Step-by-Step Guide - FoodCheck |
-| `/blog/low-fodmap-foods` | Low FODMAP Food List - Complete Guide for IBS Management |
-| `/blog/are-food-intolerance-tests-accurate` | Are Food Intolerance Tests Accurate? - FoodCheck |
-
-### Other (6 pages)
-| URL | Title |
-|-----|-------|
-| `/symptoms` | Food Intolerance Symptoms - Common Signs & What to Watch For |
-| `/faq` | Food Intolerance FAQ - Common Questions About Testing & Symptoms |
-| `/about` | About FoodCheck - Our Approach to Food Intolerance Education |
-| `/privacy` | Privacy Policy - How FoodCheck Protects Your Data |
-| `/terms` | Terms of Service - Educational Food Intolerance Resources |
+FoodCheck has a strong SEO foundation with excellent on-page optimization, comprehensive schema markup, and high-quality evidence-based content. The primary blockers are: (1) the site is not deployed, (2) a few thin content pages need expansion, and (3) some schema gaps on tool pages and the homepage FAQ section. Once deployed and with the Phase 1-2 fixes applied, the site should perform well in search results for food intolerance related queries.

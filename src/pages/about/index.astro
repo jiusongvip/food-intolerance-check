@@ -13,7 +13,7 @@ import aboutImage from '../../assets/images/doctor-health.jpg';
     <Image src={aboutImage} alt="Healthcare professional providing evidence-based nutritional guidance" class="w-full h-auto rounded-xl mb-8" width={800} height={450} loading="lazy" format="webp" />
     <p class="text-slate-600 mb-4">Founded with the belief that everyone deserves access to clear, evidence-based health information, FoodCheck provides self-assessment tools, guides, and educational content — all at no cost and with no data collection.</p>
 
-    <h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">Our Mission</h2>
+    <h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">What Is the Mission Behind FoodCheck?</h2>
     <p class="text-slate-600 mb-4">Food intolerance affects an estimated 15-20% of the population, yet many people struggle to find reliable information online. Commercial testing companies often promote unvalidated tests, and conflicting advice makes it difficult to know where to start. FoodCheck was created to bridge this gap by providing:</p>
     <ul class="list-disc list-inside text-slate-600 space-y-2 mb-6">
       <li><strong>Free self-assessment tools</strong> that run entirely in your browser — no sign-up, no data collected</li>
@@ -22,11 +22,11 @@ import aboutImage from '../../assets/images/doctor-health.jpg';
       <li><strong>Clear next steps</strong> to help you have productive conversations with your GP or dietitian</li>
     </ul>
 
-    <h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">Our Approach</h2>
+    <h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">How Does FoodCheck Approach Health Information?</h2>
     <p class="text-slate-600 mb-4">We believe in evidence-based, transparent health information. Our checker uses common symptom patterns documented in medical literature to suggest possible food intolerances, but it is <strong>not a diagnostic tool</strong>. Every piece of content on FoodCheck is reviewed for accuracy against current clinical guidelines from reputable medical organisations.</p>
     <p class="text-slate-600 mb-4">Our tools are designed to complement — not replace — professional medical advice. The best outcome is when a FoodCheck user walks into their GP's appointment with better questions and a clearer understanding of their symptoms.</p>
 
-    <h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">Our Content Team</h2>
+    <h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">Who Creates the Content?</h2>
     <div class="bg-white border border-slate-200 rounded-xl p-6 mb-6">
       <div class="flex items-start gap-4">
         <div class="w-12 h-12 rounded-full bg-brand-100 flex items-center justify-center shrink-0">
@@ -40,7 +40,7 @@ import aboutImage from '../../assets/images/doctor-health.jpg';
       </div>
     </div>
 
-    <h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">Editorial Standards</h2>
+    <h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">What Editorial Standards Do You Follow?</h2>
     <ul class="list-disc list-inside text-slate-600 space-y-2 mb-6">
       <li>All health content is based on current clinical guidelines and peer-reviewed research</li>
       <li>Medical claims are referenced with links to reputable sources (NHS, BDA, NICE, AAAAI)</li>
@@ -49,7 +49,7 @@ import aboutImage from '../../assets/images/doctor-health.jpg';
       <li>We never recommend commercial products or tests that lack scientific support</li>
     </ul>
 
-    <h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">Important Disclaimer</h2>
+    <h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">Is This a Medical Service?</h2>
     <p class="text-slate-600 mb-4">This website provides educational content only. It does not provide medical diagnosis, treatment, or advice. Always consult your GP, a gastroenterologist, or a registered dietitian for medical concerns. If you experience severe symptoms — such as difficulty breathing, swelling, or anaphylaxis — seek emergency medical attention immediately.</p>
 
     <h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">Our References</h2>
@@ -65,7 +65,27 @@ import aboutImage from '../../assets/images/doctor-health.jpg';
     </ul>
 
     <h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">Contact</h2>
-    <p class="text-slate-600 mb-4">Have a question, suggestion, or correction? We welcome feedback to help us improve our content. Reach out through our <a href="/faq" class="text-brand-600 hover:text-brand-700 underline">FAQ page</a> or report issues with specific content directly on the relevant page.</p>
+    <p class="text-slate-600 mb-4">Have a question, suggestion, or correction? We welcome feedback to help us improve our content. Reach out at <a href="mailto:hello@foodintolerancecheck.com" class="text-brand-600 hover:text-brand-700 underline">hello@foodintolerancecheck.com</a> or visit our <a href="/faq" class="text-brand-600 hover:text-brand-700 underline">FAQ page</a>.</p>
   </main>
   <Footer />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "About FoodCheck",
+  "description": "About FoodCheck — a free educational platform for food intolerance self-assessment and evidence-based health information.",
+  "url": "https://foodintolerancecheck.com/about",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Dr. Emily Carter",
+    "jobTitle": "Registered Dietitian",
+    "description": "Lead Content Author & Medical Reviewer with over 12 years of clinical experience in gastroenterology and food intolerance management.",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "FoodCheck",
+      "url": "https://foodintolerancecheck.com"
+    }
+  }
+}
+</script>
 </BaseLayout>

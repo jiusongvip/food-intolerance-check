@@ -5,12 +5,12 @@ import Footer from "../../components/Footer.astro";
 import { Image } from 'astro:assets';
 import guidesImage from '../../assets/images/books-guides.jpg';
 ---
-<BaseLayout title="Food Intolerance Guides - Testing, Diets & Symptom Management" description="In-depth guides on food intolerance testing methods, elimination diets, low FODMAP, IBS management, and how to read test results. Evidence-based resources." breadcrumbs={[{ label: 'Guides', href: '/guides' }]}">
+<BaseLayout title="Food Intolerance Guides - Testing & Diets - FoodCheck" description="In-depth guides on food intolerance testing methods, elimination diets, low FODMAP, IBS management, and how to read test results. Evidence-based resources." breadcrumbs={[{ label: 'Guides', href: '/guides' }]}">
 <Header /><main class="max-w-6xl mx-auto px-4 sm:px-6 py-16 md:py-24">
 <h1 class="text-4xl font-semibold text-slate-900 mb-4 tracking-tight">Guides</h1>
 <p class="text-lg text-slate-500 mb-12 max-w-2xl">In-depth resources to help you understand food intolerances, testing options, and evidence-based management strategies.</p>
 <Image src={guidesImage} alt="Collection of medical books and health guide resources" class="w-full h-auto rounded-xl mb-10 max-w-2xl" width={800} height={450} loading="lazy" format="webp" />
-<h2 class="text-2xl font-semibold text-slate-900 mb-5">Browse All Guides</h2>
+<h2 class="text-2xl font-semibold text-slate-900 mb-5">Which Guides Should You Read?</h2>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
 <a href="/guides/intolerance-vs-allergy" class="group bg-white border border-slate-200 rounded-xl p-6 hover:border-brand-300 hover:shadow-md transition-all no-underline">
 <h3 class="font-semibold text-slate-900 group-hover:text-brand-700 transition-colors mb-1">Food Intolerance vs Food Allergy</h3>
@@ -32,7 +32,24 @@ import guidesImage from '../../assets/images/books-guides.jpg';
 <h3 class="font-semibold text-slate-900 group-hover:text-brand-700 transition-colors mb-1">IBS & Food Intolerance</h3>
 <p class="text-sm text-slate-500">Understanding the overlap between IBS and food intolerances, and how to manage both.</p>
 </a>
-</div></main>
+</div>
+
+<h2 class="text-2xl font-semibold text-slate-900 mt-12 mb-5">How Should You Use These Guides?</h2>
+<p class="text-slate-600 mb-6">Each guide is written by a registered dietitian and reviewed against clinical guidelines from the NHS, BDA, and EAACI. We recommend reading them in this order:</p>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+  <div class="bg-white border border-slate-200 rounded-xl p-5"><h3 class="font-semibold text-slate-900 text-sm mb-2">1. Understand the Basics</h3><p class="text-xs text-slate-500">Start with Intolerance vs Allergy to understand the fundamental differences.</p></div>
+  <div class="bg-white border border-slate-200 rounded-xl p-5"><h3 class="font-semibold text-slate-900 text-sm mb-2">2. Explore Testing Options</h3><p class="text-xs text-slate-500">Read the Testing Guide to compare methods, then Reading Test Results for interpretation.</p></div>
+  <div class="bg-white border border-slate-200 rounded-xl p-5"><h3 class="font-semibold text-slate-900 text-sm mb-2">3. Take Action</h3><p class="text-xs text-slate-500">Use the Low FODMAP or IBS guides to start managing your symptoms with evidence-based strategies.</p></div>
+</div>
+
+<h2 class="text-2xl font-semibold text-slate-900 mt-12 mb-5">Ready to Start Assessing Your Symptoms?</h2>
+<p class="text-slate-600 mb-4">Use our free tools alongside these guides to get practical insights:</p>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+  <a href="/" class="bg-white border border-slate-200 rounded-xl p-5 hover:border-brand-300 transition-colors no-underline"><h3 class="font-semibold text-slate-900 text-sm mb-2">Food Intolerance Checker</h3><p class="text-xs text-slate-500">3-step assessment to explore possible triggers</p></a>
+  <a href="/tools/food-diary" class="bg-white border border-slate-200 rounded-xl p-5 hover:border-brand-300 transition-colors no-underline"><h3 class="font-semibold text-slate-900 text-sm mb-2">Food Diary</h3><p class="text-xs text-slate-500">Track meals and symptoms to spot patterns</p></a>
+  <a href="/tools/elimination-diet-planner" class="bg-white border border-slate-200 rounded-xl p-5 hover:border-brand-300 transition-colors no-underline"><h3 class="font-semibold text-slate-900 text-sm mb-2">Elimination Diet Planner</h3><p class="text-xs text-slate-500">Structured template for elimination and reintroduction</p></a>
+</div>
+</main>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",

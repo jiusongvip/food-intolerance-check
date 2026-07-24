@@ -5,22 +5,81 @@ import Footer from "../../../components/Footer.astro";
 import { Image } from 'astro:assets';
 import ibsImage from '../../../assets/images/vegetables-fodmap.jpg';
 ---
-<BaseLayout title="IBS & Food Intolerance - Symptoms, Overlap & Management" description="Understand the overlap between IBS and food intolerances. Learn how symptom triggers overlap and evidence-based strategies to manage both conditions effectively." author="Dr. Emily Carter, Registered Dietitian" datePublished="2026-03-10" dateModified="2026-07-20" breadcrumbs={[{ label: 'Guides', href: '/guides' }, { label: 'IBS & Food Intolerance', href: '/guides/ibs-food-intolerance' }]}" medical={true}>
+<BaseLayout title="IBS & Food Intolerance - Overlap & Management - FoodCheck" description="Understand the overlap between IBS and food intolerances. Learn how symptom triggers overlap and evidence-based strategies to manage both conditions effectively." ogType="article" author="Dr. Emily Carter, Registered Dietitian" datePublished="2026-03-10" dateModified="2026-07-20" breadcrumbs={[{ label: 'Guides', href: '/guides' }, { label: 'IBS & Food Intolerance', href: '/guides/ibs-food-intolerance' }]} medical={true}>
 <Header /><main class="max-w-3xl mx-auto px-4 sm:px-6 py-16 md:py-24">
 <h1 class="text-4xl font-semibold text-slate-900 mb-6 tracking-tight">IBS & Food Intolerance</h1>
 <p class="text-lg text-slate-500 mb-4">Irritable Bowel Syndrome and food intolerances often overlap. Here is what you need to know about the relationship between the two.</p>
 <p class="text-sm text-slate-400 mb-8">By Dr. Emily Carter, Registered Dietitian · Updated 20 Jul 2026</p>
 <Image src={ibsImage} alt="Healthy gut-friendly foods for managing IBS and food intolerance" class="w-full h-auto rounded-xl mb-8" width={800} height={450} loading="lazy" format="webp" />
-<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">The Connection</h2>
-<p class="text-slate-600 mb-4">Many people with IBS find that certain foods trigger their symptoms. Common culprits include high FODMAP foods, fatty foods, caffeine, and alcohol. Identifying and managing these triggers can significantly improve quality of life.</p>
-<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">Key Strategies</h2>
-<ul class="list-disc list-inside text-slate-600 space-y-2 mb-4">
-<li>Keep a detailed food and symptom diary to identify patterns</li>
-<li>Consider a low FODMAP diet under dietitian supervision</li>
-<li>Eat smaller, more frequent meals</li>
-<li>Manage stress, which can worsen both IBS and food intolerance symptoms</li>
-<li>Work with your GP to rule out other conditions (coeliac disease, IBD)</li>
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">How Are IBS and Food Intolerance Connected?</h2>
+<p class="text-slate-600 mb-4">Many people with IBS find that certain foods trigger their symptoms. According to the <strong>NICE guidelines (NG126)</strong>, approximately <strong>70% of IBS patients</strong> report that their symptoms are triggered by specific foods. Common culprits include high FODMAP foods, fatty foods, caffeine, and alcohol. Identifying and managing these triggers can significantly improve quality of life.</p>
+<blockquote class="border-l-4 border-brand-400 bg-white rounded-r-xl p-5 shadow-sm mb-6">
+  <p class="text-sm text-slate-700 italic mb-2">"Dietary modification, particularly the low FODMAP diet, is an effective management strategy for IBS symptoms and should be considered alongside other treatment approaches."</p>
+  <cite class="text-xs text-slate-500 not-italic">— NICE Guidelines NG126, Irritable Bowel Syndrome in Adults</cite>
+</blockquote>
+
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">What Are the Three IBS Subtypes and How Do They Relate to Food?</h2>
+<p class="text-slate-600 mb-4">IBS is classified into three main subtypes based on predominant bowel habits. Understanding your subtype helps identify which foods are most likely to trigger symptoms:</p>
+<div class="space-y-4 mb-6">
+<div class="bg-white border border-slate-200 rounded-xl p-5"><h3 class="font-semibold text-slate-900 mb-1">IBS-C (Constipation-predominant)</h3><p class="text-sm text-slate-500 mb-2">Characterised by hard, lumpy stools and infrequent bowel movements. Common food triggers include low-fibre diets, excessive dairy, dehydration, and high FODMAP foods that slow gut transit. Increasing soluble fibre (oats, psyllium) and water intake often helps.</p></div>
+<div class="bg-white border border-slate-200 rounded-xl p-5"><h3 class="font-semibold text-slate-900 mb-1">IBS-D (Diarrhoea-predominant)</h3><p class="text-sm text-slate-500 mb-2">Characterised by loose, watery stools and urgency. Common food triggers include fatty foods, caffeine, alcohol, artificial sweeteners (sorbitol, mannitol), and high-FODMAP fruits. Reducing insoluble fibre and avoiding large meals can help manage symptoms.</p></div>
+<div class="bg-white border border-slate-200 rounded-xl p-5"><h3 class="font-semibold text-slate-900 mb-1">IBS-M (Mixed)</h3><p class="text-sm text-slate-500 mb-2">Alternates between constipation and diarrhoea, often unpredictably. This subtype is the most challenging to manage dietary, as triggers may shift over time. A structured <a href="/guides/low-fodmap" class="text-brand-600 hover:text-brand-700 underline">low FODMAP diet</a> under dietitian supervision is often the most effective approach.</p></div>
+</div>
+
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">Which Foods Commonly Trigger IBS Symptoms?</h2>
+<p class="text-slate-600 mb-4">Food triggers vary significantly between individuals, but research identifies several common categories:</p>
+<div class="space-y-3 mb-6">
+<div class="bg-white border border-slate-200 rounded-xl p-4"><h3 class="font-semibold text-slate-900 mb-1 text-sm">High FODMAP Foods</h3><p class="text-sm text-slate-500">Onions, garlic, wheat, dairy (lactose), legumes, apples, pears, and stone fruits. These fermentable carbohydrates draw water into the gut and produce gas during bacterial fermentation. According to Monash University, a low FODMAP diet improves symptoms in approximately 70–80% of IBS patients.</p></div>
+<div class="bg-white border border-slate-200 rounded-xl p-4"><h3 class="font-semibold text-slate-900 mb-1 text-sm">Fatty and Fried Foods</h3><p class="text-sm text-slate-500">High-fat meals stimulate strong gut contractions (the gastrocolic reflex), which can worsen cramping and urgency in IBS-D patients. Common triggers include fast food, deep-fried items, creamy sauces, and large portions of cheese.</p></div>
+<div class="bg-white border border-slate-200 rounded-xl p-4"><h3 class="font-semibold text-slate-900 mb-1 text-sm">Caffeine and Alcohol</h3><p class="text-sm text-slate-500">Both act as gut stimulants and can alter bowel habits. Coffee (including decaf) stimulates colonic motility. Alcohol irritates the gut lining and can worsen both diarrhoea and bloating. Wine, particularly red wine, is also high in histamine.</p></div>
+<div class="bg-white border border-slate-200 rounded-xl p-4"><h3 class="font-semibold text-slate-900 mb-1 text-sm">Artificial Sweeteners</h3><p class="text-sm text-slate-500">Sugar alcohols such as sorbitol, mannitol, and xylitol (found in sugar-free gum, diet drinks, and some protein bars) are poorly absorbed and can cause bloating, gas, and diarrhoea even in people without IBS.</p></div>
+<div class="bg-white border border-slate-200 rounded-xl p-4"><h3 class="font-semibold text-slate-900 mb-1 text-sm">Spicy Foods</h3><p class="text-sm text-slate-500">Capsaicin in chilli peppers can stimulate gut nerve endings and worsen abdominal pain and burning sensations, particularly in IBS-D patients. However, tolerance varies widely.</p></div>
+</div>
+
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">How Does Stress Affect IBS and Food Intolerance?</h2>
+<p class="text-slate-600 mb-4">The gut and brain are connected through the <strong>gut–brain axis</strong>, a bidirectional communication network involving the vagus nerve, gut hormones, and the gut microbiome. Psychological stress activates this axis and can:</p>
+<ul class="list-disc list-inside text-slate-600 space-y-2 mb-6">
+<li>Increase gut sensitivity (visceral hypersensitivity), making normal digestion feel painful</li>
+<li>Alter gut motility, causing either faster transit (diarrhoea) or slower transit (constipation)</li>
+<li>Change the composition of gut bacteria, which may worsen fermentation and bloating</li>
+<li>Lower the threshold for food triggers — foods tolerated during calm periods may provoke symptoms during stress</li>
 </ul>
-<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">When to Seek Help</h2>
-<p class="text-slate-600">If you experience unexplained weight loss, blood in stools, or severe persistent pain, see your GP promptly. These are not typical food intolerance symptoms and may indicate a more serious condition.</p>
+<p class="text-slate-600 mb-4">According to <strong>Guts UK</strong>, stress management is a core component of IBS treatment alongside dietary changes. Evidence-based approaches include cognitive behavioural therapy (CBT), gut-directed hypnotherapy, regular exercise, and mindfulness-based stress reduction.</p>
+
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">What Evidence-Based Strategies Help Manage IBS and Food Intolerance?</h2>
+<div class="space-y-3 mb-6">
+<div class="bg-white border border-slate-200 rounded-xl p-4"><h3 class="font-semibold text-slate-900 mb-1 text-sm">1. Keep a Detailed Food and Symptom Diary</h3><p class="text-sm text-slate-500">Record everything you eat, portion sizes, timing, and any symptoms for at least 2–4 weeks. Use our <a href="/tools/food-diary" class="text-brand-600 hover:text-brand-700 underline">Food Diary</a> tool to track patterns. This is the first step recommended by the BDA before any dietary changes.</p></div>
+<div class="bg-white border border-slate-200 rounded-xl p-4"><h3 class="font-semibold text-slate-900 mb-1 text-sm">2. Try the Low FODMAP Diet Under Supervision</h3><p class="text-sm text-slate-500">The three-phase elimination and reintroduction protocol is the most evidence-based dietary approach for IBS. It should be done under dietitian guidance to ensure nutritional adequacy. See our <a href="/guides/low-fodmap" class="text-brand-600 hover:text-brand-700 underline">Low FODMAP Diet Guide</a> for details.</p></div>
+<div class="bg-white border border-slate-200 rounded-xl p-4"><h3 class="font-semibold text-slate-900 mb-1 text-sm">3. Adjust Meal Patterns</h3><p class="text-sm text-slate-500">Eat smaller, more frequent meals rather than large portions. Avoid skipping meals, as this can worsen bloating and cramping. Chew food thoroughly and eat slowly to reduce swallowed air.</p></div>
+<div class="bg-white border border-slate-200 rounded-xl p-4"><h3 class="font-semibold text-slate-900 mb-1 text-sm">4. Manage Stress Proactively</h3><p class="text-sm text-slate-500">Incorporate stress-reduction techniques such as regular walking, yoga, deep breathing exercises, or CBT. Gut-directed hypnotherapy has shown significant benefit in clinical trials for IBS symptom relief.</p></div>
+<div class="bg-white border border-slate-200 rounded-xl p-4"><h3 class="font-semibold text-slate-900 mb-1 text-sm">5. Rule Out Other Conditions</h3><p class="text-sm text-slate-500">Work with your GP to rule out coeliac disease, inflammatory bowel disease (IBD), and other conditions before attributing symptoms solely to IBS or food intolerance. Blood tests for coeliac disease should be done before starting a gluten-free diet.</p></div>
+</div>
+
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">When Should You Seek Medical Help?</h2>
+<p class="text-slate-600 mb-6">If you experience any of the following red-flag symptoms, see your GP promptly. These are not typical food intolerance symptoms and may indicate a more serious condition such as inflammatory bowel disease (IBD), coeliac disease, or colorectal cancer:</p>
+<ul class="list-disc list-inside text-slate-600 space-y-2 mb-6">
+<li>Unexplained weight loss</li>
+<li>Blood in stools or dark, tarry stools</li>
+<li>Severe, persistent abdominal pain that does not improve with bowel movements</li>
+<li>Symptoms that wake you from sleep</li>
+<li>Onset of symptoms after age 50</li>
+<li>Family history of bowel cancer, coeliac disease, or IBD</li>
+</ul>
+
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">Related Resources</h2>
+<div class="grid sm:grid-cols-2 gap-4 mb-6">
+<a href="/" class="block bg-white border border-slate-200 rounded-xl p-4 hover:border-brand-300 transition-colors"><h3 class="font-semibold text-slate-900 text-sm mb-1">Food Intolerance Checker</h3><p class="text-xs text-slate-500">3-step assessment to explore possible food intolerances</p></a>
+<a href="/guides/low-fodmap" class="block bg-white border border-slate-200 rounded-xl p-4 hover:border-brand-300 transition-colors"><h3 class="font-semibold text-slate-900 text-sm mb-1">Low FODMAP Diet Guide</h3><p class="text-xs text-slate-500">Step-by-step three-phase FODMAP protocol</p></a>
+<a href="/tools/elimination-diet-planner" class="block bg-white border border-slate-200 rounded-xl p-4 hover:border-brand-300 transition-colors"><h3 class="font-semibold text-slate-900 text-sm mb-1">Elimination Diet Planner</h3><p class="text-xs text-slate-500">Structured template for elimination and reintroduction</p></a>
+<a href="/guides/test-guide" class="block bg-white border border-slate-200 rounded-xl p-4 hover:border-brand-300 transition-colors"><h3 class="font-semibold text-slate-900 text-sm mb-1">Testing Guide</h3><p class="text-xs text-slate-500">Compare breath tests, IgG tests, and elimination diets</p></a>
+</div>
+
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">References</h2>
+<ul class="list-disc list-inside text-slate-500 text-sm space-y-1 mb-4">
+  <li>NICE Guidelines — Irritable Bowel Syndrome in Adults (NG126)</li>
+  <li>British Dietetic Association (BDA) — IBS and Diet</li>
+  <li>Monash University — Low FODMAP Diet for IBS</li>
+  <li>Gibson PR, Shepherd SJ. Evidence-based dietary management of functional gastrointestinal symptoms: The FODMAP approach. J Gastroenterol Hepatol. 2010.</li>
+  <li>Guts UK — IBS and Food Intolerance</li>
+</ul>
 </main><Footer /></BaseLayout>

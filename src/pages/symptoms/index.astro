@@ -5,12 +5,12 @@ import Footer from "../../components/Footer.astro";
 import { Image } from 'astro:assets';
 import symptomsImage from '../../assets/images/symptoms-body.jpg';
 ---
-<BaseLayout title="Food Intolerance Symptoms - Common Signs & What to Watch For" description="Explore common food intolerance symptoms — bloating, diarrhea, gas, headaches, fatigue, skin issues, nausea, and joint pain. Learn which foods may trigger each one." breadcrumbs={[{ label: 'Symptoms', href: '/symptoms' }]}" medical={true}>
+<BaseLayout title="Food Intolerance Symptoms - 8 Common Signs - FoodCheck" description="Explore common food intolerance symptoms — bloating, diarrhea, gas, headaches, fatigue, skin issues, nausea, and joint pain. Learn which foods may trigger each one." breadcrumbs={[{ label: 'Symptoms', href: '/symptoms' }]} medical={true}>
 <Header /><main class="max-w-6xl mx-auto px-4 sm:px-6 py-16 md:py-24">
 <h1 class="text-4xl font-semibold text-slate-900 mb-4 tracking-tight">Food Intolerance Symptoms</h1>
 <p class="text-lg text-slate-500 mb-12 max-w-2xl">Food intolerances can cause a wide range of symptoms. Here are the most common ones to watch for.</p>
 <Image src={symptomsImage} alt="Human body illustration showing common digestive and physical symptoms" class="w-full h-auto rounded-xl mb-10 max-w-2xl" width={800} height={450} loading="lazy" format="webp" />
-<h2 class="text-2xl font-semibold text-slate-900 mb-5">8 Common Food Intolerance Symptoms</h2>
+<h2 class="text-2xl font-semibold text-slate-900 mb-5">What Are the Most Common Food Intolerance Symptoms?</h2>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
 <div class="bg-white border border-slate-200 rounded-xl p-5"><h3 class="font-semibold text-slate-900 mb-2">Bloating</h3><p class="text-sm text-slate-500">Abdominal distension and discomfort after eating. Common with lactose, fructose, and FODMAP intolerances.</p></div>
 <div class="bg-white border border-slate-200 rounded-xl p-5"><h3 class="font-semibold text-slate-900 mb-2">Diarrhea</h3><p class="text-sm text-slate-500">Loose or watery stools, often within hours of eating trigger foods. A hallmark of many food intolerances.</p></div>
@@ -21,7 +21,7 @@ import symptomsImage from '../../assets/images/symptoms-body.jpg';
 <div class="bg-white border border-slate-200 rounded-xl p-5"><h3 class="font-semibold text-slate-900 mb-2">Nausea</h3><p class="text-sm text-slate-500">Feeling sick or queasy after eating certain foods. Can occur with multiple intolerance types.</p></div>
 <div class="bg-white border border-slate-200 rounded-xl p-5"><h3 class="font-semibold text-slate-900 mb-2">Joint Pain</h3><p class="text-sm text-slate-500">Aching joints that correlate with food intake, reported in gluten sensitivity and other intolerances.</p></div>
 </div>
-<h2 class="text-2xl font-semibold text-slate-900 mt-12 mb-5">Explore Specific Intolerances</h2>
+<h2 class="text-2xl font-semibold text-slate-900 mt-12 mb-5">Which Intolerance Types Should You Check?</h2>
 <p class="text-slate-600 mb-6">If you recognise any of the symptoms above, use our free checkers to explore further:</p>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
 <a href="/tools/lactose-intolerance-test" class="block bg-slate-50 border border-slate-200 rounded-xl p-5 hover:border-brand-300 hover:shadow-sm transition-all no-underline"><span class="text-2xl mb-2 block">🥛</span><p class="text-sm font-medium text-slate-900 mb-1">Lactose Checker</p><p class="text-xs text-slate-500">Dairy-related symptoms assessment</p></a>
@@ -30,4 +30,19 @@ import symptomsImage from '../../assets/images/symptoms-body.jpg';
 <a href="/tools/fructose-intolerance-test" class="block bg-slate-50 border border-slate-200 rounded-xl p-5 hover:border-brand-300 hover:shadow-sm transition-all no-underline"><span class="text-2xl mb-2 block">🍎</span><p class="text-sm font-medium text-slate-900 mb-1">Fructose Checker</p><p class="text-xs text-slate-500">Fruit and sweetener malabsorption</p></a>
 </div>
 <div class="mt-6"><a href="/tools/food-diary" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand-600 text-white text-sm font-medium hover:bg-brand-700 transition-colors no-underline shadow-sm">Start a Food Diary<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div>
+
+<h2 class="text-2xl font-semibold text-slate-900 mt-12 mb-5">When Should You See a Doctor?</h2>
+<p class="text-slate-600 mb-4">According to the NHS, you should see your GP if you have persistent digestive symptoms that do not improve with dietary changes, unexplained weight loss, blood in stools, or difficulty swallowing. These may indicate conditions beyond food intolerance, such as coeliac disease or inflammatory bowel disease (IBD).</p>
+<blockquote class="border-l-4 border-brand-400 bg-white rounded-r-xl p-5 shadow-sm mb-6">
+  <p class="text-sm text-slate-700 italic mb-2">"Food intolerance symptoms can be similar to those of more serious conditions. Always see your GP if symptoms are severe, persistent, or affecting your quality of life."</p>
+  <cite class="text-xs text-slate-500 not-italic">— NHS UK, Food Intolerance (2024)</cite>
+</blockquote>
+
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-5">References</h2>
+<ul class="list-disc list-inside text-slate-500 text-sm space-y-1 mb-4">
+  <li>NHS UK — Food Intolerance (2024)</li>
+  <li>British Dietetic Association (BDA) — Food Intolerance Fact Sheet</li>
+  <li>Guts UK — Food Intolerance and Digestive Health</li>
+  <li>Lomer MCE. Review article: the aetiology, diagnosis, mechanisms and therapeutic evidence for food allergy and intolerance. Aliment Pharmacol Ther. 2011;34(10):1133-1146.</li>
+</ul>
 </main><Footer /></BaseLayout>

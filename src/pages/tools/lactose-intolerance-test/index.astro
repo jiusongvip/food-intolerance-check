@@ -5,7 +5,7 @@ import Footer from "../../../components/Footer.astro";
 import { Image } from 'astro:assets';
 import dairyImage from '../../../assets/images/dairy-milk.jpg';
 ---
-<BaseLayout title="Lactose Intolerance Checker - Free Online Self-Assessment" description="Think you might be lactose intolerant? Use our free lactose intolerance checker to explore your symptoms. Educational tool only — not a medical diagnosis." breadcrumbs={[{ label: 'Tools', href: '/tools' }, { label: 'Lactose Intolerance Checker', href: '/tools/lactose-intolerance-test' }]}">
+<BaseLayout title="Lactose Intolerance Checker - Self-Test - FoodCheck" description="Think you might be lactose intolerant? Use our free lactose intolerance checker to explore your symptoms. Educational tool only — not a medical diagnosis." breadcrumbs={[{ label: 'Tools', href: '/tools' }, { label: 'Lactose Intolerance Checker', href: '/tools/lactose-intolerance-test' }]}">
 <Header />
 <main>
 <section class="pt-16 pb-8 md:pt-24 px-4 sm:px-6 max-w-6xl mx-auto">
@@ -23,18 +23,40 @@ import dairyImage from '../../../assets/images/dairy-milk.jpg';
 <div id="lactose-result" class="hidden"></div>
 </div>
 <div class="mt-8 bg-amber-50 border border-amber-200 rounded-xl p-4 text-xs text-amber-800">This tool does NOT diagnose disease. Always consult your GP or a dietitian.</div>
-<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">About This Checker</h2>
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">How Does This Lactose Checker Work?</h2>
 <p class="text-slate-600 text-sm mb-4">This lactose intolerance checker asks about your experiences with dairy products — milk, cheese, yogurt, and ice cream. Based on your answers, it suggests whether your symptoms are consistent with lactose intolerance and recommends appropriate next steps such as keeping a food diary, trying an elimination diet, or asking your GP about a hydrogen breath test.</p>
-<p class="text-slate-600 text-sm">Remember: this is an educational self-assessment only. A hydrogen breath test supervised by your GP is the gold standard for confirming lactose intolerance.</p>
-<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">Related Resources</h2>
+<p class="text-slate-600 text-sm mb-4">According to the <strong>NHS</strong>, approximately <strong>65–70% of the world's population</strong> has some degree of lactose malabsorption. A hydrogen breath test supervised by your GP is the gold standard for confirming lactose intolerance.</p>
+<blockquote class="border-l-4 border-brand-400 bg-white rounded-r-xl p-5 shadow-sm mb-6">
+  <p class="text-sm text-slate-700 italic mb-2">"Lactose intolerance is one of the most common food intolerances worldwide. Diagnosis is best achieved through a hydrogen breath test or an elimination diet supervised by a dietitian."</p>
+  <cite class="text-xs text-slate-500 not-italic">— NHS UK, Lactose Intolerance</cite>
+</blockquote>
+<h3 class="text-lg font-semibold text-slate-900 mt-6 mb-2">What Causes Lactose Intolerance?</h3>
+<p class="text-slate-600 text-sm mb-4">Lactose intolerance occurs when the body produces insufficient lactase, the enzyme that breaks down lactose (milk sugar) in the small intestine. Undigested lactose passes to the large intestine, where bacteria ferment it, producing gas, bloating, and diarrhoea. According to the <strong>NHS</strong>, lactase production naturally decreases after weaning, but the degree varies significantly by ethnicity — up to 90% of East Asian adults have some degree of lactose malabsorption, compared to approximately 5% of Northern Europeans.</p>
+<h3 class="text-lg font-semibold text-slate-900 mt-6 mb-2">Which Dairy Products Contain the Most Lactose?</h3>
+<p class="text-slate-600 text-sm mb-4">Lactose content varies by product: milk (approximately 5g per 100ml), yogurt (3–4g per 100ml, though live cultures help digestion), soft cheeses such as ricotta and cottage cheese (2–3g per 100g), and hard aged cheeses such as cheddar and parmesan (less than 0.1g per 100g). Many people with lactose intolerance can tolerate hard cheeses and small amounts of butter without symptoms.</p>
+<h3 class="text-lg font-semibold text-slate-900 mt-6 mb-2">What Should You Do If Results Suggest Lactose Intolerance?</h3>
+<p class="text-slate-600 text-sm mb-4">Try a 2-week dairy elimination, then reintroduce milk, hard cheese, and yogurt separately, allowing 3 symptom-free days between each challenge. Ask your GP about a hydrogen breath test for confirmation. Use our <a href="/tools/food-diary" class="text-brand-600 hover:text-brand-700 underline">Food Diary</a> to track symptoms throughout the process.</p>
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">What Resources Can Help You Learn More?</h2>
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-<a href="/guides/test-guide" class="block bg-slate-50 border border-slate-200 rounded-lg p-4 hover:border-brand-300 transition-colors no-underline"><p class="text-sm font-medium text-slate-900 mb-1">Testing Guide</p><p class="text-xs text-slate-500">Compare breath tests, IgG tests, and elimination diets.</p></a>
-<a href="/tools/food-diary" class="block bg-slate-50 border border-slate-200 rounded-lg p-4 hover:border-brand-300 transition-colors no-underline"><p class="text-sm font-medium text-slate-900 mb-1">Food Diary</p><p class="text-xs text-slate-500">Track meals and symptoms to spot dairy patterns.</p></a>
-<a href="/blog/elimination-diet-guide" class="block bg-slate-50 border border-slate-200 rounded-lg p-4 hover:border-brand-300 transition-colors no-underline"><p class="text-sm font-medium text-slate-900 mb-1">Elimination Diet Guide</p><p class="text-xs text-slate-500">Step-by-step protocol to confirm lactose triggers.</p></a>
-<a href="/symptoms" class="block bg-slate-50 border border-slate-200 rounded-lg p-4 hover:border-brand-300 transition-colors no-underline"><p class="text-sm font-medium text-slate-900 mb-1">Symptoms Overview</p><p class="text-xs text-slate-500">Common food intolerance symptoms to watch for.</p></a>
+<a href="/guides/test-guide" class="block bg-slate-50 border border-slate-200 rounded-lg p-4 hover:border-brand-300 transition-colors no-underline"><h3 class="text-sm font-medium text-slate-900 mb-1">Testing Guide</h3><p class="text-xs text-slate-500">Compare breath tests, IgG tests, and elimination diets.</p></a>
+<a href="/tools/food-diary" class="block bg-slate-50 border border-slate-200 rounded-lg p-4 hover:border-brand-300 transition-colors no-underline"><h3 class="text-sm font-medium text-slate-900 mb-1">Food Diary</h3><p class="text-xs text-slate-500">Track meals and symptoms to spot dairy patterns.</p></a>
+<a href="/blog/elimination-diet-guide" class="block bg-slate-50 border border-slate-200 rounded-lg p-4 hover:border-brand-300 transition-colors no-underline"><h3 class="text-sm font-medium text-slate-900 mb-1">Elimination Diet Guide</h3><p class="text-xs text-slate-500">Step-by-step protocol to confirm lactose triggers.</p></a>
+<a href="/symptoms" class="block bg-slate-50 border border-slate-200 rounded-lg p-4 hover:border-brand-300 transition-colors no-underline"><h3 class="text-sm font-medium text-slate-900 mb-1">Symptoms Overview</h3><p class="text-xs text-slate-500">Common food intolerance symptoms to watch for.</p></a>
 </div>
 </div></section>
 </main>
 <Footer />
 </BaseLayout>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Lactose Intolerance Checker",
+  "url": "https://foodintolerancecheck.com/tools/lactose-intolerance-test",
+  "description": "Free online lactose intolerance self-assessment tool. Explore whether your dairy-related symptoms suggest lactose intolerance.",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "All",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
 <script is:inline src="/js/lactose-checker.js"></script>

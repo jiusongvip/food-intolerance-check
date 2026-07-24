@@ -5,17 +5,83 @@ import Footer from "../../../components/Footer.astro";
 import { Image } from 'astro:assets';
 import fodmapImage from '../../../assets/images/vegetables-fodmap.jpg';
 ---
-<BaseLayout title="Low FODMAP Diet Guide - Manage IBS & Food Intolerance" description="A step-by-step guide to the low FODMAP diet for managing IBS and food intolerances. Learn which foods to eat, which to avoid, and how to reintroduce triggers." author="Dr. Emily Carter, Registered Dietitian" datePublished="2026-02-05" dateModified="2026-07-20" breadcrumbs={[{ label: 'Guides', href: '/guides' }, { label: 'Low FODMAP Diet', href: '/guides/low-fodmap' }]}" medical={true}>
+<BaseLayout title="Low FODMAP Diet Guide - Manage IBS Symptoms - FoodCheck" description="A step-by-step guide to the low FODMAP diet for managing IBS and food intolerances. Learn which foods to eat, which to avoid, and how to reintroduce triggers." ogType="article" author="Dr. Emily Carter, Registered Dietitian" datePublished="2026-02-05" dateModified="2026-07-20" breadcrumbs={[{ label: 'Guides', href: '/guides' }, { label: 'Low FODMAP Diet', href: '/guides/low-fodmap' }]} medical={true}>
 <Header /><main class="max-w-3xl mx-auto px-4 sm:px-6 py-16 md:py-24">
 <h1 class="text-4xl font-semibold text-slate-900 mb-6 tracking-tight">Low FODMAP Diet Guide</h1>
 <p class="text-lg text-slate-500 mb-4">The low FODMAP diet is an evidence-based approach for managing IBS and identifying food triggers. It should be done under professional guidance.</p>
 <p class="text-sm text-slate-400 mb-8">By Dr. Emily Carter, Registered Dietitian · Updated 20 Jul 2026</p>
 <Image src={fodmapImage} alt="Low FODMAP fruits and vegetables arranged on a table" class="w-full h-auto rounded-xl mb-8" width={800} height={450} loading="lazy" format="webp" />
-<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">What are FODMAPs?</h2>
-<p class="text-slate-600 mb-4">FODMAPs are fermentable carbohydrates that can cause digestive symptoms in sensitive individuals. FODMAP stands for Fermentable Oligosaccharides, Disaccharides, Monosaccharides, and Polyols.</p>
-<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">The Three Phases</h2>
-<div class="space-y-4"><div class="bg-white border border-slate-200 rounded-xl p-5"><h3 class="font-semibold text-slate-900 mb-1">Phase 1: Elimination (2-6 weeks)</h3><p class="text-sm text-slate-500">Remove all high FODMAP foods from your diet to see if symptoms improve.</p></div>
-<div class="bg-white border border-slate-200 rounded-xl p-5"><h3 class="font-semibold text-slate-900 mb-1">Phase 2: Reintroduction (6-8 weeks)</h3><p class="text-sm text-slate-500">Systematically reintroduce FODMAP groups one at a time to identify personal triggers.</p></div>
-<div class="bg-white border border-slate-200 rounded-xl p-5"><h3 class="font-semibold text-slate-900 mb-1">Phase 3: Personalisation</h3><p class="text-sm text-slate-500">Build a long-term diet that avoids only your specific triggers while maximising variety.</p></div></div>
-<p class="text-sm text-slate-500 mt-8">The low FODMAP diet should be undertaken with guidance from a registered dietitian. It is not intended as a permanent diet.</p>
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">What Are FODMAPs and Why Do They Cause Symptoms?</h2>
+<p class="text-slate-600 mb-4">FODMAPs are fermentable carbohydrates that can cause digestive symptoms in sensitive individuals. FODMAP stands for Fermentable Oligosaccharides, Disaccharides, Monosaccharides, and Polyols. According to <strong>Monash University</strong>, where the diet was developed, these carbohydrates are poorly absorbed in the small intestine and are rapidly fermented by gut bacteria in the large intestine, producing gas and drawing in water.</p>
+<blockquote class="border-l-4 border-brand-400 bg-white rounded-r-xl p-5 shadow-sm mb-6">
+  <p class="text-sm text-slate-700 italic mb-2">"The low FODMAP diet is now recognised by NICE guidelines and the British Dietetic Association as an evidence-based approach for managing IBS symptoms, with approximately 70–80% of patients experiencing significant improvement."</p>
+  <cite class="text-xs text-slate-500 not-italic">— Monash University, Low FODMAP Diet Research</cite>
+</blockquote>
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">What Are the Five FODMAP Categories?</h2>
+<div class="space-y-3 mb-8">
+<div class="bg-white border border-slate-200 rounded-xl p-4"><h3 class="font-semibold text-slate-900 mb-1 text-sm">Oligosaccharides (Fructans & GOS)</h3><p class="text-xs text-slate-600">Found in wheat, rye, onion, garlic, legumes, and certain vegetables. These are among the most common triggers for IBS symptoms.</p></div>
+<div class="bg-white border border-slate-200 rounded-xl p-4"><h3 class="font-semibold text-slate-900 mb-1 text-sm">Disaccharides (Lactose)</h3><p class="text-xs text-slate-600">Found in milk, soft cheeses, yogurt, and ice cream. Tolerance varies — many people can handle small amounts of hard cheese or butter.</p></div>
+<div class="bg-white border border-slate-200 rounded-xl p-4"><h3 class="font-semibold text-slate-900 mb-1 text-sm">Monosaccharides (Excess Fructose)</h3><p class="text-xs text-slate-600">Found in honey, apples, mangoes, and high-fructose corn syrup. Fructose is problematic when it exceeds glucose in the same food.</p></div>
+<div class="bg-white border border-slate-200 rounded-xl p-4"><h3 class="font-semibold text-slate-900 mb-1 text-sm">Polyols (Sorbitol & Mannitol)</h3><p class="text-xs text-slate-600">Found in stone fruits (cherries, peaches, plums), mushrooms, cauliflower, and artificial sweeteners (xylitol, sorbitol).</p></div>
+</div>
+
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">What Are the Three Phases of the Low FODMAP Diet?</h2>
+<div class="space-y-4"><div class="bg-white border border-slate-200 rounded-xl p-5"><h3 class="font-semibold text-slate-900 mb-1">Phase 1: Elimination (2–6 weeks)</h3><p class="text-sm text-slate-500 mb-2">Remove all high FODMAP foods from your diet to establish a symptom baseline. During this phase, replace high FODMAP foods with low FODMAP alternatives. You should notice a meaningful improvement in symptoms within 2–3 weeks if FODMAPs are contributing to your symptoms.</p><p class="text-sm text-slate-500">Keep a detailed <a href="/tools/food-diary" class="text-brand-600 hover:text-brand-700 underline">food and symptom diary</a> throughout this phase to track your progress.</p></div>
+<div class="bg-white border border-slate-200 rounded-xl p-5"><h3 class="font-semibold text-slate-900 mb-1">Phase 2: Reintroduction (6–8 weeks)</h3><p class="text-sm text-slate-500 mb-2">Systematically reintroduce one FODMAP group at a time, starting with a small amount on Day 1, a normal portion on Day 2, and observing on Day 3. Wait at least 3 symptom-free days before testing the next FODMAP group. This phase identifies your personal triggers.</p><p class="text-sm text-slate-500">Test each FODMAP category separately: fructans, lactose, excess fructose, GOS, and polyols. Record all results in your diary.</p></div>
+<div class="bg-white border border-slate-200 rounded-xl p-5"><h3 class="font-semibold text-slate-900 mb-1">Phase 3: Personalisation</h3><p class="text-sm text-slate-500 mb-2">Build a long-term diet that avoids only your confirmed triggers while maximising nutritional variety. The goal is to eat as broadly as possible, restricting only the specific FODMAPs that trigger your symptoms.</p><p class="text-sm text-slate-500">Work with your dietitian to create a sustainable, personalised diet plan. Some triggers may change over time, so periodic reassessment is recommended.</p></div></div>
+<p class="text-sm text-slate-500 mt-8 mb-4">The low FODMAP diet should be undertaken with guidance from a registered dietitian. It is not intended as a permanent diet.</p>
+
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">Which Foods Should You Avoid on a Low FODMAP Diet?</h2>
+<p class="text-slate-600 mb-4">During the elimination phase, avoid the following high FODMAP foods:</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+<div class="bg-red-50 border border-red-200 rounded-xl p-4"><h3 class="font-semibold text-red-800 mb-1 text-sm">Fruits</h3><p class="text-xs text-red-700">Apples, pears, watermelon, stone fruits, dried fruits, mango</p></div>
+<div class="bg-red-50 border border-red-200 rounded-xl p-4"><h3 class="font-semibold text-red-800 mb-1 text-sm">Vegetables</h3><p class="text-xs text-red-700">Onion, garlic, cauliflower, mushrooms, asparagus, artichoke</p></div>
+<div class="bg-red-50 border border-red-200 rounded-xl p-4"><h3 class="font-semibold text-red-800 mb-1 text-sm">Grains</h3><p class="text-xs text-red-700">Wheat, barley, rye (in large amounts)</p></div>
+<div class="bg-red-50 border border-red-200 rounded-xl p-4"><h3 class="font-semibold text-red-800 mb-1 text-sm">Dairy</h3><p class="text-xs text-red-700">Milk, soft cheese, yogurt, ice cream (lactose)</p></div>
+</div>
+
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">What Can You Eat on a Low FODMAP Diet?</h2>
+<p class="text-slate-600 mb-4">Replace high FODMAP foods with these safe alternatives:</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+<div class="bg-emerald-50 border border-emerald-200 rounded-xl p-4"><h3 class="font-semibold text-emerald-800 mb-1 text-sm">Fruits</h3><p class="text-xs text-emerald-700">Bananas, blueberries, strawberries, oranges, grapes, kiwi</p></div>
+<div class="bg-emerald-50 border border-emerald-200 rounded-xl p-4"><h3 class="font-semibold text-emerald-800 mb-1 text-sm">Vegetables</h3><p class="text-xs text-emerald-700">Carrots, spinach, zucchini, bell peppers, potatoes, green beans</p></div>
+<div class="bg-emerald-50 border border-emerald-200 rounded-xl p-4"><h3 class="font-semibold text-emerald-800 mb-1 text-sm">Grains</h3><p class="text-xs text-emerald-700">Rice, oats, quinoa, gluten-free bread and pasta</p></div>
+<div class="bg-emerald-50 border border-emerald-200 rounded-xl p-4"><h3 class="font-semibold text-emerald-800 mb-1 text-sm">Dairy Alternatives</h3><p class="text-xs text-emerald-700">Lactose-free milk, hard cheeses, almond milk, rice milk</p></div>
+</div>
+<p class="text-sm text-slate-500 mb-6">For a more detailed food reference, see our <a href="/blog/low-fodmap-foods" class="text-brand-600 hover:text-brand-700 underline">complete Low FODMAP food list</a>.</p>
+
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">What Common Mistakes Should You Avoid?</h2>
+<ul class="list-disc list-inside text-slate-600 space-y-2 mb-6">
+  <li><strong>Staying on the elimination phase too long</strong> — the diet is not meant to be permanent. Prolonged restriction can reduce beneficial gut bacteria.</li>
+  <li><strong>Skipping reintroduction</strong> — without testing each FODMAP group, you cannot identify your personal triggers and may unnecessarily restrict foods.</li>
+  <li><strong>Ignoring serving sizes</strong> — some foods are low FODMAP at small portions but become high FODMAP at larger quantities (e.g., sweet potato, avocado).</li>
+  <li><strong>Not reading labels</strong> — hidden FODMAPs like garlic powder, onion powder, inulin, and high-fructose corn syrup appear in many processed foods.</li>
+  <li><strong>Doing it without professional guidance</strong> — the low FODMAP diet is complex and should be supervised by a registered dietitian trained in FODMAP management.</li>
+</ul>
+
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">What Hidden FODMAPs Should You Watch For?</h2>
+<p class="text-slate-600 mb-4">Many processed foods contain hidden high FODMAP ingredients. Common culprits include:</p>
+<ul class="list-disc list-inside text-slate-600 space-y-2 mb-6">
+  <li><strong>Garlic and onion powder</strong> — found in stock cubes, sauces, spice mixes, and marinades</li>
+  <li><strong>High-fructose corn syrup</strong> — found in soft drinks, cereals, and snack bars</li>
+  <li><strong>Inulin and chicory root fibre</strong> — added to "high fibre" or "prebiotic" products</li>
+  <li><strong>Honey and agave syrup</strong> — often used as "healthier" sweeteners but are high in fructose</li>
+  <li><strong>Sorbitol and xylitol</strong> — sugar-free gum, mints, and diet products</li>
+</ul>
+
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">What Resources Can Help You Further?</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+<a href="/blog/low-fodmap-foods" class="block bg-slate-50 border border-slate-200 rounded-lg p-4 hover:border-brand-300 transition-colors no-underline"><p class="text-sm font-medium text-slate-900 mb-1">Low FODMAP Food List</p><p class="text-xs text-slate-500">Complete high and low FODMAP food reference guide.</p></a>
+<a href="/tools/food-diary" class="block bg-slate-50 border border-slate-200 rounded-lg p-4 hover:border-brand-300 transition-colors no-underline"><p class="text-sm font-medium text-slate-900 mb-1">Food Diary</p><p class="text-xs text-slate-500">Track your meals and symptoms during each phase.</p></a>
+<a href="/guides/ibs-food-intolerance" class="block bg-slate-50 border border-slate-200 rounded-lg p-4 hover:border-brand-300 transition-colors no-underline"><p class="text-sm font-medium text-slate-900 mb-1">IBS & Food Intolerance</p><p class="text-xs text-slate-500">Understanding the overlap between IBS and food intolerances.</p></a>
+<a href="/blog/elimination-diet-guide" class="block bg-slate-50 border border-slate-200 rounded-lg p-4 hover:border-brand-300 transition-colors no-underline"><p class="text-sm font-medium text-slate-900 mb-1">Elimination Diet Guide</p><p class="text-xs text-slate-500">Step-by-step protocol for structured elimination and reintroduction.</p></a>
+</div>
+
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">References</h2>
+<ul class="list-disc list-inside text-slate-500 text-sm space-y-1 mb-4">
+  <li>Monash University — The Low FODMAP Diet</li>
+  <li>NICE Guidelines — Irritable Bowel Syndrome in Adults (NG126)</li>
+  <li>British Dietetic Association (BDA) — Low FODMAP Diet Fact Sheet</li>
+  <li>Gibson PR, Shepherd SJ. Evidence-based dietary management of functional gastrointestinal symptoms: The FODMAP approach. J Gastroenterol Hepatol. 2010.</li>
+</ul>
 </main><Footer /></BaseLayout>

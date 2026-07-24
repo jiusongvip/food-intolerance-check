@@ -5,14 +5,14 @@ import Footer from "../../../components/Footer.astro";
 import { Image } from 'astro:assets';
 import allergyImage from '../../../assets/images/allergy-compare.jpg';
 ---
-<BaseLayout title="Food Intolerance vs Food Allergy - Key Differences Explained" description="Learn the key differences between food intolerance and food allergy — symptoms, mechanisms, diagnosis, and when to seek emergency care. Clear comparison included." author="Dr. Emily Carter, Registered Dietitian" datePublished="2026-01-10" dateModified="2026-07-20" breadcrumbs={[{ label: 'Guides', href: '/guides' }, { label: 'Intolerance vs Allergy', href: '/guides/intolerance-vs-allergy' }]}" medical={true}>
+<BaseLayout title="Intolerance vs Allergy - Key Differences - FoodCheck" description="Learn the key differences between food intolerance and food allergy — symptoms, mechanisms, diagnosis, and when to seek emergency care. Clear comparison included." ogType="article" author="Dr. Emily Carter, Registered Dietitian" datePublished="2026-01-10" dateModified="2026-07-20" breadcrumbs={[{ label: 'Guides', href: '/guides' }, { label: 'Intolerance vs Allergy', href: '/guides/intolerance-vs-allergy' }]} medical={true}>
   <Header />
   <main class="max-w-3xl mx-auto px-4 sm:px-6 py-16 md:py-24">
     <h1 class="text-4xl font-semibold text-slate-900 mb-6 tracking-tight">Food Intolerance vs Food Allergy</h1>
     <p class="text-lg text-slate-500 mb-4">Understanding the difference is critical for your health and safety.</p>
     <p class="text-sm text-slate-400 mb-8">By Dr. Emily Carter, Registered Dietitian · Updated 20 Jul 2026</p>
     <Image src={allergyImage} alt="Comparison of food allergy and food intolerance symptoms" class="w-full h-auto rounded-xl mb-8" width={800} height={450} loading="lazy" format="webp" />
-    <h2 class="text-2xl font-semibold text-slate-900 mb-4">Intolerance vs Allergy: Side-by-Side Comparison</h2>
+    <h2 class="text-2xl font-semibold text-slate-900 mb-4">What Is the Difference Between Food Intolerance and Food Allergy?</h2>
     <div class="overflow-x-auto mb-10">
       <table class="w-full text-sm border-collapse">
         <thead>
@@ -31,7 +31,64 @@ import allergyImage from '../../../assets/images/allergy-compare.jpg';
         </tbody>
       </table>
     </div>
-    <p class="text-sm text-slate-500">This is a simplified overview. Always consult a healthcare professional for assessment and diagnosis.</p>
+    <p class="text-sm text-slate-500 mt-8 mb-4">This is a simplified overview. Always consult a healthcare professional for assessment and diagnosis.</p>
+
+    <h3 class="text-lg font-semibold text-slate-900 mt-6 mb-2">Key Takeaway</h3>
+    <p class="text-slate-600 mb-4">The most critical distinction is that <strong>food allergies can kill</strong>, while food intolerances cannot. Allergic reactions involve IgE antibodies and can trigger anaphylaxis within minutes. Intolerances involve the digestive system and, while uncomfortable, are not life-threatening.</p>
+
+    <h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">What Causes Food Intolerance?</h2>
+    <p class="text-slate-600 mb-4">Food intolerances typically occur when the digestive system cannot properly break down certain foods. According to the <strong>British Dietetic Association (BDA)</strong>, the most common causes include enzyme deficiencies (such as lactase deficiency in lactose intolerance), sensitivity to food additives, and pharmacological reactions to naturally occurring chemicals like histamine.</p>
+    <blockquote class="border-l-4 border-brand-400 bg-white rounded-r-xl p-5 shadow-sm mb-6">
+      <p class="text-sm text-slate-700 italic mb-2">"Food intolerance is not an immune-mediated reaction. The mechanisms are diverse and include enzyme deficiencies, pharmacological effects, and metabolic abnormalities."</p>
+      <cite class="text-xs text-slate-500 not-italic">— Lomer MCE, Aliment Pharmacol Ther, 2011</cite>
+    </blockquote>
+
+    <h3 class="text-lg font-semibold text-slate-900 mt-6 mb-2">Common Intolerance Mechanisms</h3>
+    <div class="space-y-3 mb-6">
+      <div class="bg-white border border-slate-200 rounded-xl p-4"><p class="text-sm text-slate-600"><strong>Enzyme deficiency</strong> — The body lacks the enzyme to digest a specific food component. Example: lactase deficiency causes lactose intolerance.</p></div>
+      <div class="bg-white border border-slate-200 rounded-xl p-4"><p class="text-sm text-slate-600"><strong>Pharmacological reaction</strong> — Naturally occurring chemicals in food cause drug-like effects. Example: histamine in aged cheese and wine triggers headaches.</p></div>
+      <div class="bg-white border border-slate-200 rounded-xl p-4"><p class="text-sm text-slate-600"><strong>Food additive sensitivity</strong> — Preservatives, colourings, or flavourings trigger adverse reactions. Example: MSG, sulphites, or artificial colourings.</p></div>
+    </div>
+
+    <h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">How Does a Food Allergy Work?</h2>
+    <p class="text-slate-600 mb-4">Food allergies involve the immune system producing IgE antibodies in response to specific food proteins. According to the <strong>American Academy of Allergy, Asthma & Immunology (AAAAI)</strong>, even tiny amounts of an allergen can trigger a reaction within minutes. Symptoms range from mild (hives, itching) to severe (anaphylaxis), and food allergies can be life-threatening.</p>
+
+    <h3 class="text-lg font-semibold text-slate-900 mt-6 mb-2">IgE-Mediated vs Non-IgE-Mediated Allergies</h3>
+    <div class="space-y-3 mb-6">
+      <div class="bg-white border border-slate-200 rounded-xl p-4"><p class="text-sm text-slate-600"><strong>IgE-mediated (immediate)</strong> — Reactions occur within minutes to 2 hours. Symptoms include hives, swelling, wheezing, vomiting, and anaphylaxis. Diagnosed by skin prick test or specific IgE blood test.</p></div>
+      <div class="bg-white border border-slate-200 rounded-xl p-4"><p class="text-sm text-slate-600"><strong>Non-IgE-mediated (delayed)</strong> — Reactions appear hours to days after exposure, primarily affecting the gut (FPIES, eosinophilic oesophagitis). These are harder to diagnose and may be confused with intolerances.</p></div>
+    </div>
+
+    <h3 class="text-lg font-semibold text-slate-900 mt-6 mb-2">Most Common Food Allergens</h3>
+    <p class="text-slate-600 mb-4">According to <strong>AAAAI</strong>, the eight most common allergens responsible for 90% of reactions are: milk, eggs, peanuts, tree nuts, fish, shellfish, wheat, and soy. In the UK and EU, sesame, celery, mustard, lupin, and sulphites are also recognised as major allergens.</p>
+
+    <h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">When Should You See a Doctor?</h2>
+    <p class="text-slate-600 mb-4">If you experience rapid-onset symptoms after eating — especially swelling, difficulty breathing, or dizziness — seek emergency medical attention immediately. For slower-onset digestive symptoms that persist, consult your GP. They can determine whether you need allergy testing (skin prick test or specific IgE blood test) or intolerance assessment (hydrogen breath test or elimination diet).</p>
+
+    <h3 class="text-lg font-semibold text-slate-900 mt-6 mb-2">Emergency Symptoms (Call 999/911)</h3>
+    <ul class="list-disc list-inside text-slate-600 space-y-2 mb-4">
+      <li>Swelling of the lips, tongue, or throat</li>
+      <li>Difficulty breathing or wheezing</li>
+      <li>Sudden drop in blood pressure or dizziness</li>
+      <li>Loss of consciousness</li>
+    </ul>
+
+    <h3 class="text-lg font-semibold text-slate-900 mt-6 mb-2">Non-Emergency Symptoms (Book a GP Appointment)</h3>
+    <ul class="list-disc list-inside text-slate-600 space-y-2 mb-4">
+      <li>Recurring bloating, gas, or diarrhoea after specific foods</li>
+      <li>Persistent fatigue or brain fog linked to meals</li>
+      <li>Skin rashes or eczema that worsen with certain foods</li>
+      <li>Symptoms that do not improve after dietary changes</li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-4">References</h2>
+    <ul class="list-disc list-inside text-slate-500 text-sm space-y-1 mb-4">
+      <li>NHS UK — Food Allergy and Intolerance (2024)</li>
+      <li>British Dietetic Association (BDA) — Food Intolerance Fact Sheet</li>
+      <li>American Academy of Allergy, Asthma & Immunology (AAAAI) — Food Allergy</li>
+      <li>Lomer MCE. Review article: the aetiology, diagnosis, mechanisms and therapeutic evidence for food allergy and intolerance. Aliment Pharmacol Ther. 2011;34(10):1133-1146.</li>
+      <li>Guts UK — Food Allergy and Intolerance</li>
+    </ul>
   </main>
   <Footer />
 </BaseLayout>

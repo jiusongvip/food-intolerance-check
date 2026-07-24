@@ -1,69 +1,61 @@
-# FoodIntoleranceCheck.com — Action Plan
+# FoodCheck SEO Action Plan
 
-**SEO Health Score: 68/100**  
-**Date**: July 23, 2026  
+**Domain:** foodintolerancecheck.com  
+**Audit Date:** July 24, 2026  
+**Health Score:** 72/100
 
 ---
 
 ## Phase 1: Critical Fixes (Week 1)
 
-| # | Action | Effort | Impact | Category |
-|---|--------|--------|--------|----------|
-| 1 | **Fix sitemap deployment** — Redeploy the site from current source code. Verify `sitemap-index.xml` contains all 23 URLs. Confirm live `robots.txt` matches source with absolute sitemap URL. | Low | Critical | Technical |
-| 2 | **Add Google Search Console** — Verify domain ownership and submit sitemap. No tracking code needed — respects privacy policy. | Low | High | Technical |
-| 3 | **Add "Tools" to header nav** — The main navigation omits the Tools section, which is the site's core feature. Add `/tools` link. | Low | Medium | On-Page |
+| Priority | Action | Impact | Effort |
+|---|---|---|---|
+| 🔴 Critical | Deploy site to hosting provider (Cloudflare Pages/Netlify/Vercel) | Blocks all SEO | 1-2 hours |
+| 🔴 High | Add FAQPage schema to homepage FAQ section | Rich result eligibility | 30 min |
+| 🟡 Medium | Add contact email to About page and Footer | E-E-A-T trust signal | 15 min |
+| 🟡 Medium | Remove duplicate images from `public/images/` | Repo cleanliness | 15 min |
+| 🟡 Medium | Set `og:type="article"` for blog/guide pages via BaseLayout prop | Social sharing | 20 min |
 
 ## Phase 2: High-Impact Improvements (Weeks 2-3)
 
-| # | Action | Effort | Impact | Category |
-|---|--------|--------|--------|----------|
-| 4 | **Expand thin guide pages** — Target: `/guides/reading-test-results` (200→800 words), `/guides/low-fodmap` (250→1200 words), `/guides/ibs-food-intolerance` (300→800 words). Add practical examples, internal links, and referenced claims. | Medium | High | Content |
-| 5 | **Expand symptoms page** — Add more detail per symptom card, link to relevant tools and guides, add FAQ section. Target: 600+ words. | Medium | Medium | Content |
-| 6 | **Add MedicalWebPage schema** — Add to all health content pages (guides, blog, symptoms). Signals YMYL expertise to Google. | Medium | High | Schema |
-| 7 | **Convert images to WebP** — Use Astro's `<Image>` component or `astro:assets` for automatic format optimization. Potential 25-35% size reduction. | Medium | Medium | Performance |
-| 8 | **Add HowTo schema** — Apply to `/blog/elimination-diet-guide` (4 clear steps). Enables HowTo rich results. | Low | Medium | Schema |
-| 9 | **Fix Article schema publisher** — Add `logo` ImageObject to publisher in BaseLayout. | Low | Low | Schema |
+| Priority | Action | Impact | Effort |
+|---|---|---|---|
+| 🔴 High | Expand `/guides/low-fodmap` with food lists and detailed phases | Content depth + rankings | 2-3 hours |
+| 🔴 High | Expand `/tools/elimination-diet-planner` with interactive content | Tool engagement + SEO | 2-3 hours |
+| 🟡 Medium | Add WebApplication schema to 6 individual tool pages | Rich result eligibility | 1 hour |
+| 🟡 Medium | Create `llms-full.txt` with expanded per-page summaries | AI citation readiness | 1 hour |
+| 🟢 Low | Fix Article schema publisher logo (use brand logo, not OG image) | Schema accuracy | 15 min |
 
 ## Phase 3: Content & Authority (Month 2)
 
-| # | Action | Effort | Impact | Category |
-|---|--------|--------|--------|----------|
-| 10 | **Strengthen E-E-A-T signals** — Create a verifiable author profile for Dr. Emily Carter (LinkedIn, professional directory listing). Add author page with photo and credentials. | Medium | High | Content |
-| 11 | **Add ItemList schema** — Apply to `/tools`, `/guides`, and `/blog` listing pages for potential carousel rich results. | Low | Medium | Schema |
-| 12 | **Self-host Google Fonts** — Download Outfit font files, serve locally. Eliminates render-blocking external request and Google Fonts privacy concern. | Medium | Medium | Performance |
-| 13 | **Internal linking improvements** — Add contextual links from tool pages to relevant guides and vice versa. Add "Related Content" section to each page. | Medium | Medium | On-Page |
-| 14 | **Create `llms.txt`** — Add an AI-friendly summary file at `/llms.txt` for AI crawler access (referenced in live robots.txt). | Low | Medium | AI Readiness |
-| 15 | **Add inline citations** — Link reference claims in blog/guide content directly to NHS, BDA, NICE pages instead of listing references at the end. | Low | Medium | AI Readiness |
+| Priority | Action | Impact | Effort |
+|---|---|---|---|
+| 🟡 Medium | Expand `/guides/ibs-food-intolerance` with subtypes + management | Content depth | 2 hours |
+| 🟡 Medium | Add AboutPage schema with Person entity for Dr. Emily Carter | E-E-A-T signals | 30 min |
+| 🟢 Low | Standardize title tag format across all pages | Brand consistency | 30 min |
+| 🟢 Low | Replace reused images with unique context-specific images | Visual diversity | 1-2 hours |
+| 🟢 Low | Add PNG favicon variants (32x32, 16x16) | Cross-platform support | 15 min |
 
 ## Phase 4: Monitoring & Iteration (Ongoing)
 
-| # | Action | Effort | Impact | Category |
-|---|--------|--------|--------|----------|
-| 16 | **Publish new blog content monthly** — Target health queries with search volume: coeliac disease vs gluten sensitivity, FODMAP reintroduction tips, food diary best practices. | High | High | Content |
-| 17 | **Monitor Search Console** — Track impressions, clicks, CTR, position. Identify queries to optimize for. | Low | Medium | Technical |
-| 18 | **Add responsive images** — Use `srcset` or Astro responsive image features for different viewport sizes. | Medium | Low | Performance |
-| 19 | **Preload hero image** — Add `<link rel="preload" as="image">` for homepage hero to improve LCP. | Low | Low | Performance |
-| 20 | **Add OG images for key pages** — Create custom social sharing images for homepage, top blog posts, and tool pages. | Medium | Low | Images |
+| Action | Frequency |
+|---|---|
+| Measure Core Web Vitals via PageSpeed Insights | After deployment + monthly |
+| Set up Google Search Console and submit sitemap | Once deployed |
+| Monitor indexing status and fix crawl errors | Weekly for first month |
+| Track keyword rankings for target queries | Monthly |
+| Add new blog content targeting long-tail keywords | Bi-weekly |
+| Add security headers via hosting provider | Once |
+| Consider adding a search feature + SearchAction schema | When content grows |
 
 ---
 
-## Effort & Impact Matrix
+## Estimated Impact After Implementation
 
-```
-High Impact ┃  4. Expand guides    6. MedicalWebPage   10. E-E-A-T
-            ┃  1. Fix sitemap      2. GSC setup
-            ┃  3. Tools nav link
-            ┃─────────────────────────────────────────────────────
-Low Impact  ┃  9. Publisher logo   18. Responsive img  19. Preload
-            ┃  7. WebP images      12. Self-host fonts
-            ┃  8. HowTo schema     11. ItemList schema
-            ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-              Low Effort                              High Effort
-```
-
-## Quick Wins (Do Today)
-1. ✅ Redeploy to sync source → live (fixes sitemap + robots.txt)
-2. ✅ Add `/tools` link to Header.astro navigation
-3. ✅ Submit sitemap to Google Search Console
-4. ✅ Add `image` field to Article schema in BaseLayout
-5. ✅ Create `/llms.txt` file
+| Metric | Current | Expected (3 months) |
+|---|---|---|
+| Indexed pages | 0 (not deployed) | 20-23 |
+| Schema coverage | ~70% | ~95% |
+| Thin content pages | 3 | 0 |
+| AI citation readiness | Basic (llms.txt only) | Enhanced (llms.txt + llms-full.txt) |
+| Health Score | 72 | 85-90 |

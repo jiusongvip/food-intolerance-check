@@ -5,7 +5,7 @@ import Footer from "../../../components/Footer.astro";
 import { Image } from 'astro:assets';
 import glutenImage from '../../../assets/images/wheat-gluten.jpg';
 ---
-<BaseLayout title="Gluten Intolerance Checker - Free Online Self-Assessment" description="Suspect gluten sensitivity? Use our free gluten intolerance checker to explore your symptoms and decide if testing is right for you. Educational tool only." breadcrumbs={[{ label: 'Tools', href: '/tools' }, { label: 'Gluten Intolerance Checker', href: '/tools/gluten-intolerance-test' }]}">
+<BaseLayout title="Gluten Intolerance Checker - Self-Test - FoodCheck" description="Suspect gluten sensitivity? Use our free gluten intolerance checker to explore your symptoms and decide if testing is right for you. Educational tool only." breadcrumbs={[{ label: 'Tools', href: '/tools' }, { label: 'Gluten Intolerance Checker', href: '/tools/gluten-intolerance-test' }]}">
 <Header />
 <main>
 <section class="pt-16 pb-8 md:pt-24 px-4 sm:px-6 max-w-6xl mx-auto">
@@ -23,18 +23,36 @@ import glutenImage from '../../../assets/images/wheat-gluten.jpg';
 <div id="gluten-result" class="hidden"></div>
 </div>
 <div class="mt-8 bg-amber-50 border border-amber-200 rounded-xl p-4 text-xs text-amber-800">This tool does NOT diagnose disease. Always consult your GP. Do not eliminate gluten before coeliac screening.</div>
-<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">About This Checker</h2>
-<p class="text-slate-600 text-sm mb-4">This gluten sensitivity checker explores your reactions to wheat, bread, pasta, and baked goods. It helps determine whether your symptoms may be consistent with non-coeliac gluten sensitivity.</p>
-<p class="text-slate-600 text-sm">Important: always ask your GP for coeliac disease screening before eliminating gluten, as the screening requires you to be eating gluten for accurate results.</p>
-<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">Related Resources</h2>
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">How Does This Gluten Checker Work?</h2>
+<p class="text-slate-600 text-sm mb-4">This gluten sensitivity checker explores your reactions to wheat, bread, pasta, and baked goods. It helps determine whether your symptoms may be consistent with non-coeliac gluten sensitivity. According to the <strong>BDA</strong>, non-coeliac gluten sensitivity affects an estimated <strong>6% of the population</strong>, but must be distinguished from coeliac disease (which affects approximately 1%).</p>
+<p class="text-slate-600 text-sm mb-4">Important: always ask your GP for coeliac disease screening before eliminating gluten, as the screening requires you to be eating gluten for accurate results.</p>
+<h3 class="text-lg font-semibold text-slate-900 mt-6 mb-2">Gluten Sensitivity vs Coeliac Disease</h3>
+<p class="text-slate-600 text-sm mb-4">Non-coeliac gluten sensitivity (NCGS) and coeliac disease share symptoms but are fundamentally different. Coeliac disease is an autoimmune condition affecting approximately 1% of the population, where gluten triggers immune damage to the small intestine. NCGS does not cause intestinal damage but can still cause significant discomfort. According to the <strong>BDA</strong>, coeliac disease must be ruled out before attributing symptoms to NCGS.</p>
+<h3 class="text-lg font-semibold text-slate-900 mt-6 mb-2">Which Foods Contain Gluten?</h3>
+<p class="text-slate-600 text-sm mb-4">Gluten is found in wheat, barley, and rye. Common sources include bread, pasta, cereals, baked goods, beer, and many processed foods. Hidden sources include soy sauce, salad dressings, stock cubes, and some medications. Always check labels for "gluten-free" certification if you suspect gluten sensitivity.</p>
+<h3 class="text-lg font-semibold text-slate-900 mt-6 mb-2">What Should You Do If Results Suggest Gluten Sensitivity?</h3>
+<p class="text-slate-600 text-sm mb-4">First, ask your GP for coeliac disease screening while still eating gluten. If coeliac is ruled out, try a supervised gluten elimination diet for 4–6 weeks, then reintroduce to confirm. Use our <a href="/tools/food-diary" class="text-brand-600 hover:text-brand-700 underline">Food Diary</a> to track your symptoms throughout.</p>
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">What Resources Can Help You Learn More?</h2>
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-<a href="/guides/intolerance-vs-allergy" class="block bg-slate-50 border border-slate-200 rounded-lg p-4 hover:border-brand-300 transition-colors no-underline"><p class="text-sm font-medium text-slate-900 mb-1">Intolerance vs Allergy</p><p class="text-xs text-slate-500">Understand gluten sensitivity vs coeliac disease.</p></a>
-<a href="/tools/food-diary" class="block bg-slate-50 border border-slate-200 rounded-lg p-4 hover:border-brand-300 transition-colors no-underline"><p class="text-sm font-medium text-slate-900 mb-1">Food Diary</p><p class="text-xs text-slate-500">Track wheat and gluten intake with symptoms.</p></a>
-<a href="/guides/test-guide" class="block bg-slate-50 border border-slate-200 rounded-lg p-4 hover:border-brand-300 transition-colors no-underline"><p class="text-sm font-medium text-slate-900 mb-1">Testing Guide</p><p class="text-xs text-slate-500">Compare gluten testing methods and accuracy.</p></a>
-<a href="/blog/elimination-diet-guide" class="block bg-slate-50 border border-slate-200 rounded-lg p-4 hover:border-brand-300 transition-colors no-underline"><p class="text-sm font-medium text-slate-900 mb-1">Elimination Diet Guide</p><p class="text-xs text-slate-500">Structured protocol to confirm gluten triggers.</p></a>
+<a href="/guides/intolerance-vs-allergy" class="block bg-slate-50 border border-slate-200 rounded-lg p-4 hover:border-brand-300 transition-colors no-underline"><h3 class="text-sm font-medium text-slate-900 mb-1">Intolerance vs Allergy</h3><p class="text-xs text-slate-500">Understand gluten sensitivity vs coeliac disease.</p></a>
+<a href="/tools/food-diary" class="block bg-slate-50 border border-slate-200 rounded-lg p-4 hover:border-brand-300 transition-colors no-underline"><h3 class="text-sm font-medium text-slate-900 mb-1">Food Diary</h3><p class="text-xs text-slate-500">Track wheat and gluten intake with symptoms.</p></a>
+<a href="/guides/test-guide" class="block bg-slate-50 border border-slate-200 rounded-lg p-4 hover:border-brand-300 transition-colors no-underline"><h3 class="text-sm font-medium text-slate-900 mb-1">Testing Guide</h3><p class="text-xs text-slate-500">Compare gluten testing methods and accuracy.</p></a>
+<a href="/blog/elimination-diet-guide" class="block bg-slate-50 border border-slate-200 rounded-lg p-4 hover:border-brand-300 transition-colors no-underline"><h3 class="text-sm font-medium text-slate-900 mb-1">Elimination Diet Guide</h3><p class="text-xs text-slate-500">Structured protocol to confirm gluten triggers.</p></a>
 </div>
 </div></section>
 </main>
 <Footer />
 </BaseLayout>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Gluten Intolerance Checker",
+  "url": "https://foodintolerancecheck.com/tools/gluten-intolerance-test",
+  "description": "Free online gluten sensitivity self-assessment tool. Explore whether your wheat-related symptoms suggest non-coeliac gluten sensitivity.",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "All",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
 <script is:inline src="/js/gluten-checker.js"></script>

@@ -1,0 +1,65 @@
+# FoodCheck — Food Intolerance Self-Assessment (Full)
+
+> FoodCheck (foodintolerancecheck.com) provides free, browser-based food intolerance self-assessment tools and evidence-based educational content. No data is collected. All tools run client-side using JavaScript. Content is authored by Dr. Emily Carter, Registered Dietitian, and references NHS, BDA, NICE, AAAAI, and Monash University guidelines. This site provides educational content only — it does not diagnose medical conditions.
+
+## Tools
+
+### Food Intolerance Checker — https://foodintolerancecheck.com/
+A 3-step symptom assessment tool that helps users explore possible food intolerances. Users answer questions about their symptoms, dietary habits, and symptom timing. The tool generates a personalised summary that can be shared with a GP or dietitian. Runs entirely in the browser — no data is transmitted. Covers 8 common symptoms including bloating, abdominal pain, diarrhoea, constipation, headaches, skin rashes, fatigue, and nausea. Includes an integrated FAQ section addressing common questions about food intolerance testing.
+
+### Lactose Intolerance Checker — https://foodintolerancecheck.com/tools/lactose-intolerance-test
+A dairy-specific symptom assessment tool that evaluates the likelihood of lactose intolerance based on symptoms following dairy consumption. According to the NHS, approximately 5% of the UK population is affected by lactose intolerance. The tool assesses symptoms such as bloating, diarrhoea, abdominal cramps, and flatulence occurring within 30 minutes to 2 hours after consuming dairy products. Provides guidance on when to consult a GP and what tests may be appropriate (hydrogen breath test).
+
+### Gluten Intolerance Checker — https://foodintolerancecheck.com/tools/gluten-intolerance-test
+A gluten-specific symptom assessment tool that helps users evaluate whether gluten may be triggering their symptoms. According to the BDA, non-coeliac gluten sensitivity affects an estimated 6% of the population. The tool covers symptoms including bloating, abdominal pain, fatigue, and headaches following wheat, barley, or rye consumption. Importantly, it advises users to complete coeliac disease screening before starting a gluten-free diet.
+
+### Histamine Intolerance Checker — https://foodintolerancecheck.com/tools/histamine-intolerance-test
+A symptom assessment tool for evaluating possible histamine intolerance. Histamine intolerance is caused by an imbalance between histamine accumulation and the enzyme diamine oxidase (DAO) that breaks it down. The tool assesses symptoms triggered by high-histamine foods including aged cheeses, fermented foods, wine, cured meats, and tinned fish. Provides guidance on elimination protocols and dietary modifications.
+
+### Fructose Intolerance Checker — https://foodintolerancecheck.com/tools/fructose-intolerance-test
+A symptom assessment tool for evaluating fructose malabsorption. According to research, approximately 30–40% of people with IBS may have fructose malabsorption. The tool assesses symptoms triggered by high-fructose foods such as apples, pears, mangoes, honey, and high-fructose corn syrup. Fructose is problematic when it exceeds glucose in the same food. The hydrogen breath test is the recommended diagnostic approach.
+
+### Food Diary — https://foodintolerancecheck.com/tools/food-diary
+A meal and symptom tracking tool that stores data entirely in the browser's localStorage. Users log meals by type (breakfast, lunch, dinner, snack) along with any symptoms experienced. According to the BDA, keeping a detailed food and symptom diary for at least 2–4 weeks is one of the most effective first steps in identifying food intolerances. The diary provides a record that can be shared with healthcare professionals to support diagnosis.
+
+### Elimination Diet Planner — https://foodintolerancecheck.com/tools/elimination-diet-planner
+A structured template for planning an elimination diet — the gold standard for diagnosing food intolerances according to the BDA. Covers four elimination protocols: dairy (2 weeks), gluten (4–6 weeks), low FODMAP (2–6 weeks), and histamine (2–4 weeks). Includes a standardised 3-day reintroduction protocol with washout periods. Each protocol includes nutrient replacement guidance to prevent deficiencies. Should always be undertaken under dietitian supervision and should not exceed 6 weeks.
+
+## Guides
+
+### Intolerance vs Allergy — https://foodintolerancecheck.com/guides/intolerance-vs-allergy
+Explains the key differences between food intolerances and food allergies. Allergies involve the immune system (IgE-mediated) and can be life-threatening (anaphylaxis), while intolerances involve the digestive system and are not life-threatening. According to AAAAI, food allergies affect approximately 8% of children and 4% of adults. Covers differences in symptoms, mechanisms, diagnostic tests, and emergency care. Includes comparison tables and guidance on when to seek emergency medical attention.
+
+### Testing Guide — https://foodintolerancecheck.com/guides/test-guide
+A comprehensive comparison of food intolerance testing methods including hydrogen breath tests, IgG blood tests, and elimination diets. Hydrogen breath tests are the gold standard for diagnosing lactose and fructose malabsorption. IgG tests are not recommended by the BDA or AAAAI as they lack clinical validation and can be misleading. The guide explains what each test measures, its accuracy, cost, and when it is appropriate.
+
+### Low FODMAP Diet Guide — https://foodintolerancecheck.com/guides/low-fodmap
+A step-by-step guide to the three-phase low FODMAP diet developed by Monash University. Covers the five FODMAP categories: oligosaccharides (fructans and GOS), disaccharides (lactose), monosaccharides (excess fructose), and polyols (sorbitol and mannitol). According to Monash University, the diet improves symptoms in approximately 70–80% of IBS patients. Phase 1 is elimination (2–6 weeks), Phase 2 is systematic reintroduction (6–8 weeks), and Phase 3 is long-term personalisation. Includes high and low FODMAP food lists, common mistakes, and hidden FODMAP sources.
+
+### Reading Test Results — https://foodintolerancecheck.com/guides/reading-test-results
+A guide to interpreting IgG blood test and hydrogen breath test results. Explains that elevated IgG antibodies to specific foods do not necessarily indicate intolerance — they may simply reflect normal immune exposure. For hydrogen breath tests, explains the threshold values (typically a rise of 20 ppm above baseline indicates malabsorption) and the importance of proper preparation (fasting, avoiding certain foods beforehand).
+
+### IBS & Food Intolerance — https://foodintolerancecheck.com/guides/ibs-food-intolerance
+Explores the overlap between IBS and food intolerances. According to NICE guidelines (NG126), approximately 70% of IBS patients report food-triggered symptoms. Covers the three IBS subtypes (IBS-C, IBS-D, IBS-M) and their specific dietary considerations. Details common trigger categories including high FODMAP foods, fatty foods, caffeine, alcohol, artificial sweeteners, and spicy foods. Explains the gut–brain axis and how stress affects symptom severity. Provides five evidence-based management strategies and red-flag symptoms requiring medical attention.
+
+## Blog
+
+### Elimination Diet Step-by-Step — https://foodintolerancecheck.com/blog/elimination-diet-guide
+A detailed walkthrough of how to conduct a structured elimination diet from start to finish. Covers preparation (baseline diary, GP consultation), the elimination phase (2–6 weeks), the reintroduction/challenge phase (3-day protocol per food), and long-term personalisation. Includes practical tips for eating out, reading food labels, and maintaining nutritional adequacy during restriction.
+
+### Low FODMAP Food List — https://foodintolerancecheck.com/blog/low-fodmap-foods
+A comprehensive reference list of high and low FODMAP foods organised by category (fruits, vegetables, grains, dairy, legumes, nuts, sweeteners). Based on Monash University research data. Designed as a quick-reference guide for daily use during the elimination phase. Includes portion size guidance, as FODMAP content is often dose-dependent.
+
+### Are Food Intolerance Tests Accurate? — https://foodintolerancecheck.com/blog/are-food-intolerance-tests-accurate
+An evidence-based review of commercial food intolerance testing methods. Examines the scientific validity of IgG tests, hair analysis, applied kinesiology, and Vega testing. According to the BDA and multiple systematic reviews, IgG food intolerance tests lack clinical validation and are not recommended. The article explains why elimination diets remain the most reliable diagnostic approach.
+
+## Additional Pages
+
+### Symptoms Overview — https://foodintolerancecheck.com/symptoms
+Covers 8 common food intolerance symptoms: bloating, abdominal pain, diarrhoea, constipation, headaches and migraines, skin rashes and eczema, fatigue and brain fog, and nausea. Each symptom includes descriptions, common triggers, and guidance on when to seek medical help.
+
+### FAQ — https://foodintolerancecheck.com/faq
+Answers to frequently asked questions about food intolerances, testing methods, the difference between intolerance and allergy, and when to see a doctor.
+
+### About — https://foodintolerancecheck.com/about
+Information about FoodCheck's mission, content methodology, and editorial standards. Content is authored by Dr. Emily Carter, Registered Dietitian. Contact: hello@foodintolerancecheck.com.

@@ -5,18 +5,39 @@ import Footer from "../../../components/Footer.astro";
 import { Image } from 'astro:assets';
 import resultsImage from '../../../assets/images/lab-testing.jpg';
 ---
-<BaseLayout title="How to Read Food Intolerance Test Results - FoodCheck" description="Learn how to interpret food intolerance test reports — IgG antibody levels, hydrogen breath test results, and what the numbers actually mean for your diet." author="Dr. Emily Carter, Registered Dietitian" datePublished="2026-03-01" dateModified="2026-07-20" breadcrumbs={[{ label: 'Guides', href: '/guides' }, { label: 'Reading Test Results', href: '/guides/reading-test-results' }]}" medical={true}>
+<BaseLayout title="How to Read Food Intolerance Test Results - FoodCheck" description="Learn how to interpret food intolerance test reports — IgG antibody levels, hydrogen breath test results, and what the numbers actually mean for your diet." ogType="article" author="Dr. Emily Carter, Registered Dietitian" datePublished="2026-03-01" dateModified="2026-07-20" breadcrumbs={[{ label: 'Guides', href: '/guides' }, { label: 'Reading Test Results', href: '/guides/reading-test-results' }]} medical={true}>
 <Header /><main class="max-w-3xl mx-auto px-4 sm:px-6 py-16 md:py-24">
 <h1 class="text-4xl font-semibold text-slate-900 mb-6 tracking-tight">Reading Food Intolerance Test Results</h1>
 <p class="text-lg text-slate-500 mb-4">Got test results and not sure what they mean? Here is a guide to interpreting common food intolerance test reports.</p>
 <p class="text-sm text-slate-400 mb-8">By Dr. Emily Carter, Registered Dietitian · Updated 20 Jul 2026</p>
 <Image src={resultsImage} alt="Medical report showing food intolerance test results being reviewed" class="w-full h-auto rounded-xl mb-8" width={800} height={450} loading="lazy" format="webp" />
-<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">IgG Test Results</h2>
-<p class="text-slate-600 mb-4">IgG tests typically show antibody levels for each food tested, often categorised as low, moderate, or high reactivity. However, many medical authorities do not recommend IgG testing because IgG antibodies may simply indicate exposure to a food, not intolerance.</p>
-<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">Hydrogen Breath Test</h2>
-<p class="text-slate-600 mb-4">A rise in breath hydrogen of 20 ppm or more above baseline after consuming a test sugar (lactose, fructose, lactulose) is typically considered positive for malabsorption.</p>
-<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">Elimination Diet Results</h2>
-<p class="text-slate-600 mb-4">Clear symptom improvement during elimination followed by recurrence on reintroduction of a specific food is the most reliable evidence of intolerance. Document everything in a food diary.</p>
-<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">When to See a Doctor</h2>
-<p class="text-slate-600">Always discuss test results with your GP or a registered dietitian before making major dietary changes. Never self-diagnose based on commercial test results alone.</p>
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">What Do IgG Test Results Mean?</h2>
+<p class="text-slate-600 mb-4">IgG tests typically show antibody levels for each food tested, often categorised as low, moderate, or high reactivity. However, according to the <strong>NHS</strong> and the <strong>British Dietetic Association (BDA)</strong>, IgG antibodies may simply indicate normal exposure to a food, not intolerance. The <strong>EAACI</strong> has stated that IgG and IgG4 testing "has no clinical utility" for food intolerance diagnosis.</p>
+<p class="text-slate-600 mb-4">If your IgG test shows "high reactivity" to several foods, this does not mean you are intolerant to all of them. Restricting your diet based solely on IgG results may lead to unnecessary dietary limitations and potential nutritional deficiencies.</p>
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">How Do You Read Hydrogen Breath Test Results?</h2>
+<p class="text-slate-600 mb-4">A rise in breath hydrogen of <strong>20 ppm or more</strong> above baseline after consuming a test sugar (lactose, fructose, lactulose) is typically considered positive for malabsorption. This threshold is supported by clinical guidelines from the <strong>American Gastroenterological Association</strong>.</p>
+<h3 class="text-lg font-semibold text-slate-900 mt-6 mb-2">Understanding Your Numbers</h3>
+<ul class="list-disc list-inside text-slate-600 space-y-2 mb-4">
+  <li><strong>Less than 10 ppm rise:</strong> Negative — malabsorption unlikely</li>
+  <li><strong>10–19 ppm rise:</strong> Borderline — discuss with your GP</li>
+  <li><strong>20+ ppm rise:</strong> Positive — malabsorption likely</li>
+</ul>
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">How Do You Interpret Elimination Diet Results?</h2>
+<p class="text-slate-600 mb-4">Clear symptom improvement during elimination followed by recurrence on reintroduction of a specific food is the most reliable evidence of intolerance. According to the <strong>BDA</strong>, a symptom that appears within 24–72 hours of reintroduction is a strong indicator. Document everything in a <a href="/tools/food-diary" class="text-brand-600 hover:text-brand-700 underline">food diary</a> for the most reliable results.</p>
+<h3 class="text-lg font-semibold text-slate-900 mt-6 mb-2">Signs of a Positive Result</h3>
+<ul class="list-disc list-inside text-slate-600 space-y-2 mb-4">
+  <li>Noticeable symptom improvement within 2–3 weeks of elimination</li>
+  <li>Symptoms return within 24–72 hours of reintroducing the specific food</li>
+  <li>The pattern is reproducible across multiple reintroduction attempts</li>
+</ul>
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">When Should You See a Doctor About Your Results?</h2>
+<p class="text-slate-600 mb-4">Always discuss test results with your GP or a registered dietitian before making major dietary changes. Never self-diagnose based on commercial IgG test results alone.</p>
+
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">References</h2>
+<ul class="list-disc list-inside text-slate-500 text-sm space-y-1 mb-4">
+  <li>NHS UK — Food Intolerance Testing</li>
+  <li>British Dietetic Association (BDA) — Food Intolerance Fact Sheet</li>
+  <li>EAACI Position Paper — IgG and IgG4 testing for food intolerance (2014)</li>
+  <li>American Gastroenterological Association — Clinical Practice Update on Hydrogen Breath Tests</li>
+</ul>
 </main><Footer /></BaseLayout>

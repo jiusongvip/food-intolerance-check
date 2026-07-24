@@ -5,7 +5,7 @@ import Footer from "../../../components/Footer.astro";
 import { Image } from 'astro:assets';
 import elimDietImage from '../../../assets/images/elimination-diet.jpg';
 ---
-<BaseLayout title="Elimination Diet: A Step-by-Step Guide - FoodCheck" description="Learn how to do an elimination diet step by step. Identify food intolerance triggers through structured elimination and reintroduction. Safety guidelines included." author="Dr. Emily Carter, Registered Dietitian" datePublished="2026-01-15" dateModified="2026-07-20" breadcrumbs={[{ label: 'Blog', href: '/blog' }, { label: 'Elimination Diet Guide', href: '/blog/elimination-diet-guide' }]}" medical={true}>
+<BaseLayout title="Elimination Diet: A Step-by-Step Guide - FoodCheck" description="Learn how to do an elimination diet step by step. Identify food intolerance triggers through structured elimination and reintroduction. Safety guidelines included." ogType="article" author="Dr. Emily Carter, Registered Dietitian" datePublished="2026-01-15" dateModified="2026-07-20" breadcrumbs={[{ label: 'Blog', href: '/blog' }, { label: 'Elimination Diet Guide', href: '/blog/elimination-diet-guide' }]} medical={true}>
 <Header /><main class="max-w-3xl mx-auto px-4 sm:px-6 py-16 md:py-24">
 <h1 class="text-4xl font-semibold text-slate-900 mb-6 tracking-tight">Elimination Diet: A Step-by-Step Guide</h1>
 <p class="text-lg text-slate-500 mb-4">An elimination diet is the gold standard for identifying food intolerances. Here is how to do it safely and effectively.</p>
@@ -19,7 +19,10 @@ import elimDietImage from '../../../assets/images/elimination-diet.jpg';
 <p class="text-slate-600 mb-4">An elimination diet may be appropriate if you experience recurring digestive symptoms — such as bloating, diarrhoea, gas, or abdominal pain — that seem to correlate with certain foods. It may also help with non-digestive symptoms like headaches, fatigue, skin flare-ups, or joint pain that you suspect are food-related.</p>
 <p class="text-slate-600 mb-4">However, an elimination diet is <strong>not appropriate</strong> if you have a history of eating disorders, are pregnant or breastfeeding (without medical supervision), or if you are a child. In these cases, always consult a healthcare professional first.</p>
 
-<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">Step 1: Preparation (1 week)</h2>
+<h3 class="text-lg font-semibold text-slate-900 mt-6 mb-2">When an Elimination Diet Is Not Appropriate</h3>
+<p class="text-slate-600 mb-4">Elimination diets should never be used by individuals with a history of eating disorders, children (without medical supervision), or pregnant/breastfeeding women. If you have severe symptoms — such as unexplained weight loss, blood in stools, or persistent vomiting — see your GP immediately, as these are not typical food intolerance symptoms and may indicate a more serious condition.</p>
+
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">Step 1: How Do You Prepare for an Elimination Diet?</h2>
 <p class="text-slate-600 mb-4">Keep a detailed food and symptom diary for at least one week before starting. Record everything you eat and drink, the time of consumption, and any symptoms that follow — including their severity and duration. This establishes your <strong>baseline</strong> and helps you identify patterns you may not have noticed.</p>
 <p class="text-slate-600 mb-4">During this phase, also plan which food or food group you will eliminate. Common starting points include:</p>
 <ul class="list-disc list-inside text-slate-600 space-y-2 mb-4">
@@ -30,12 +33,15 @@ import elimDietImage from '../../../assets/images/elimination-diet.jpg';
 </ul>
 <p class="text-slate-600 mb-4">Use our <a href="/tools/food-diary" class="text-brand-600 hover:text-brand-700 underline">Food Diary tool</a> to track your baseline week digitally.</p>
 
-<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">Step 2: Elimination (2-4 weeks)</h2>
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">Step 2: How Do You Eliminate Foods (2–4 Weeks)?</h2>
 <p class="text-slate-600 mb-4">Remove the suspect food or food group <strong>completely</strong> from your diet. This means reading ingredient labels carefully — many processed foods contain hidden triggers. For example, lactose can appear in bread, sauces, and even some medications. Gluten hides in soy sauce, soups, and many pre-packaged meals.</p>
 <p class="text-slate-600 mb-4">During this phase, you should notice whether your symptoms improve. Most people see a meaningful change within 2-3 weeks if the eliminated food was indeed a trigger. If there is no improvement after 4 weeks, the eliminated food is likely not the cause, and you should discuss other possibilities with your GP.</p>
 <p class="text-slate-600 mb-4">Keep your food and symptom diary going throughout the elimination phase. Note any changes in symptom frequency, severity, and type.</p>
 
-<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">Step 3: Reintroduction (1-2 weeks per food)</h2>
+<h3 class="text-lg font-semibold text-slate-900 mt-6 mb-2">Hidden Sources of Common Triggers</h3>
+<p class="text-slate-600 mb-4">Lactose appears in bread, sauces, medications, and processed meats. Gluten hides in soy sauce, soups, salad dressings, and even some vitamin supplements. Always check ingredient lists carefully — even foods labelled "gluten-free" or "dairy-free" may contain trace amounts if produced in shared facilities.</p>
+
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">Step 3: How Do You Reintroduce Foods?</h2>
 <p class="text-slate-600 mb-4">This is the most critical phase. Reintroduce <strong>one food at a time</strong>, with at least 3 days between each new food. Follow this protocol:</p>
 <ul class="list-disc list-inside text-slate-600 space-y-2 mb-4">
   <li><strong>Day 1:</strong> Eat a small amount of the test food (e.g., half a glass of milk for lactose)</li>
@@ -45,10 +51,10 @@ import elimDietImage from '../../../assets/images/elimination-diet.jpg';
 </ul>
 <p class="text-slate-600 mb-4">Record the food tested, the amount, and any symptoms with their timing. A symptom that appears within 24-72 hours of reintroduction is a strong indicator of intolerance.</p>
 
-<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">Step 4: Personalisation</h2>
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">Step 4: How Do You Personalise Your Diet?</h2>
 <p class="text-slate-600 mb-4">After completing reintroduction, you will have a clear picture of which foods trigger symptoms and which do not. Work with your dietitian to build a long-term diet that avoids only your confirmed triggers while maximising nutritional variety. The goal is <strong>not</strong> to eliminate foods unnecessarily — overly restrictive diets can lead to nutritional deficiencies.</p>
 
-<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">Common Mistakes to Avoid</h2>
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">What Common Mistakes Should You Avoid?</h2>
 <ul class="list-disc list-inside text-slate-600 space-y-2 mb-4">
   <li><strong>Eliminating too many foods at once</strong> — makes it impossible to identify the specific trigger</li>
   <li><strong>Not reading labels</strong> — hidden ingredients can sabotage the elimination phase</li>
@@ -57,7 +63,10 @@ import elimDietImage from '../../../assets/images/elimination-diet.jpg';
   <li><strong>Not keeping a diary</strong> — without records, you cannot draw reliable conclusions</li>
 </ul>
 
-<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">Important Safety Notes</h2>
+<h3 class="text-lg font-semibold text-slate-900 mt-6 mb-2">How to Stay Motivated During Elimination</h3>
+<p class="text-slate-600 mb-4">The elimination phase can feel restrictive, but it is temporary. Focus on the foods you <em>can</em> eat rather than what you are avoiding. Many people find that their symptoms improve significantly within the first two weeks, which provides strong motivation to continue. Use our <a href="/tools/food-diary" class="text-brand-600 hover:text-brand-700 underline">Food Diary</a> to track your progress and celebrate improvements.</p>
+
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">What Safety Precautions Should You Take?</h2>
 <ul class="list-disc list-inside text-slate-600 space-y-2 mb-4">
   <li>Always undertake an elimination diet under the supervision of a GP or registered dietitian</li>
   <li>Do not eliminate multiple food groups at once without professional guidance</li>
@@ -65,6 +74,9 @@ import elimDietImage from '../../../assets/images/elimination-diet.jpg';
   <li>Children and pregnant women should only do this under medical supervision</li>
   <li>If you experience severe symptoms (unexplained weight loss, blood in stools, persistent vomiting), see your GP promptly — these are not typical food intolerance symptoms</li>
 </ul>
+
+<h3 class="text-lg font-semibold text-slate-900 mt-6 mb-2">Working with a Healthcare Team</h3>
+<p class="text-slate-600 mb-4">The most successful elimination diets are conducted under the supervision of a GP and a registered dietitian. Your GP can rule out other conditions first, and a dietitian can help you plan nutritionally balanced meals during elimination, guide reintroduction, and help you build a sustainable long-term diet based on your results.</p>
 
 <h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">References</h2>
 <ul class="list-disc list-inside text-slate-500 text-sm space-y-1 mb-4">
