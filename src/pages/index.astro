@@ -3,7 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { Image } from 'astro:assets';
-import heroImage from '../assets/images/hero-healthy.jpg';
+import heroImage from '../assets/images/hero-healthy.webp';
 ---
 
 <BaseLayout title="Food Intolerance Checker - Free Self-Test - FoodCheck" description="Use our free food intolerance checker to explore which foods may be linked to your symptoms. Educational tool only — no medical diagnosis. No sign-up required.">
@@ -127,6 +127,23 @@ import heroImage from '../assets/images/hero-healthy.jpg';
   </main>
   <Footer />
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "FoodCheck",
+  "url": "https://foodintolerancecheck.com",
+  "description": "Free online food intolerance self-assessment tools and evidence-based educational content.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://foodintolerancecheck.com/?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",

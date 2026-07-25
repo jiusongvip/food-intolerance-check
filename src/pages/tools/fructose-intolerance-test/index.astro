@@ -3,14 +3,15 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
 import Header from "../../../components/Header.astro";
 import Footer from "../../../components/Footer.astro";
 import { Image } from 'astro:assets';
-import fructoseImage from '../../../assets/images/fruits-fructose.jpg';
+import fructoseImage from '../../../assets/images/fruits-fructose.webp';
 ---
 <BaseLayout title="Fructose Intolerance Checker - Self-Test - FoodCheck" description="Bloating or discomfort after fruit or honey? Our free fructose intolerance checker helps identify possible malabsorption patterns. Educational tool only." breadcrumbs={[{ label: 'Tools', href: '/tools' }, { label: 'Fructose Intolerance Checker', href: '/tools/fructose-intolerance-test' }]}">
 <Header /><main>
 <section class="pt-16 pb-8 md:pt-24 px-4 sm:px-6 max-w-6xl mx-auto">
 <div class="max-w-2xl mx-auto text-center">
 <h1 class="text-4xl md:text-5xl font-semibold tracking-tight text-slate-900 leading-none mb-4">Fructose Intolerance Checker</h1>
-<p class="text-lg text-slate-500 max-w-lg mx-auto">5 questions to explore possible fructose malabsorption. Educational tool only.</p>
+<p class="text-lg text-slate-500 max-w-lg mx-auto mb-2">5 questions to explore possible fructose malabsorption. Educational tool only.</p>
+<p class="text-xs text-slate-400 max-w-lg mx-auto">Reviewed by Dr. Emily Carter, Registered Dietitian</p>
 </div>
 <div class="mt-8 max-w-2xl mx-auto"><Image src={fructoseImage} alt="Fresh fruits and honey containing natural fructose" class="w-full h-auto rounded-xl" width={800} height={450} loading="lazy" format="webp" /></div>
 </section>

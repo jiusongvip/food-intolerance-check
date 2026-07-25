@@ -3,12 +3,13 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
 import Header from "../../../components/Header.astro";
 import Footer from "../../../components/Footer.astro";
 import { Image } from 'astro:assets';
-import plannerImage from '../../../assets/images/planning-calendar.jpg';
+import plannerImage from '../../../assets/images/planning-calendar.webp';
 ---
 <BaseLayout title="Elimination Diet Planner - Identify Triggers - FoodCheck" description="Plan a structured elimination diet with our guided planner template. Systematically identify food intolerance triggers through elimination and reintroduction." breadcrumbs={[{ label: 'Tools', href: '/tools' }, { label: 'Elimination Diet Planner', href: '/tools/elimination-diet-planner' }]}">
 <Header /><main class="max-w-3xl mx-auto px-4 sm:px-6 py-16 md:py-24">
 <h1 class="text-4xl font-semibold text-slate-900 mb-6 tracking-tight">Elimination Diet Planner</h1>
-<p class="text-lg text-slate-500 mb-8">A guided template for planning a structured elimination diet. Always undertake this under professional supervision.</p>
+<p class="text-lg text-slate-500 mb-2">A guided template for planning a structured elimination diet. Always undertake this under professional supervision.</p>
+<p class="text-xs text-slate-400 mb-8">Reviewed by Dr. Emily Carter, Registered Dietitian</p>
 <Image src={plannerImage} alt="Meal planning calendar and notebook for an elimination diet" class="w-full h-auto rounded-xl mb-8" width={800} height={450} loading="lazy" format="webp" />
 <h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">What Is an Elimination Diet and How Does It Work?</h2>
 <p class="text-slate-600 mb-4">An elimination diet is a structured, short-term dietary protocol used to identify specific foods that trigger adverse symptoms. According to the <strong>British Dietetic Association (BDA)</strong>, elimination diets are considered the gold standard for diagnosing food intolerances when used alongside a detailed symptom diary. The process involves removing suspected trigger foods for a defined period, then systematically reintroducing them one at a time while monitoring symptoms.</p>

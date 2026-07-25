@@ -3,12 +3,13 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
 import { Image } from 'astro:assets';
-import toolsHero from '../../assets/images/hero-healthy.jpg';
+import toolsHero from '../../assets/images/tools-overview.webp';
 ---
 <BaseLayout title="Food Intolerance Tools - Checkers & Diary - FoodCheck" description="Free online tools to explore food intolerances: symptom checkers for lactose, gluten, histamine, and fructose, a food diary, and an elimination diet planner. No sign-up required." breadcrumbs={[{ label: 'Tools', href: '/tools' }]}">
 <Header /><main class="max-w-6xl mx-auto px-4 sm:px-6 py-16 md:py-24">
 <h1 class="text-4xl font-semibold text-slate-900 mb-4 tracking-tight">Tools</h1>
-<p class="text-lg text-slate-500 mb-12 max-w-2xl">Free, private tools to help you explore food intolerances. Everything runs in your browser — no sign-up, no data collected.</p>
+<p class="text-lg text-slate-500 mb-2 max-w-2xl">Free, private tools to help you explore food intolerances. Everything runs in your browser — no sign-up, no data collected.</p>
+<p class="text-sm text-slate-400 mb-12 max-w-2xl">Reviewed by Dr. Emily Carter, Registered Dietitian</p>
 <Image src={toolsHero} alt="Food intolerance self-assessment tools and resources" class="w-full h-auto rounded-xl mb-10 max-w-2xl" width={800} height={450} loading="lazy" format="webp" />
 <h2 class="text-2xl font-semibold text-slate-900 mb-5">Which Symptom Checkers Are Available?</h2>
 <p class="text-slate-600 mb-6">Answer 5 questions to explore whether your symptoms suggest a specific food intolerance. Educational only — not a medical diagnosis.</p>

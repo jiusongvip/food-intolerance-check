@@ -1,0 +1,33 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+<BaseLayout title="Page Not Found - FoodCheck" description="The page you are looking for does not exist. Return to FoodCheck for free food intolerance tools and guides.">
+<Header />
+<main class="max-w-2xl mx-auto px-4 sm:px-6 py-24 md:py-32 text-center">
+  <p class="text-7xl font-semibold text-brand-600 mb-4">404</p>
+  <h1 class="text-3xl md:text-4xl font-semibold text-slate-900 mb-4 tracking-tight">Page Not Found</h1>
+  <p class="text-lg text-slate-500 mb-10 max-w-md mx-auto">The page you are looking for may have been moved or does not exist. Here are some helpful links to get you back on track.</p>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-lg mx-auto mb-10">
+    <a href="/" class="block bg-white border border-slate-200 rounded-xl p-5 hover:border-brand-300 hover:shadow-sm transition-all no-underline">
+      <h2 class="font-semibold text-slate-900 text-sm mb-1">Food Intolerance Checker</h2>
+      <p class="text-xs text-slate-500">Free 3-step self-assessment tool</p>
+    </a>
+    <a href="/tools" class="block bg-white border border-slate-200 rounded-xl p-5 hover:border-brand-300 hover:shadow-sm transition-all no-underline">
+      <h2 class="font-semibold text-slate-900 text-sm mb-1">All Tools</h2>
+      <p class="text-xs text-slate-500">Checkers, food diary & diet planner</p>
+    </a>
+    <a href="/guides" class="block bg-white border border-slate-200 rounded-xl p-5 hover:border-brand-300 hover:shadow-sm transition-all no-underline">
+      <h2 class="font-semibold text-slate-900 text-sm mb-1">Guides</h2>
+      <p class="text-xs text-slate-500">Testing, diets & evidence-based resources</p>
+    </a>
+    <a href="/blog" class="block bg-white border border-slate-200 rounded-xl p-5 hover:border-brand-300 hover:shadow-sm transition-all no-underline">
+      <h2 class="font-semibold text-slate-900 text-sm mb-1">Blog</h2>
+      <p class="text-xs text-slate-500">Articles on elimination diets & FODMAPs</p>
+    </a>
+  </div>
+  <a href="/" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand-600 text-white text-sm font-medium hover:bg-brand-700 transition-colors no-underline shadow-sm shadow-brand-200">Back to Home<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+</main>
+<Footer />
+</BaseLayout>

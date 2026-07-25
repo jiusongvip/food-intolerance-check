@@ -3,7 +3,7 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
 import Header from "../../../components/Header.astro";
 import Footer from "../../../components/Footer.astro";
 import { Image } from 'astro:assets';
-import dairyImage from '../../../assets/images/dairy-milk.jpg';
+import dairyImage from '../../../assets/images/dairy-milk.webp';
 ---
 <BaseLayout title="Lactose Intolerance Checker - Self-Test - FoodCheck" description="Think you might be lactose intolerant? Use our free lactose intolerance checker to explore your symptoms. Educational tool only — not a medical diagnosis." breadcrumbs={[{ label: 'Tools', href: '/tools' }, { label: 'Lactose Intolerance Checker', href: '/tools/lactose-intolerance-test' }]}">
 <Header />
@@ -11,7 +11,8 @@ import dairyImage from '../../../assets/images/dairy-milk.jpg';
 <section class="pt-16 pb-8 md:pt-24 px-4 sm:px-6 max-w-6xl mx-auto">
 <div class="max-w-2xl mx-auto text-center">
 <h1 class="text-4xl md:text-5xl font-semibold tracking-tight text-slate-900 leading-none mb-4">Lactose Intolerance Checker</h1>
-<p class="text-lg text-slate-500 max-w-lg mx-auto">Answer 5 questions about your dairy experiences. Educational only - not a medical diagnosis.</p>
+<p class="text-lg text-slate-500 max-w-lg mx-auto mb-2">Answer 5 questions about your dairy experiences. Educational only - not a medical diagnosis.</p>
+<p class="text-sm text-slate-400">Reviewed by Dr. Emily Carter, Registered Dietitian</p>
 </div>
 <div class="mt-8 max-w-2xl mx-auto"><Image src={dairyImage} alt="Dairy products including milk, cheese, and yogurt" class="w-full h-auto rounded-xl" width={800} height={450} loading="lazy" format="webp" /></div>
 </section>

@@ -3,7 +3,7 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
 import Header from "../../../components/Header.astro";
 import Footer from "../../../components/Footer.astro";
 import { Image } from 'astro:assets';
-import resultsImage from '../../../assets/images/lab-testing.jpg';
+import resultsImage from '../../../assets/images/reading-results.webp';
 ---
 <BaseLayout title="How to Read Food Intolerance Test Results - FoodCheck" description="Learn how to interpret food intolerance test reports — IgG antibody levels, hydrogen breath test results, and what the numbers actually mean for your diet." ogType="article" author="Dr. Emily Carter, Registered Dietitian" datePublished="2026-03-01" dateModified="2026-07-20" breadcrumbs={[{ label: 'Guides', href: '/guides' }, { label: 'Reading Test Results', href: '/guides/reading-test-results' }]} medical={true}>
 <Header /><main class="max-w-3xl mx-auto px-4 sm:px-6 py-16 md:py-24">
@@ -30,6 +30,31 @@ import resultsImage from '../../../assets/images/lab-testing.jpg';
   <li>Symptoms return within 24–72 hours of reintroducing the specific food</li>
   <li>The pattern is reproducible across multiple reintroduction attempts</li>
 </ul>
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">What Should You Do Before Getting Tested?</h2>
+<p class="text-slate-600 mb-4">Preparation can significantly affect the accuracy of your test results. Before any food intolerance testing, consider the following:</p>
+<div class="space-y-3 mb-8">
+<div class="bg-white border border-slate-200 rounded-xl p-4"><h3 class="font-semibold text-slate-900 mb-1 text-sm">Do not start a restrictive diet before testing</h3><p class="text-sm text-slate-600">For coeliac disease screening, you must be eating gluten for at least 6 weeks before the blood test and biopsy. Starting a gluten-free diet prematurely can lead to false-negative results. According to the <strong>BDA</strong>, this is one of the most common mistakes patients make.</p></div>
+<div class="bg-white border border-slate-200 rounded-xl p-4"><h3 class="font-semibold text-slate-900 mb-1 text-sm">Keep a symptom diary first</h3><p class="text-sm text-slate-600">Record your meals, symptoms, and timing for at least 2 weeks before your GP appointment. This helps your doctor identify patterns and decide which tests are most appropriate. Use our <a href="/tools/food-diary" class="text-brand-600 hover:text-brand-700 underline">Food Diary</a> to track this digitally.</p></div>
+<div class="bg-white border border-slate-200 rounded-xl p-4"><h3 class="font-semibold text-slate-900 mb-1 text-sm">Prepare for breath tests properly</h3><p class="text-sm text-slate-600">For hydrogen breath tests, you will typically need to fast overnight and avoid antibiotics, laxatives, and high-fibre foods for 2–4 weeks beforehand. Follow your clinic's specific preparation instructions carefully, as improper preparation can invalidate results.</p></div>
+</div>
+
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">How Do You Create an Action Plan From Your Results?</h2>
+<p class="text-slate-600 mb-4">Once you have your test results, work with your GP or dietitian to create a structured action plan:</p>
+<ul class="list-disc list-inside text-slate-600 space-y-2 mb-6">
+  <li><strong>Positive result:</strong> If a specific intolerance is confirmed, plan a targeted elimination of the trigger food and identify suitable nutritional replacements. For example, if lactose intolerance is confirmed, replace dairy calcium with fortified plant milks, leafy greens, and tofu.</li>
+  <li><strong>Negative result:</strong> If tests come back negative but symptoms persist, discuss other potential causes with your GP — including coeliac disease, IBS, inflammatory bowel disease, or other food intolerances not covered by the initial tests.</li>
+  <li><strong>Inconclusive result:</strong> Borderline results may require repeat testing or a supervised elimination diet to clarify. According to the <strong>BDA</strong>, an elimination diet followed by controlled reintroduction remains the most reliable way to confirm or rule out a food intolerance.</li>
+</ul>
+
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">What Are the Limitations of Food Intolerance Tests?</h2>
+<p class="text-slate-600 mb-4">No single test can identify all food intolerances. Key limitations include:</p>
+<ul class="list-disc list-inside text-slate-600 space-y-2 mb-6">
+  <li><strong>Breath tests</strong> only detect specific sugar malabsorption (lactose, fructose, lactulose) and cannot identify intolerances to food additives, histamine, or salicylates.</li>
+  <li><strong>IgG blood tests</strong> are not recommended for intolerance diagnosis by any major medical organisation. They measure exposure, not intolerance, and often lead to unnecessary dietary restrictions.</li>
+  <li><strong>Elimination diets</strong> are the most comprehensive approach but require discipline, time (4–8 weeks), and ideally professional supervision to ensure nutritional adequacy.</li>
+  <li><strong>Some intolerances</strong> — such as reactions to food additives, salicylates, or amines — have no validated laboratory test and can only be identified through careful elimination and reintroduction under dietitian guidance.</li>
+</ul>
+
 <h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">When Should You See a Doctor About Your Results?</h2>
 <p class="text-slate-600 mb-4">Always discuss test results with your GP or a registered dietitian before making major dietary changes. Never self-diagnose based on commercial IgG test results alone.</p>
 

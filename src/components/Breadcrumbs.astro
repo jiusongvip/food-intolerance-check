@@ -1,0 +1,17 @@
+---
+export interface Props {
+  breadcrumbs: { label: string; href: string }[];
+}
+const { breadcrumbs } = Astro.props;
+---
+<nav aria-label="Breadcrumb" class="max-w-3xl mx-auto px-4 sm:px-6 pt-6">
+  <ol class="flex items-center gap-1.5 text-sm text-slate-400">
+    <li><a href="/" class="hover:text-brand-600 transition-colors no-underline">Home</a></li>
+    {breadcrumbs.map((b) => (
+      <li class="flex items-center gap-1.5">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <a href={b.href} class="hover:text-brand-600 transition-colors no-underline">{b.label}</a>
+      </li>
+    ))}
+  </ol>
+</nav>

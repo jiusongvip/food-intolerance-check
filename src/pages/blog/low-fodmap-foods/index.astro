@@ -3,7 +3,7 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
 import Header from "../../../components/Header.astro";
 import Footer from "../../../components/Footer.astro";
 import { Image } from 'astro:assets';
-import fodmapImage from '../../../assets/images/vegetables-fodmap.jpg';
+import fodmapImage from '../../../assets/images/low-fodmap-meal.webp';
 ---
 <BaseLayout title="Low FODMAP Food List - IBS Management - FoodCheck" description="Complete low FODMAP food list for IBS management. High FODMAP foods to avoid and safe alternatives to eat. Based on Monash University research." ogType="article" author="Dr. Emily Carter, Registered Dietitian" datePublished="2026-02-10" dateModified="2026-07-20" breadcrumbs={[{ label: 'Blog', href: '/blog' }, { label: 'Low FODMAP Food List', href: '/blog/low-fodmap-foods' }]} medical={true}>
 <Header /><main class="max-w-3xl mx-auto px-4 sm:px-6 py-16 md:py-24">
@@ -12,51 +12,75 @@ import fodmapImage from '../../../assets/images/vegetables-fodmap.jpg';
 <p class="text-sm text-slate-400 mb-8">By Dr. Emily Carter, Registered Dietitian · Published 10 Feb 2026 · Updated 20 Jul 2026</p>
 <Image src={fodmapImage} alt="Fresh vegetables and fruits used in a low FODMAP diet" class="w-full h-auto rounded-xl mb-8" width={800} height={450} loading="lazy" format="webp" />
 
-<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">What Are FODMAPs?</h2>
-<p class="text-slate-600 mb-4">FODMAPs are a group of short-chain carbohydrates (sugars and fibres) that are poorly absorbed in the small intestine. The acronym stands for <strong>Fermentable Oligosaccharides, Disaccharides, Monosaccharides, and Polyols</strong>. When these carbohydrates reach the large intestine, they are rapidly fermented by gut bacteria, producing gas and drawing in water — which causes bloating, pain, and altered bowel habits in sensitive individuals.</p>
-<p class="text-slate-600 mb-4">The low FODMAP diet was developed by researchers at <strong>Monash University</strong> in Australia and is now recognised by the British Dietetic Association and NICE guidelines as an evidence-based approach for managing IBS symptoms. Research shows that approximately 70-80% of IBS patients experience significant symptom improvement on a low FODMAP diet.</p>
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">What Is the Low FODMAP Diet?</h2>
+<p class="text-slate-600 mb-4">The low FODMAP diet was developed by researchers at <strong>Monash University</strong> in Australia and is now recognised by the British Dietetic Association and NICE guidelines as an evidence-based approach for managing IBS symptoms. Research shows that approximately 70–80% of IBS patients experience significant symptom improvement when following the diet under professional guidance. For a full explanation of the three-phase protocol (elimination, reintroduction, and personalisation), see our <a href="/guides/low-fodmap" class="text-brand-600 hover:text-brand-700 underline">Low FODMAP Diet Guide</a>.</p>
+<p class="text-slate-600 mb-4">This article focuses on the practical side: which foods to eat, which to avoid, and how to plan meals on a low FODMAP diet.</p>
 
-<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">What Are the Five FODMAP Categories?</h2>
-<div class="space-y-3 mb-8">
-<div class="bg-white border border-slate-200 rounded-xl p-4"><h3 class="font-semibold text-slate-900 mb-1 text-sm">Oligosaccharides (Fructans & GOS)</h3><p class="text-xs text-slate-600">Found in wheat, rye, onion, garlic, legumes, and certain vegetables. These are among the most common triggers.</p></div>
-<div class="bg-white border border-slate-200 rounded-xl p-4"><h3 class="font-semibold text-slate-900 mb-1 text-sm">Disaccharides (Lactose)</h3><p class="text-xs text-slate-600">Found in milk, soft cheeses, yogurt, and ice cream. Tolerance varies — many people can handle small amounts of hard cheese or butter.</p></div>
-<div class="bg-white border border-slate-200 rounded-xl p-4"><h3 class="font-semibold text-slate-900 mb-1 text-sm">Monosaccharides (Excess Fructose)</h3><p class="text-xs text-slate-600">Found in honey, apples, mangoes, and high-fructose corn syrup. Fructose is problematic when it exceeds glucose in the same food.</p></div>
-<div class="bg-white border border-slate-200 rounded-xl p-4"><h3 class="font-semibold text-slate-900 mb-1 text-sm">Polyols (Sorbitol & Mannitol)</h3><p class="text-xs text-slate-600">Found in stone fruits (cherries, peaches, plums), mushrooms, cauliflower, and artificial sweeteners (xylitol, sorbitol).</p></div>
-</div>
-<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">Which Foods Are High in FODMAPs?</h2>
-<p class="text-slate-600 mb-4">During the elimination phase (typically 2-6 weeks), avoid the following high FODMAP foods:</p>
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">Which Foods Should You Avoid on a Low FODMAP Diet?</h2>
+<p class="text-slate-600 mb-4">During the elimination phase (typically 2–6 weeks), avoid the following high FODMAP foods. These are the most common triggers for IBS symptoms:</p>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-<div class="bg-red-50 border border-red-200 rounded-xl p-4"><h3 class="font-semibold text-red-800 mb-1 text-sm">Fruits</h3><p class="text-xs text-red-700">Apples, pears, watermelon, stone fruits, dried fruits, mango</p></div>
-<div class="bg-red-50 border border-red-200 rounded-xl p-4"><h3 class="font-semibold text-red-800 mb-1 text-sm">Vegetables</h3><p class="text-xs text-red-700">Onion, garlic, cauliflower, mushrooms, asparagus, artichoke</p></div>
-<div class="bg-red-50 border border-red-200 rounded-xl p-4"><h3 class="font-semibold text-red-800 mb-1 text-sm">Grains</h3><p class="text-xs text-red-700">Wheat, barley, rye (in large amounts)</p></div>
-<div class="bg-red-50 border border-red-200 rounded-xl p-4"><h3 class="font-semibold text-red-800 mb-1 text-sm">Dairy</h3><p class="text-xs text-red-700">Milk, soft cheese, yogurt, ice cream (lactose)</p></div>
-</div>
-<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">What Can You Eat on a Low FODMAP Diet?</h2>
-<p class="text-slate-600 mb-4">Replace high FODMAP foods with these safe alternatives:</p>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-<div class="bg-emerald-50 border border-emerald-200 rounded-xl p-4"><h3 class="font-semibold text-emerald-800 mb-1 text-sm">Fruits</h3><p class="text-xs text-emerald-700">Bananas, blueberries, strawberries, oranges, grapes, kiwi</p></div>
-<div class="bg-emerald-50 border border-emerald-200 rounded-xl p-4"><h3 class="font-semibold text-emerald-800 mb-1 text-sm">Vegetables</h3><p class="text-xs text-emerald-700">Carrots, spinach, zucchini, bell peppers, potatoes, green beans</p></div>
-<div class="bg-emerald-50 border border-emerald-200 rounded-xl p-4"><h3 class="font-semibold text-emerald-800 mb-1 text-sm">Grains</h3><p class="text-xs text-emerald-700">Rice, oats, quinoa, gluten-free bread and pasta</p></div>
-<div class="bg-emerald-50 border border-emerald-200 rounded-xl p-4"><h3 class="font-semibold text-emerald-800 mb-1 text-sm">Dairy Alternatives</h3><p class="text-xs text-emerald-700">Lactose-free milk, hard cheeses, almond milk, rice milk</p></div>
+<div class="bg-red-50 border border-red-200 rounded-xl p-4"><h3 class="font-semibold text-red-800 mb-1 text-sm">Fruits</h3><p class="text-xs text-red-700">Apples, pears, watermelon, stone fruits (cherries, peaches, plums), dried fruits, mango, blackberries, nectarines</p></div>
+<div class="bg-red-50 border border-red-200 rounded-xl p-4"><h3 class="font-semibold text-red-800 mb-1 text-sm">Vegetables</h3><p class="text-xs text-red-700">Onion, garlic, cauliflower, mushrooms, asparagus, artichoke, Brussels sprouts, leek (white part), shallots</p></div>
+<div class="bg-red-50 border border-red-200 rounded-xl p-4"><h3 class="font-semibold text-red-800 mb-1 text-sm">Grains & Legumes</h3><p class="text-xs text-red-700">Wheat, barley, rye (in large amounts), most beans and lentils, chickpeas (canned are lower), soybeans</p></div>
+<div class="bg-red-50 border border-red-200 rounded-xl p-4"><h3 class="font-semibold text-red-800 mb-1 text-sm">Dairy & Sweeteners</h3><p class="text-xs text-red-700">Milk, soft cheese, yogurt, ice cream (lactose), honey, high-fructose corn syrup, agave, sugar alcohols (sorbitol, xylitol)</p></div>
 </div>
 
-<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">What Hidden FODMAPs Should You Watch For?</h2>
-<p class="text-slate-600 mb-4">Many processed foods contain hidden high FODMAP ingredients. Common culprits include:</p>
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">What Can You Eat on a Low FODMAP Diet?</h2>
+<p class="text-slate-600 mb-4">Replace high FODMAP foods with these safe alternatives. These foods are low in FODMAPs at standard serving sizes:</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+<div class="bg-emerald-50 border border-emerald-200 rounded-xl p-4"><h3 class="font-semibold text-emerald-800 mb-1 text-sm">Fruits</h3><p class="text-xs text-emerald-700">Bananas (firm), blueberries, strawberries, oranges, grapes, kiwi, cantaloupe, pineapple, papaya, raspberries</p></div>
+<div class="bg-emerald-50 border border-emerald-200 rounded-xl p-4"><h3 class="font-semibold text-emerald-800 mb-1 text-sm">Vegetables</h3><p class="text-xs text-emerald-700">Carrots, spinach, zucchini, bell peppers, potatoes, green beans, cucumber, tomato, lettuce, eggplant, kale</p></div>
+<div class="bg-emerald-50 border border-emerald-200 rounded-xl p-4"><h3 class="font-semibold text-emerald-800 mb-1 text-sm">Grains & Legumes</h3><p class="text-xs text-emerald-700">Rice, oats, quinoa, gluten-free bread and pasta, polenta, corn tortillas, canned chickpeas (¼ cup), firm tofu</p></div>
+<div class="bg-emerald-50 border border-emerald-200 rounded-xl p-4"><h3 class="font-semibold text-emerald-800 mb-1 text-sm">Dairy & Proteins</h3><p class="text-xs text-emerald-700">Lactose-free milk, hard cheeses (cheddar, parmesan), almond milk, rice milk, eggs, fresh meat, fish, tempeh</p></div>
+</div>
+
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">What Does a Low FODMAP Day of Meals Look Like?</h2>
+<p class="text-slate-600 mb-4">Here is a sample day of low FODMAP meals to show that the diet does not have to be restrictive or bland:</p>
+<div class="space-y-3 mb-8">
+<div class="bg-white border border-slate-200 rounded-xl p-4"><h3 class="font-semibold text-slate-900 mb-1 text-sm">Breakfast</h3><p class="text-sm text-slate-600">Oatmeal made with lactose-free milk, topped with firm banana slices, blueberries, and a drizzle of maple syrup. Add a tablespoon of chia seeds for fibre.</p></div>
+<div class="bg-white border border-slate-200 rounded-xl p-4"><h3 class="font-semibold text-slate-900 mb-1 text-sm">Lunch</h3><p class="text-sm text-slate-600">Quinoa salad with grilled chicken, spinach, cucumber, cherry tomatoes, bell pepper, and a lemon-olive oil dressing. Serve with a slice of gluten-free bread.</p></div>
+<div class="bg-white border border-slate-200 rounded-xl p-4"><h3 class="font-semibold text-slate-900 mb-1 text-sm">Dinner</h3><p class="text-sm text-slate-600">Baked salmon with roasted potatoes, zucchini, and carrots. Season with garlic-infused oil (the FODMAPs are not oil-soluble, so the flavour is safe) and fresh herbs.</p></div>
+<div class="bg-white border border-slate-200 rounded-xl p-4"><h3 class="font-semibold text-slate-900 mb-1 text-sm">Snacks</h3><p class="text-sm text-slate-600">Rice cakes with peanut butter, a handful of walnuts, firm banana, lactose-free yogurt, or a small portion of dark chocolate (up to 30g).</p></div>
+</div>
+
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">How Should You Read Labels on a Low FODMAP Diet?</h2>
+<p class="text-slate-600 mb-4">Many processed foods contain hidden high FODMAP ingredients. When shopping, scan ingredient lists for these common culprits:</p>
 <ul class="list-disc list-inside text-slate-600 space-y-2 mb-6">
-  <li><strong>Garlic and onion powder</strong> — found in stock cubes, sauces, spice mixes, and marinades</li>
-  <li><strong>High-fructose corn syrup</strong> — found in soft drinks, cereals, and snack bars</li>
-  <li><strong>Inulin and chicory root fibre</strong> — added to "high fibre" or "prebiotic" products</li>
-  <li><strong>Honey and agave syrup</strong> — often used as "healthier" sweeteners but are high in fructose</li>
-  <li><strong>Sorbitol and xylitol</strong> — sugar-free gum, mints, and diet products</li>
+  <li><strong>Garlic and onion powder</strong> — found in stock cubes, sauces, spice mixes, marinades, and savoury snacks. Look for garlic-infused oil as a safe alternative for cooking.</li>
+  <li><strong>High-fructose corn syrup (HFCS)</strong> — found in soft drinks, cereals, snack bars, and some breads. In the EU, check for "glucose-fructose syrup" where fructose exceeds glucose.</li>
+  <li><strong>Inulin and chicory root fibre</strong> — added to "high fibre" or "prebiotic" products, protein bars, and some yogurts. These are concentrated FODMAPs even in small amounts.</li>
+  <li><strong>Honey and agave syrup</strong> — often used as "healthier" sweeteners but are high in excess fructose. Maple syrup and table sugar (sucrose) are safe alternatives.</li>
+  <li><strong>Sorbitol, xylitol, and mannitol</strong> — sugar-free gum, mints, diet products, and some medications. Check the ingredients of any "sugar-free" or "diet" product carefully.</li>
+</ul>
+
+<h3 class="text-lg font-semibold text-slate-900 mt-6 mb-2">Label Reading Tips</h3>
+<p class="text-slate-600 mb-4">When in doubt, choose products with shorter ingredient lists and fewer processed additives. The <strong>Monash University FODMAP Diet app</strong> provides a regularly updated database of tested foods and is the most reliable reference for packaged products.</p>
+
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">What Common Mistakes Should You Avoid?</h2>
+<ul class="list-disc list-inside text-slate-600 space-y-2 mb-6">
+  <li><strong>Ignoring serving sizes</strong> — some foods are low FODMAP at small portions but become high FODMAP at larger quantities. For example, sweet potato is safe at ½ cup (70g) but high in mannitol at 1 cup (180g). Avocado is safe at 1/8 of a fruit but high in sorbitol at ¼ fruit.</li>
+  <li><strong>Assuming "gluten-free" means low FODMAP</strong> — many gluten-free products contain high FODMAP ingredients like soy flour, chickpea flour, inulin, or honey. Always check the full ingredient list.</li>
+  <li><strong>Staying on the elimination phase too long</strong> — the low FODMAP diet is a three-phase process (elimination, reintroduction, personalisation). It is not meant to be a permanent diet. Prolonged restriction can reduce beneficial gut bacteria diversity.</li>
+  <li><strong>Skipping reintroduction</strong> — without systematically testing each FODMAP group, you cannot identify your personal triggers and may unnecessarily restrict foods you actually tolerate well.</li>
+  <li><strong>Doing it without professional guidance</strong> — the low FODMAP diet is complex and should be supervised by a registered dietitian trained in FODMAP management to ensure nutritional adequacy.</li>
 </ul>
 
 <h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">What Should You Remember About the Low FODMAP Diet?</h2>
 <ul class="list-disc list-inside text-slate-600 space-y-2 mb-6">
   <li>The low FODMAP diet is a <strong>three-phase process</strong>: elimination, reintroduction, and personalisation. It is not meant to be a permanent diet.</li>
   <li>Undertake this diet with guidance from a <strong>registered dietitian</strong> trained in FODMAP management.</li>
-  <li>Serving size matters — some foods are low FODMAP at small portions but become high FODMAP at larger quantities (e.g., sweet potato, avocado).</li>
+  <li>Serving size matters — some foods are low FODMAP at small portions but become high FODMAP at larger quantities.</li>
   <li>Use the <strong>Monash University FODMAP Diet app</strong> for the most up-to-date food testing data.</li>
+  <li>The goal is to eat as broadly as possible, restricting only your confirmed triggers.</li>
 </ul>
+
+<h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">Related Resources</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+<a href="/guides/low-fodmap" class="block bg-slate-50 border border-slate-200 rounded-lg p-4 hover:border-brand-300 transition-colors no-underline"><p class="text-sm font-medium text-slate-900 mb-1">Low FODMAP Diet Guide</p><p class="text-xs text-slate-500">The full three-phase protocol explained step by step.</p></a>
+<a href="/tools/food-diary" class="block bg-slate-50 border border-slate-200 rounded-lg p-4 hover:border-brand-300 transition-colors no-underline"><p class="text-sm font-medium text-slate-900 mb-1">Food Diary</p><p class="text-xs text-slate-500">Track your meals and symptoms during each phase.</p></a>
+<a href="/guides/ibs-food-intolerance" class="block bg-slate-50 border border-slate-200 rounded-lg p-4 hover:border-brand-300 transition-colors no-underline"><p class="text-sm font-medium text-slate-900 mb-1">IBS & Food Intolerance</p><p class="text-xs text-slate-500">Understanding the overlap between IBS and food intolerances.</p></a>
+<a href="/blog/elimination-diet-guide" class="block bg-slate-50 border border-slate-200 rounded-lg p-4 hover:border-brand-300 transition-colors no-underline"><p class="text-sm font-medium text-slate-900 mb-1">Elimination Diet Guide</p><p class="text-xs text-slate-500">Step-by-step protocol for structured elimination and reintroduction.</p></a>
+</div>
 
 <h2 class="text-2xl font-semibold text-slate-900 mt-10 mb-3">References</h2>
 <ul class="list-disc list-inside text-slate-500 text-sm space-y-1 mb-4">

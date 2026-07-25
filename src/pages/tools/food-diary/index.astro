@@ -3,14 +3,15 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
 import Header from "../../../components/Header.astro";
 import Footer from "../../../components/Footer.astro";
 import { Image } from 'astro:assets';
-import foodDiaryImage from '../../../assets/images/food-diary.jpg';
+import foodDiaryImage from '../../../assets/images/food-diary.webp';
 ---
 <BaseLayout title="Food Diary - Track Meals & Symptoms - FoodCheck" description="Track your meals and symptoms over time with our free food diary tool. Spot patterns and identify possible food intolerance triggers. Runs entirely in your browser." breadcrumbs={[{ label: 'Tools', href: '/tools' }, { label: 'Food Diary', href: '/tools/food-diary' }]}">
 <Header /><main>
 <section class="pt-16 pb-8 md:pt-24 px-4 sm:px-6 max-w-6xl mx-auto">
 <div class="max-w-2xl mx-auto text-center">
 <h1 class="text-4xl md:text-5xl font-semibold tracking-tight text-slate-900 leading-none mb-4">Food Diary</h1>
-<p class="text-lg text-slate-500 max-w-lg mx-auto">Log your daily meals and symptoms. Spot patterns over time. Everything stays in your browser.</p>
+<p class="text-lg text-slate-500 max-w-lg mx-auto mb-2">Log your daily meals and symptoms. Spot patterns over time. Everything stays in your browser.</p>
+<p class="text-xs text-slate-400 max-w-lg mx-auto">Reviewed by Dr. Emily Carter, Registered Dietitian</p>
 </div>
 <div class="mt-8 max-w-2xl mx-auto"><Image src={foodDiaryImage} alt="A food journal notebook with meal and symptom tracking notes" class="w-full h-auto rounded-xl" width={800} height={450} loading="lazy" format="webp" /></div>
 </section>

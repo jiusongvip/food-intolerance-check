@@ -3,7 +3,7 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
 import Header from "../../../components/Header.astro";
 import Footer from "../../../components/Footer.astro";
 import { Image } from 'astro:assets';
-import glutenImage from '../../../assets/images/wheat-gluten.jpg';
+import glutenImage from '../../../assets/images/wheat-gluten.webp';
 ---
 <BaseLayout title="Gluten Intolerance Checker - Self-Test - FoodCheck" description="Suspect gluten sensitivity? Use our free gluten intolerance checker to explore your symptoms and decide if testing is right for you. Educational tool only." breadcrumbs={[{ label: 'Tools', href: '/tools' }, { label: 'Gluten Intolerance Checker', href: '/tools/gluten-intolerance-test' }]}">
 <Header />
@@ -11,7 +11,8 @@ import glutenImage from '../../../assets/images/wheat-gluten.jpg';
 <section class="pt-16 pb-8 md:pt-24 px-4 sm:px-6 max-w-6xl mx-auto">
 <div class="max-w-2xl mx-auto text-center">
 <h1 class="text-4xl md:text-5xl font-semibold tracking-tight text-slate-900 leading-none mb-4">Gluten Intolerance Checker</h1>
-<p class="text-lg text-slate-500 max-w-lg mx-auto">5 questions to explore possible gluten sensitivity. Educational tool only.</p>
+<p class="text-lg text-slate-500 max-w-lg mx-auto mb-2">5 questions to explore possible gluten sensitivity. Educational tool only.</p>
+<p class="text-sm text-slate-400">Reviewed by Dr. Emily Carter, Registered Dietitian</p>
 </div>
 <div class="mt-8 max-w-2xl mx-auto"><Image src={glutenImage} alt="Wheat bread and gluten-containing grains" class="w-full h-auto rounded-xl" width={800} height={450} loading="lazy" format="webp" /></div>
 </section>
