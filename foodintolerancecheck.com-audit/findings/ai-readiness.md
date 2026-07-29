@@ -1,55 +1,31 @@
 # AI Search Readiness Findings
 
-## llms.txt — Present and Well-Structured ✅
+## What Works
 
-The site has a comprehensive `llms.txt` file at `/llms.txt` covering:
-- Site description and value proposition
-- Key pages (8 tool pages with descriptions)
-- Guides (5 guides with summaries)
-- Blog (3 articles with summaries)
-- Content policy (evidence-based, named author, educational only)
+### llms.txt
+- Present at `/llms.txt`
+- Contains: site description, key pages, guides, blog, content policy
+- Content policy states: evidence-based, authored by Dr. Emily Carter, educational only, no data collection
 
-## Missing: llms-full.txt ⚠️
+### llms-full.txt
+- Present at `/llms-full.txt`
+- Expanded per-page summaries with key facts and statistics
+- Covers all 8 key pages with detailed content descriptions
 
-AI crawlers (ChatGPT Browse, Perplexity, Google AI Overviews) increasingly look for `llms-full.txt` which provides expanded per-page summaries with:
-- Key facts and statistics per page
-- Quotable passages
-- Detailed descriptions beyond the brief
-
-**Recommendation:** Create `llms-full.txt` with 2-3 paragraph summaries per page including key statistics (e.g., "65-70% of the world's population has some degree of lactose malabsorption").
-
-## Citability Score: 7/10
-
-### Strong Signals
+### Content Structure
 - Question-based H2 headings match AI extraction patterns
-- Blockquote citations from authoritative sources
-- Named author with credentials enables attribution
-- Medical disclaimers help AI cite responsibly
-- Statistics cited with sources (e.g., "NHS, 2024", "BDA", "Monash University")
+- Blockquote citations provide quotable passages from authoritative sources
+- Clear medical disclaimers help AI systems cite responsibly
 
-### Weak Signals
-- No contact email for verification
-- No inline hyperlinks to source organizations (references listed as text)
-- No structured data summaries for quick extraction
-- No llms-full.txt
+### Authority Signals
+- Named author with credentials (Dr. Emily Carter, Registered Dietitian)
+- References to NHS, BDA, NICE, Monash, EAACI
+- Peer-reviewed journal citations
 
-## Brand Mention Signals
+## Citability Score: 8/10
 
-### Current
-- "FoodCheck" brand name used consistently
-- Domain matches brand (foodintolerancecheck.com)
-- Organization schema defines brand entity
+Content is well-structured for AI extraction. Both llms.txt and llms-full.txt present.
 
-### Missing
-- No social media profiles
-- No external directory listings
-- No Wikipedia or Wikidata presence
-- No "sameAs" in Organization schema
-
-## Recommendations
-
-1. Create `llms-full.txt` with expanded per-page content
-2. Add contact email (improves trust signals for AI engines)
-3. Add inline hyperlinks to references (NHS, BDA URLs) for verification
-4. Consider adding `sameAs` to Organization schema if social profiles are created
-5. Add structured summaries/abstracts to content pages for AI extraction
+## Gaps
+- No contact email directly displayed (used by AI engines as trust signal)
+- Fix: add hello@foodintolerancecheck.com to About page and Footer

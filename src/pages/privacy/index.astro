@@ -5,7 +5,7 @@ import Footer from "../../components/Footer.astro";
 import { Image } from 'astro:assets';
 import privacyImage from '../../assets/images/privacy-shield.webp';
 ---
-<BaseLayout title="Privacy Policy - How FoodCheck Protects Your Data" description="FoodCheck privacy policy. Learn how we handle your data — spoiler: we don't collect any. All tools run entirely in your browser.">
+<BaseLayout title="Privacy Policy - How FoodCheck Protects Your Data" description="FoodCheck privacy policy. Learn how we handle your data — spoiler: we don't collect any. All tools run entirely in your browser." breadcrumbs={[{ label: 'Privacy Policy', href: '/privacy' }]}>
 <Header />
 <main class="max-w-3xl mx-auto px-4 sm:px-6 py-16 md:py-24">
   <h1 class="text-4xl font-semibold text-slate-900 mb-6 tracking-tight">Privacy Policy</h1>
@@ -54,4 +54,18 @@ import privacyImage from '../../assets/images/privacy-shield.webp';
   <p class="text-slate-600">If you have any questions about this privacy policy, you can reach us at <a href="/about" class="text-brand-600 hover:text-brand-700 underline">our About page</a>.</p>
 </main>
 <Footer />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Privacy Policy",
+  "description": "FoodCheck privacy policy — we do not collect, store, or share any personal data. All tools run entirely in your browser.",
+  "url": "https://foodintolerancecheck.com/privacy",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "FoodCheck",
+    "url": "https://foodintolerancecheck.com"
+  }
+}
+</script>
 </BaseLayout>

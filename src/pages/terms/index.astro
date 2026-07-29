@@ -5,7 +5,7 @@ import Footer from "../../components/Footer.astro";
 import { Image } from 'astro:assets';
 import termsImage from '../../assets/images/terms-documents.webp';
 ---
-<BaseLayout title="Terms of Service - Food Intolerance Tools - FoodCheck" description="FoodCheck terms of service. Important information about using our educational food intolerance tools and content.">
+<BaseLayout title="Terms of Service - Food Intolerance Tools - FoodCheck" description="FoodCheck terms of service. Important information about using our free educational food intolerance self-assessment tools and evidence-based content." breadcrumbs={[{ label: 'Terms of Service', href: '/terms' }]}>
 <Header />
 <main class="max-w-3xl mx-auto px-4 sm:px-6 py-16 md:py-24">
   <h1 class="text-4xl font-semibold text-slate-900 mb-6 tracking-tight">Terms of Service</h1>
@@ -61,4 +61,18 @@ import termsImage from '../../assets/images/terms-documents.webp';
   <p class="text-slate-600">Questions about these terms? Visit our <a href="/about" class="text-brand-600 hover:text-brand-700 underline">About page</a> to get in touch.</p>
 </main>
 <Footer />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Terms of Service",
+  "description": "FoodCheck terms of service for using our free educational food intolerance self-assessment tools and content.",
+  "url": "https://foodintolerancecheck.com/terms",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "FoodCheck",
+    "url": "https://foodintolerancecheck.com"
+  }
+}
+</script>
 </BaseLayout>

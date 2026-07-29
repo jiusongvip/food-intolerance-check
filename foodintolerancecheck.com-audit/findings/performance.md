@@ -2,7 +2,7 @@
 
 ## Estimated Core Web Vitals (Code Analysis)
 
-> Note: Site is not deployed. These are estimates based on source code analysis.
+> Site not deployed. Estimates based on source code analysis.
 
 | Metric | Estimate | Rating |
 |---|---|---|
@@ -15,36 +15,29 @@
 ## Positive Performance Signals
 
 1. **Astro SSG** — Static HTML output, zero framework JavaScript overhead
-2. **Minimal client JS** — Only checker/diary scripts (126 lines max) loaded on specific pages
+2. **Minimal client JS** — Only checker/diary scripts (max 126 lines) on specific pages
 3. **Image optimization** — Astro Image auto-converts to WebP with width/height attributes
-4. **Hero image** — `loading="eager"` + `fetchpriority="high"` on homepage hero
+4. **Hero image** — `loading="eager"` + `fetchpriority="high"`
 5. **Lazy loading** — All other images use `loading="lazy"`
-6. **No third-party scripts** — No analytics, no ads, no tracking
-7. **Purged CSS** — Tailwind CSS purges unused styles via @astrojs/tailwind
+6. **No third-party scripts** — No analytics, ads, or tracking
+7. **Purged CSS** — Tailwind via @astrojs/tailwind
+8. **4 font weights** (400, 500, 600, 700) — self-hosted via @fontsource, unused weight 300 removed
 
 ## Performance Concerns
 
-### Font Loading (Low impact)
-- 5 Outfit font weight files loaded (300, 400, 500, 600, 700)
-- Weight 300 appears unused
-- Consider: Outfit variable font or removing weight 300
-- Font files from @fontsource are self-hosted (good — no external request)
+### Font Loading (Minimal)
+- 4 Outfit weight files loaded (400, 500, 600, 700)
+- Self-hosted via @fontsource — no external request
+- Could consider variable font for single file
 
-### Image Containers (Low impact)
-- Some containers use `w-full` without `aspect-ratio` constraint
-- Could cause minor CLS during image loading
-- Fix: Add `aspect-[16/9]` or similar to image wrapper divs
+### Image Containers (Minimal)
+- Astro Image handles width/height automatically
+- Some `w-full` containers without `aspect-ratio` — negligible risk
 
-### CSS Strategy (Low impact)
-- Tailwind generates purged CSS — efficient
-- Global CSS imports 5 font weight files — could be reduced
-- No render-blocking concerns with Astro's CSS handling
+## Expected Lighthouse Scores
+90+ on all categories post-deployment.
 
-## Deployment Performance Recommendations
-
-After deployment, measure with:
-1. PageSpeed Insights (lab data + field data via CrUX)
-2. WebPageTest for detailed waterfall analysis
+## Post-Deployment Measurement
+1. PageSpeed Insights (lab + field data via CrUX)
+2. WebPageTest for waterfall analysis
 3. Lighthouse CI for ongoing monitoring
-
-Expected score: 90+ on all Lighthouse categories given the minimal JS and static HTML output.

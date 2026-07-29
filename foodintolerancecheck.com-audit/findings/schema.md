@@ -1,48 +1,36 @@
 # Schema / Structured Data Findings
 
-## Current Implementation
+## Current Implementation — Comprehensive
 
-### Organization (Homepage)
-```json
-{
-  "@type": "Organization",
-  "name": "FoodCheck",
-  "url": "https://foodintolerancecheck.com",
-  "logo": "https://foodintolerancecheck.com/favicon.svg"
-}
-```
-✅ Valid. Consider adding `sameAs` array with social profiles if they exist.
+| Schema Type | Pages | Status |
+|---|---|---|
+| Organization | Homepage | ✅ With SearchAction potentialAction |
+| WebApplication | 6 tool pages (lactose, gluten, histamine, fructose, food-diary, elimination-diet-planner) | ✅ All set to HealthApplication category |
+| Article | 5 pages (intolerance-vs-allergy, test-guide, low-fodmap, reading-test-results, ibs-food-intolerance, elimination-diet-guide, are-food-intolerance-tests-accurate, low-fodmap-foods) | ✅ With author, datePublished, dateModified, publisher |
+| MedicalWebPage | 8 medical content pages | ✅ With specialty: Gastroenterology, reviewedBy, lastReviewed |
+| FAQPage | Homepage (5 questions), /faq (6 questions) | ✅ Both present and valid |
+| ItemList | /tools, /guides, /blog listing pages | ✅ With correct itemListElement |
+| HowTo | /blog/elimination-diet-guide | ✅ 4 steps with name, text, and URL. ⚠️ Step URLs don't match HTML ids |
+| BreadcrumbList | 22 of 24 pages | ✅ Missing on /privacy and /terms |
+| AboutPage + Person | /about | ✅ Person entity with name, jobTitle, description |
+| WebSite | Homepage | ✅ With SearchAction |
 
-### WebApplication (Homepage only)
-✅ Valid for main checker tool.
-⚠️ Should also be added to individual tool pages (lactose, gluten, histamine, fructose, food diary, planner).
-
-### Article (Blog posts, Guide pages)
-✅ Valid with author, datePublished, dateModified, publisher.
-⚠️ Publisher logo uses `og-default.png` (large OG image). Should use a proper brand logo (~600x60px).
-
-### MedicalWebPage (Medical content pages)
-✅ Applied to: symptoms, intolerance-vs-allergy, test-guide, low-fodmap, reading-test-results, ibs-food-intolerance, low-fodmap-foods, are-food-intolerance-tests-accurate, elimination-diet-guide.
-✅ Includes `specialty: "Gastroenterology"`, `about: MedicalCondition`, `reviewedBy`.
-
-### FAQPage (/faq page)
-✅ 6 questions with acceptedAnswer. Valid.
-⚠️ Homepage also has FAQ content (5 items via JS) but NO FAQPage schema.
-
-### ItemList (Listing pages)
-✅ Applied to /tools, /guides, /blog listing pages. Valid.
-
-### HowTo (Elimination Diet Guide)
-✅ 4 steps with name, text, and URL. Includes totalTime "P8W". Valid.
-
-### BreadcrumbList (All inner pages)
-✅ Correctly structured with Home as position 1. Valid.
+**Total: 10 schema types · 55 JSON-LD blocks · 23 pages covered**
 
 ## Missing Schema Opportunities
 
 | Page/Section | Recommended Schema | Priority |
 |---|---|---|
-| Homepage FAQ section | FAQPage | High |
-| Tool pages (6) | WebApplication/SoftwareApplication | Medium |
-| /about | AboutPage + Person | Low |
-| /symptoms | MedicalWebPage (already has it) | ✅ Done |
+| /privacy, /terms | WebPage + BreadcrumbList | Medium |
+| /guides/low-fodmap | HowTo (3 phases = 3 steps) | Low |
+| /tools/elimination-diet-planner | HowTo | Low |
+
+## Validation Notes
+- All JSON-LD valid syntax
+- URLs correctly absolute (https://foodintolerancecheck.com/...)
+- Date fields use ISO 8601 format
+- `@type` values correctly capitalised
+
+## Improvement Needed
+- Article schema publisher logo points to /og-default.png (1200x630px) instead of a proper brand logo (recommended: 600x60px or square)
+- HowTo schema step[].url fragments (#step-1...4) don't match any HTML id attributes

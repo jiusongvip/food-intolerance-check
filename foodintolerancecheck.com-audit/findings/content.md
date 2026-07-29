@@ -18,32 +18,34 @@
 - Editorial standards documented on About page
 
 ### Trust — Strong
-- Medical disclaimers on every page
+- Medical disclaimers on every page including tools
 - Clear distinction between evidence-based and unvalidated approaches
 - No commercial product recommendations
 - No data collection, transparent privacy policy
+- Terms of Service with clear limitations
 
-## Thin Content Pages
+## Content Depth — All Pages Now Adequate
 
-### /guides/low-fodmap (33 lines)
-**Problem:** Only 3 brief phase descriptions. Competing pages typically have 1500+ words with food lists, meal plans, and practical tips.
-**Fix:** Add high/low FODMAP food tables, serving size guidance, common mistakes, cross-link to /blog/low-fodmap-foods.
-
-### /tools/elimination-diet-planner (34 lines)
-**Problem:** As a "planner" tool, it should offer interactive functionality, not just text. Only 3 bullet-point protocols with brief descriptions.
-**Fix:** Add interactive weekly planner, printable template, sample meal plans, and detailed reintroduction schedule.
-
-### /guides/ibs-food-intolerance (47 lines)
-**Problem:** Missing IBS subtypes (IBS-C, IBS-D, IBS-M), specific FODMAP triggers by subtype, and detailed management strategies.
-**Fix:** Add IBS subtype explanations, stress-gut connection, specific dietary strategies per subtype, and when to see a gastroenterologist.
+| Page | Lines | Content Coverage |
+|---|---|---|
+| /guides/low-fodmap | 87 | 5 FODMAP categories, 3 phases, food lists, hidden FODMAPs, mistakes |
+| /tools/elimination-diet-planner | 93 | 4 protocols, reintroduction table, common mistakes, references |
+| /guides/ibs-food-intolerance | 85 | 3 IBS subtypes, 5 trigger categories, stress-gut axis, management strategies |
+| /guides/intolerance-vs-allergy | 94 | Comparison table, 3 intolerance mechanisms, allergy types, emergency guidelines |
+| /blog/elimination-diet-guide | 124 | Full protocol with HowTo schema, 4-step process |
+| /blog/are-food-intolerance-tests-accurate | 80 | Test comparison table, evidence levels, preparation guidance |
 
 ## Content Overlap
 - `/guides/test-guide` and `/blog/are-food-intolerance-tests-accurate` cover similar ground
-- Consider differentiating: guide = practical comparison table, blog = deep evidence review
-- Current overlap is acceptable but could be more distinct
+- guide = practical comparison table, blog = deep evidence review
+- Acceptable but could be more differentiated
 
 ## Readability
 - Average sentence length: appropriate (15-20 words)
 - Technical terms explained in plain language
 - Good use of bold for key statistics and terms
 - Blockquotes used effectively for citations
+
+## Issues
+- FAQ H1 lacks primary keyword: "Frequently Asked Questions" → "Food Intolerance FAQ"
+- No contact email directly displayed
